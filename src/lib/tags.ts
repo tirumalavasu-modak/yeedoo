@@ -16,7 +16,7 @@ function generateTagMap(): { [key: string]: TagContent } {
 }
 
 export function getTag(slug: string) {
-  return tagMap[slug];
+  return tagMap[slug] || { slug, name: slug };
 }
 
 export function listTags(): TagContent[] {

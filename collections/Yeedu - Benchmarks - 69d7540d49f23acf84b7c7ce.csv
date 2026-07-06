@@ -1,0 +1,535 @@
+Benchmark Title,Slug,Collection ID,Locale ID,Item ID,Archived,Draft,Created On,Updated On,Published On,Hero Desc,Benchmark Thumbnail,Thumbnail alt text,Benchmark Content,Meta Title,Meta Description,OG Title,OG Description,Keywords
+We Broke Big Data Economics,your-big-data-infrastructure-costs-should-not-be-a-line-item-you-cant-explain,69d7540d49f23acf84b7c7ce,6781106372f1ec1571cf150a,69d79129daba5549b7329d8d,false,false,Thu Apr 09 2026 11:44:41 GMT+0000 (Coordinated Universal Time),Fri Jun 05 2026 06:15:46 GMT+0000 (Coordinated Universal Time),Fri Jun 05 2026 06:15:46 GMT+0000 (Coordinated Universal Time),3TB enterprise workload for less than a cup of coffee,https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d72246f20c788c3f2fad2_We%20Broke%20Big%20Data%20Economics.avif,Breaking the $1 per TB Barrier: Redefining Data Platforms for the AI Era,"<p>‍</p><p>‍</p><h2><strong>Not a demo. <br>A production-grade result.</strong></h2><p><a rel=""noopener noreferrer"" href=""https://www.tpc.org/tpcds/"">TPC-DS</a> is a decision-support benchmark with 99 complex SQL queries over 24 tables. It reflects real enterprise analytics workloads used in dashboards, ML, and business decisions. </p><p>This is not a partial benchmark. Not a hand-picked subset. Not a simplified workload on a tuned cluster with the meter off.</p><p>This is TPC-DS at full scale, correlated subqueries, multi-pass window functions, rollups across three sales channels - every query that breaks underpowered engines</p><div data-rt-embed-type='true'><style>
+  .yeedu-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+    font-family: Inter, sans-serif;
+  }
+
+  .feature-card {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.25s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.4);
+  }
+
+  /* Number */
+  .feature-number {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f2600c; /* Yeedu orange */
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Heading */
+  .feature-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f8fafc; /* white */
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  /* Description */
+  .feature-desc {
+    font-size: 14px;
+    color: #cbd5f5;
+    line-height: 1.6;
+  }
+
+  .feature-desc strong {
+    color: #f2600c;
+    font-weight: 600;
+  }
+
+  /* ===== RESPONSIVE ===== */
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .yeedu-feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .yeedu-feature-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+      padding: 16px;
+    }
+
+    .feature-title {
+      font-size: 15px;
+    }
+
+    .feature-desc {
+      font-size: 13px;
+    }
+  }
+</style>
+
+<div class=""yeedu-feature-grid"">
+
+  <!-- 01 -->
+  <div class=""feature-card"">
+    <div class=""feature-number"">01</div>
+    <h3><div class=""feature-title"">99 out of 99</div></h3>
+    <div class=""feature-desc"">
+      Every query completed. Correlated subqueries, multi-pass window functions, rollups across 3 sales channels.  
+      <strong>No rewrites. No retries.</strong>
+    </div>
+  </div>
+
+  <!-- 02 -->
+  <div class=""feature-card"">
+    <div class=""feature-number"">02</div>
+    <h3><div class=""feature-title"">Sub-dollar at terabyte scale</div></h3>
+    <div class=""feature-desc"">
+      The full TPC-DS suite against 1 TB for $0.52.  
+      This is what production looks like when the engine is built right.
+    </div>
+  </div>
+
+  <!-- 03 -->
+  <div class=""feature-card"">
+    <div class=""feature-number"">03</div>
+    <h3><div class=""feature-title"">Pure engine performance</div></h3>
+    <div class=""feature-desc"">
+      Same data. Same queries. Standard cloud hardware anyone can rent.  
+      <strong>The only variable is the engine.</strong> Turbo is why these numbers exist.
+    </div>
+  </div>
+
+  <!-- 04 -->
+  <div class=""feature-card"">
+    <div class=""feature-number"">04</div>
+    <h3><div class=""feature-title"">Compute headroom for AI</div></h3>
+    <div class=""feature-desc"">
+      When ML pipelines, feature stores, and real-time analytics compete for the same budget,  
+      <strong>efficiency decides who ships and who stalls.</strong>
+    </div>
+  </div>
+
+</div></div><p>‍</p><h2>Benchmark Results</h2><div data-rt-embed-type='true'><style>
+  .kpi-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #1e293b;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 2.5rem;
+  }
+
+  .kpi-cell {
+    background: #020617;
+    padding: 20px 20px 16px;
+  }
+
+  .kpi-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 10px;
+  }
+
+  .kpi-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    color: #f2600c;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .kpi-context {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+  
+  .kpi-phrase {
+    font-size: 13px;
+    color: white;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  .kpi-context .duration {
+    color: #22c55e;
+    font-weight: 600;
+  }
+
+  /* Hover (subtle premium feel) */
+  .kpi-cell:hover {
+    background: #020617;
+    box-shadow: inset 0 0 0 1px #334155;
+  }
+
+  /* Tablet */
+  @media (max-width: 600px) {
+    .kpi-strip {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 550px) {
+    .kpi-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .kpi-num {
+      font-size: 24px;
+    }
+  }
+</style>
+
+<div class=""kpi-strip"">
+  <div class=""kpi-cell"">
+    <div class=""kpi-label"">1 TB · Total Cost</div>
+    <div class=""kpi-num"">$0.52</div>
+    <div class=""kpi-context"">99 queries - <span class=""duration"">17 min</span></div>
+    <div class=""kpi-phrase"">less than a pack of chewing gum</div>
+  </div>
+
+  <div class=""kpi-cell"">
+    <div class=""kpi-label"">3 TB · Total Cost</div>
+    <div class=""kpi-num"">$2.33</div>
+    <div class=""kpi-context"">99 queries - <span class=""duration"">40 min</span></div>
+    <div class=""kpi-phrase"">less than a gas station coffee</div>
+  </div>
+
+  <div class=""kpi-cell"">
+    <div class=""kpi-label"">10 TB · Total Cost</div>
+    <div class=""kpi-num"">$12.57</div>
+    <div class=""kpi-context"">99 queries - <span class=""duration"">3.16 hrs</span></div>
+    <div class=""kpi-phrase"">less than a casual weekday lunch</div>
+  </div>
+
+</div></div><p>‍</p><h2>Infrastructure Details</h2><p>Standard cloud instances. No custom hardware. The performance comes from Turbo.</p><div data-rt-embed-type='true'><style>
+  .yeedu-spec-wrap {
+    width: 100%;
+    margin: 30px 0;
+    font-family: Inter, sans-serif;
+  }
+
+  /* ===== DESKTOP TABLE ===== */
+  .yeedu-spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #e5e7eb;
+  }
+
+  .yeedu-spec-table thead {
+    background: linear-gradient(90deg, #1e293b, #0f172a);
+  }
+
+  .yeedu-spec-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+  }
+
+  .yeedu-spec-table td {
+    padding: 16px;
+    border-top: 1px solid #1e293b;
+    font-size: 14px;
+  }
+
+  .spec-label {
+    font-weight: 600;
+    color: #f8fafc;
+  }
+
+  /* Highlight last column (10TB) */
+  .yeedu-spec-table td:last-child {
+    background: rgba(34, 197, 94, 0.04);
+  }
+
+  .yeedu-spec-table tbody tr:hover {
+    background: rgba(59, 130, 246, 0.05);
+  }
+
+  /* ===== MOBILE CARDS ===== */
+  .mobile-spec {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .yeedu-spec-table {
+      display: none;
+    }
+
+    .mobile-spec {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .spec-card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .spec-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #f8fafc;
+      margin-bottom: 12px;
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .spec-grid div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .label {
+      color: #64748b;
+    }
+
+    .value {
+      color: #e5e7eb;
+      font-weight: 500;
+      text-align: right;
+    }
+  }
+</style>
+
+<div class=""yeedu-spec-wrap"">
+
+  <!-- ===== DESKTOP TABLE ===== -->
+  <table class=""yeedu-spec-table"">
+    <thead>
+      <tr>
+        <th>Specification</th>
+        <th>1 TB Run</th>
+        <th>3 TB Run</th>
+        <th>10 TB Run</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class=""spec-label"">Machine Type</td>
+        <td>m8gd.8xlarge</td>
+        <td>r8gd.12xlarge</td>
+        <td>i8g.12xlarge</td>
+      </tr>
+
+      <tr>
+        <td class=""spec-label"">vCPU</td>
+        <td>32</td>
+        <td>48</td>
+        <td>64</td>
+      </tr>
+
+      <tr>
+        <td class=""spec-label"">Memory</td>
+        <td>128 GiB</td>
+        <td>384 GiB</td>
+        <td>512 GiB</td>
+      </tr>
+
+      <tr>
+        <td class=""spec-label"">Instance Storage</td>
+        <td>1× 1,900 GB NVMe</td>
+        <td>3× 950 GB NVMe</td>
+        <td>4× 3,750 GB NVMe</td>
+      </tr>
+
+      <tr>
+        <td class=""spec-label"">Network</td>
+        <td>15 Gbps</td>
+        <td>22.5 Gbps</td>
+        <td>Up to 37.5 Gbps</td>
+      </tr>
+
+      <tr>
+        <td class=""spec-label"">EBS Bandwidth</td>
+        <td>Up to 10 Gbps</td>
+        <td>Up to 15 Gbps</td>
+        <td>Up to 20 Gbps</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ===== MOBILE CARDS ===== -->
+  <div class=""mobile-spec"">
+
+    <div class=""spec-card"">
+      <div class=""spec-title"">1 TB Run</div>
+      <div class=""spec-grid"">
+        <div><span class=""label"">Machine</span><span class=""value"">m8gd.8xlarge</span></div>
+        <div><span class=""label"">vCPU</span><span class=""value"">32</span></div>
+        <div><span class=""label"">Memory</span><span class=""value"">128 GiB</span></div>
+        <div><span class=""label"">Storage</span><span class=""value"">1×1900 GB</span></div>
+        <div><span class=""label"">Network</span><span class=""value"">15 Gbps</span></div>
+        <div><span class=""label"">EBS</span><span class=""value"">10 Gbps</span></div>
+      </div>
+    </div>
+
+    <div class=""spec-card"">
+      <div class=""spec-title"">3 TB Run</div>
+      <div class=""spec-grid"">
+        <div><span class=""label"">Machine</span><span class=""value"">r8gd.12xlarge</span></div>
+        <div><span class=""label"">vCPU</span><span class=""value"">48</span></div>
+        <div><span class=""label"">Memory</span><span class=""value"">384 GiB</span></div>
+        <div><span class=""label"">Storage</span><span class=""value"">3×950 GB</span></div>
+        <div><span class=""label"">Network</span><span class=""value"">22.5 Gbps</span></div>
+        <div><span class=""label"">EBS</span><span class=""value"">15 Gbps</span></div>
+      </div>
+    </div>
+
+    <div class=""spec-card"">
+      <div class=""spec-title"">10 TB Run</div>
+      <div class=""spec-grid"">
+        <div><span class=""label"">Machine</span><span class=""value"">i8g.12xlarge</span></div>
+        <div><span class=""label"">vCPU</span><span class=""value"">64</span></div>
+        <div><span class=""label"">Memory</span><span class=""value"">512 GiB</span></div>
+        <div><span class=""label"">Storage</span><span class=""value"">4×3750 GB</span></div>
+        <div><span class=""label"">Network</span><span class=""value"">37.5 Gbps</span></div>
+        <div><span class=""label"">EBS</span><span class=""value"">20 Gbps</span></div>
+      </div>
+    </div>
+
+  </div>
+
+</div></div><p>‍</p><h2>How is Turbo the Fastest Analytical Engine?</h2><div data-rt-embed-type='true'><style>
+  .yeedu-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+    font-family: Inter, sans-serif;
+  }
+
+  .yeedu-card {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 22px;
+    transition: all 0.25s ease;
+  }
+
+  .yeedu-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.4);
+  }
+
+  /* Heading */
+  .ic-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #f2600c;
+  }
+
+  /* Body */
+  .card-body {
+    font-size: 14px;
+    color: #cbd5f5;
+    line-height: 1.7;
+  }
+
+  .card-body strong {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .card-body p {
+    margin-bottom: 10px;
+  }
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .yeedu-cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .yeedu-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .yeedu-card {
+      padding: 18px;
+    }
+
+    .card-heading {
+      font-size: 16px;
+    }
+
+    .card-body {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class=""yeedu-cards"">
+
+  <!-- Card 1 -->
+  <div class=""yeedu-card"">
+    <div class=""ic-heading"">SIMD-Accelerated Execution</div>
+    <div class=""card-body"">
+      <p>
+        Processes multiple data values per CPU cycle - the hardware parallelism
+        that JVM-based engines leave on the table.
+      </p>
+      <p><strong>Turbo exploits every cycle.</strong></p>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class=""yeedu-card"">
+    <div class=""ic-heading"">Columnar Vectorized Runtime</div>
+    <div class=""card-body"">
+      Filters, joins, and aggregations run through a native columnar engine on batches.  
+      Lower overhead. Saturated pipelines. Higher throughput.
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class=""yeedu-card"">
+    <div class=""ic-heading"">Smart Scheduling</div>
+    <div class=""card-body"">
+      Fills CPU idle windows during I/O waits with pending work.  
+      <strong>2–4× higher utilization</strong> across workloads.
+    </div>
+  </div>
+
+</div></div><p>‍</p><figure class=""w-richtext-figure-type-image w-richtext-align-fullwidth"" style=""max-width:5318px"" data-rt-type=""image"" data-rt-align=""fullwidth"" data-rt-max-width=""5318px""><div><img alt=""Yeedu turbo engine"" src=""https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2005ad2b31e69178424a_How%20Yeedu%20Architecture%20Leverages%20Spark1.avif"" width=""auto"" height=""auto"" loading=""lazy""></div><figcaption>Yeedu turbo engine</figcaption></figure><p>‍</p><h2><strong>Every dollar saved on data infrastructure is a dollar spent on AI</strong></h2><p>AI initiatives don't fail because of bad models. They fail because there's no budget left after the data platform bill hits.</p><p>Feature stores, model training, embedding pipelines, real-time inference, they all compete for the same compute budget. When analytical workloads consume less, everything else gets room.</p><figure class=""w-richtext-figure-type-image w-richtext-align-fullwidth"" style=""max-width:1920px"" data-rt-type=""image"" data-rt-align=""fullwidth"" data-rt-max-width=""1920px""><div><img alt=""Optimize data engineering costs yeedu vs without yeedu"" src=""https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d72b2221a5dc3f55b2fdb_We%20Broke%20Big%20Data%20Economics2.avif"" width=""auto"" height=""auto"" loading=""lazy""></div><figcaption>Optimize data engineering costs yeedu vs without yeedu</figcaption></figure><p>‍</p><p>At $0.52 per terabyte, Turbo doesn't just run your queries. It creates the budget for what comes next</p><p>‍</p><p>‍</p><p>‍</p>",Big Data Cost Optimization: Run 3TB for $2.33 | Turbo,"Run full TPC-DS workloads at ultra-low cost. Process 1TB for $0.52 with Turbo engine and unlock efficient, scalable big data analytics for AI.",Big Data Cost Optimization: Run 3TB for $2.33 | Turbo,"Run full TPC-DS workloads at ultra-low cost. Process 1TB for $0.52 with Turbo engine and unlock efficient, scalable big data analytics for AI.",

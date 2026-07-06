@@ -1,0 +1,136 @@
+---
+slug: accelerating-chemical-similarity-for-drug-discovery-with-yeedu-turbo-engine
+title: Accelerating Chemical Similarity for Drug Discovery with Yeedu
+date: '2026-06-01'
+author: milind-chitgupakar
+tags:
+  - chemical-similarity-computation
+  - drug-discovery-optimization
+  - high-performance-computing-for-drug-discovery
+thumbnail: >-
+  https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1ae9c931fed60b9bb8022f_Accelerating%20Chemical%20Similarity%20for%20Drug%20Discovery%20with%20Yeedu%20t.avif
+thumbnail_alt: Accelerating Chemical Similarity for Drug Discovery with Yeedu
+meta_title: High Performance Computing for Drug Discovery
+meta_description: >-
+  Explore how high-performance computing for drug discovery is enabled with
+  Yeedu Turbo Engine. 2.4M chemical comparisons in under 2 hours for just $18.
+og_title: Accelerating Chemical Similarity for Drug Discovery with Yeedu Turbo Engine
+og_description: >-
+  Yeedu processed 2.4 million compound comparisons in under 2 hours for just
+  $18. Learn more about Yeedu benchmark for cost-effective drug discovery
+  compute.
+---
+
+Chemical similarity computation at scale is essential to drug discovery optimization but remains a compute-intensive challenge. As workloads grow, researchers increasingly depend on high performance computing for drug discovery to handle such massive analytical pipelines. Yeedu’s Turbo Engine processes 2.4 million compound comparisons in under 2 hours at just $18, compared to $2,400 using traditional Spark.  
+
+This breakthrough enables researchers to accelerate molecular analysis, reduce infrastructure costs, and increase R&D productivity bringing true efficiency to chemical similarity computation pipelines.
+
+## **What is Chemical Similarity and Why Does It Matter?**
+
+Chemical similarity plays a critical role in drug discovery, helping researchers:
+
+*   Identify compounds with similar biological activity
+*   Enable drug repurposing
+*   Reduce toxicity and side effects
+
+In simple terms, chemical similarity measures how alike two chemical compounds are.
+
+These comparisons rely on molecular fingerprints binary strings that encode specific structural features of molecules. The Tanimoto coefficient, a widely used metric, quantifies this similarity.
+
+### **The Scale Challenge**
+
+The computation of chemical similarity, particularly at scale, presents a significant challenge. Take the ChEMBL database, for instance, a critical resource in drug discovery containing information on roughly 2.4 million compounds. Calculating the Tanimoto coefficient between each pair of compounds requires a staggering 5.76 trillion comparisons (2.4 million × 2.4 million).
+
+This level of computation is a massive hurdle, as it demands enormous processing power, making it difficult for many organizations to perform this efficiently.
+
+Running similarity calculations for millions of compounds is far from trivial. It is a process that can become computationally prohibitive, even for organizations with large-scale computing infrastructure.  
+
+This is precisely where high performance computing for drug discovery traditionally enters the picture but such infrastructure is costly, complex to manage, and often inaccessible to smaller teams.
+
+Yet, scientists and researchers depend on this chemical similarity computation to drive breakthroughs in drug discovery optimization. Without rapid, efficient ways to process these massive datasets, research progress can slow to a crawl.‍
+
+### **Turbo Engine: Speeding Up Chemical Similarity Calculations**
+
+We put this challenge to the test using Yeedu's Turbo Engine (currently in Beta). First, we generated molecular fingerprints (2048-bit Morgan fingerprints, radius 2) for all 2.4 million compounds in the ChEMBL database.
+
+We processed the Tanimoto coefficients for all pairs of compounds on a **192-core AWS EC2 instance (C7i.x48large)**
+
+Results:
+
+*   **Time Taken:** 1 hour 45 minutes
+*   **Cost**: Under $18 (based on current on-demand instance pricing).
+
+Baseline Comparison:
+
+*   Using traditional Spark engines:
+    1.  Required 100 r5.24xlarge nodes
+    2.  Ran for 4 hours
+    3.  Total compute cost: $2,400+
+
+### **Why Yeedu Performs Better**
+
+The number of computations scales quadratically with the number of compounds, since the coefficient of each compound needs to be calculated with respect to all the other compounds. Therefore, time taken for computations also scales quadratically, with the number of compounds. In other words, if the number of compounds doubles, the number of calculation and hence the time taken is expected to increase by four times.
+
+To illustrate it mathematically, if T(n) is the time required to compute Tanimoto coefficient for n compounds, then time required to compute Tanimoto coefficient for 2 million compounds is T(2M) = 1.75 hours (i.e. 1 hour, 45 minutes).
+
+As per quadratic scaling, the expected times for the compound similarity will be as under:
+
+*   4 million compounds, T(4M): 7 hours
+*   8 million compounds, T(8M): 28 hours
+*   And for 100 million compounds, T(100M): 4,375 hours
+
+However, with Yeedu, while the number of calculations increases quadratically, the time required to complete the calculations, and hence the cost scales sub-quadratically.
+
+This is due to the efficiency of Yeedu’s Turbo engine – a rearchitected spark execution engine that speeds up processing with:
+
+*   Vectorized execution
+*   Leveraging SIMD capabilities of modern CPUs
+*   Use of CPU caches
+
+‍
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a197eee96df4f62c2cc7dfa_Accelerating%20Chemical%20Similarity%20for%20Drug%20Discovery%20with%20Yeedu.avif)
+
+Chemical Similarity Scaling with Number of Molecules
+
+### **Real-time calculations of Tanimoto coefficient**
+
+While the benchmark focuses on scale, day-to-day researchers often need fast comparisons for smaller batches (1–100 compounds).
+
+With Yeedu:
+
+*   Scientists can calculate similarity in **sub-second latency**
+
+*   Use familiar **SQL editors** for instant results
+
+This puts real-time decisioning something traditional high performance computing for drug discovery rarely delivers directly into the hands of computational chemists and biologists.
+
+### **Real-World Impact for Drug Discovery**
+
+Chemical similarity accelerates:
+
+*   Drug repurposing
+*   Compound library navigation
+*   Toxicity mitigation
+
+With Yeedu, this can now happen:
+
+*   Faster  
+*   Cheaper  
+*   Without infrastructure bottlenecks
+
+Researchers can spend less time waiting for jobs to finish and more time pushing scientific boundaries. By augmenting or replacing conventional high performance computing for drug discovery, Yeedu turns efficiency itself into a competitive advantage.
+
+### **Conclusion: Turbocharge Discovery, Not Costs**
+
+Traditional Spark infrastructure simply wasn’t built with this level of efficiency in mind. Yeedu changes that.
+
+By cutting costs from **$2,400 to $18**, and enabling sub-second latency for small queries, [**Yeedu**](https://www.yeedu.io/pricing) Turbo Engine proves that chemical similarity computation at scale doesn’t have to be prohibitively expensive.
+
+For organizations that rely on high performance computing for drug discovery, Yeedu offers a more agile, cost-effective, cloud-optimized alternative transforming how chemical similarity pipelines are executed at scale.
+
+For research teams and pharmaceutical innovators, this means faster insights, lower compute spend, and a decisive leap forward in **drug discovery optimization**.
+
+‍
+
+‍

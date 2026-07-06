@@ -1,6 +1,39 @@
 authors:
-  - slug: wutali
-    name: Takahiro Fujiwara
-    introduction:
-      Co-founder and CTO at Fuller, Inc. / Software & Data Engineer /
-      Python / Golang / React
+  - slug: daniel-mantovani
+    name: Daniel Mantovani
+    introduction: >-
+      Daniel has over 16 years of experience leading, designing, architecting,
+      and implementing software solutions for enterprise customers. He is
+      passionate about building innovative products in data engineering. He has
+      worked with teams and clients across South America, North America, Europe,
+      and Asia. He met Milind at IBM and decided to join him. He strategized,
+      formulated, and transformed general ideas into innovative solutions for
+      its clients. One such innovation resulted in the creation of the Yeedu
+      product. As the CTO of Yeedu, Daniel drives the technology vision and
+      roadmap of the product.
+  - slug: mayank-mehra
+    name: Mayank Mehra
+    introduction: >-
+      Mayank’s extensive experience in product management has equipped him with
+      a deep understanding of customer-centricity and the critical role of
+      technology in addressing business challenges. He has a proven track record
+      of designing and executing tailored product strategies that enhance
+      operational efficiency, reduce costs, and increase revenue for
+      enterprises. He has developed and managed products for diverse industries,
+      such as utilities, medical devices, automotive, and consumer electronics,
+      serving clients in the US, Europe, and APAC regions. As the CPO of Yeedu,
+      Mayank engages with customers to discover product features and drive the
+      product development roadmap.
+  - slug: milind-chitgupakar
+    name: Milind Chitgupakar
+    introduction: >-
+      Milind has over 23 years of experience transforming enterprise data
+      strategies, shaped by an early encounter with a costly Fortune 500 data
+      failure. He helped build some of the era’s largest data warehouses at
+      Microsoft and IBM, witnessing the gap between data investment and business
+      value. He has also led the delivery of massive, efficient data platforms
+      across healthcare and life sciences. To address rising data computing
+      costs, Milind launched Yeedu - a SaaS platform that cuts data processing
+      expenses by 60% and boosts performance without migration or lock-in.
+      Holding six patents, he now focuses on scaling Yeedu and mentoring the
+      next wave of data innovators.

@@ -1,0 +1,303 @@
+---
+slug: >-
+  integrating-glue-hive-and-unity-metastore-seamlessly-into-yeedu-with-zero-migration-overhead
+title: >-
+  Integrating Glue, Hive and Unity Metastore Seamlessly into Yeedu  With Zero
+  Migration Overhead
+date: '2026-06-01'
+author: charitharth-t-harshavardhan-chvs
+tags:
+  - hive-metastore-architecture
+  - databricks-unity-catalog-connectivity
+  - unity-catalog-integration
+  - glue-data-catalog-integration
+  - data-catalog-integration
+thumbnail: >-
+  https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198b8ba149113625c4b6e8_Integrating%20Glue%2C%20Hive%20and%20Unity.avif
+thumbnail_alt: >-
+  Integrating Glue, Hive and Unity Metastore Seamlessly into Yeedu With Zero
+  Migration Overhead
+meta_title: 'Integrating Glue, Hive & Unity Catalogs Metastores: Yeedu'
+meta_description: >-
+  Learn how Yeedu delivers seamless unity catalog integration with Glue and Hive
+  metastores no metadata migration, instant governance, and unified access. 
+og_title: Seamless Glue, Hive & Unity Metastore Integration in Yeedu
+og_description: >-
+  Connect Glue, Hive, or Unity to Yeedu with zero migration. Instant catalog
+  access, unified governance, and no engineering overhead.
+---
+
+Enterprise data platforms often evolve over time starting with traditional Hive metastores and gradually adopting newer systems like AWS Glue or Unity. As these stacks mature, enterprises begin thinking about modernizing their Hive Metastore architecture while ensuring compatibility with newer governance layers and simplifying unified workflows built on strong unity catalog integration.
+
+But when adopting a unified analytics platform like [Yeedu](https://yeedu.com/), teams often ask:
+
+“How do we bring our existing Hive, Glue, or Unity metastores into Yeedu without rebuilding or migrating metadata?”
+
+Yeedu solves this elegantly.
+
+It natively integrates with all three metastores, allowing you to connect existing metadata stores instantly making it a natural fit for teams prioritizing robust data catalog integration without additinal engineering overhead and enabling cleaner end-to-end pipelines that benefit from seamless unity catalog integration.
+
+That means:
+
+*   No schema recreation
+
+*   No manual migration
+
+*   Immediate access to existing data assets
+
+Instead of duplicating metadata, Yeedu acts as a federated metastore layer that reads from your source systems directly simplifying everything from Glue Data Catalog integration to Unity Catalog integration.
+
+## Why External Metastore Integration Is Realistic
+
+### Governance stays external.
+
+Yeedu connects to your metastore rather than forcing you to migrate metadata into a proprietary system. Your lineage, permissions, and compliance logs remain exactly where they are and this is true even for advanced setups like Databricks Unity Catalog connectivity, where governance cannot be compromised.  
+
+### Zero migration overhead.
+
+You can integrate Glue, Hive, or Unity metastore instantly with no schema recreation or manual migration.
+
+**TL;DR:** You point clusters at the metastore you already trust no metadata migration, no permission recertification, no audit gaps.
+
+## Zero Migration - How Yeedu Avoids Metadata Duplication
+
+Traditional catalog integration often involves **exporting** metadata from Hive and **importing** into Glue or Unity metastore.  
+
+That’s brittle, time-consuming, and error-prone.
+
+Yeedu avoids this entirely.
+
+**How It Works**
+
+*   Yeedu treats Glue/Hive/Unity as **live external metastores** no data copying.
+
+*   It queries metadata on-demand using native APIs.
+
+*   Data remains in place whether on S3, HDFS, or any object store.
+
+So your team can:
+
+*   Keep using existing catalogs.
+
+*   Use the same tables from Yeedu notebooks and Spark jobs.
+
+*   Share the same catalog definitions across multiple tools.
+
+Yeedu’s unified catalog layer abstracts over Glue and Hive while maintaining metadata consistency without migration giving you clean Unity Catalog integration without modifying your pipelines and improving multi-cloud reliability.
+
+## Key Design Principles
+
+.yeedu-principle-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } /\* ===== TABLE BOX ===== \*/ .yeedu-principle-box { border: 1px solid #334155; border-radius: 14px; overflow: hidden; background: #020617; } .yeedu-principle-table { width: 100%; border-collapse: collapse; table-layout: auto; } /\* ===== HEADER ===== \*/ .yeedu-principle-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-principle-table th { padding: 14px 16px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; white-space: nowrap; } /\* ===== BODY ===== \*/ .yeedu-principle-table td { padding: 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e5e7eb; vertical-align: top; line-height: 1.6; } .yeedu-principle-table tbody tr { transition: 0.2s ease; } .yeedu-principle-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* ===== PRINCIPLE COLUMN ===== \*/ .principle { width: 34%; font-weight: 600; color: #f8fafc; background: rgba(249, 115, 22, 0.04); } /\* ===== DESCRIPTION ===== \*/ .description { color: #cbd5e1; } /\* ================= MOBILE ================= \*/ @media (max-width: 768px) { .yeedu-principle-table th { padding: 10px 12px; font-size: 10px; } .yeedu-principle-table td { padding: 12px; font-size: 12px; line-height: 1.5; } .principle { width: 40%; font-size: 12px; } } /\* ===== EXTRA SMALL ===== \*/ @media (max-width: 480px) { .yeedu-principle-table th { padding: 9px 10px; font-size: 9px; } .yeedu-principle-table td { padding: 10px; font-size: 11px; } .principle { width: 42%; font-size: 11px; } }
+
+Principle
+
+Description
+
+Zero Migration Overhead
+
+Connect Glue, Hive, or Unity directly, no duplication.
+
+Unified Access Layer
+
+Query all catalogs from one interface.
+
+Consistency & Security
+
+Uses access policies and metadata definitions from the source catalog.
+
+Plug-and-Play Setup
+
+Metastores can be configured using XML files or by filling required details in the Yeedu UI.
+
+Yeedu supports external metastore integration for **Glue, Hive**, and **Unity**, giving enterprises a single control plane for data discovery and governance and forming the foundation for scalable Hive metastore architecture in hybrid environments.
+
+## Yeedu Secrets for Metastores
+
+Yeedu secrets can be used to store sensitive data such as PAT tokens, AWS Secrets, and Azure credentials required for metastore configuration.
+
+Secrets are scoped at three levels to match operational boundaries:
+
+1.  **Tenant Secrets** – Organization-wide credentials
+
+2.  **Workspace Secrets** – Team-level credentials
+
+3.  **User Secrets** – Developer-specific credentials
+
+Beyond credential storage, Yeedu Secrets also play a critical role in catalog connectivity and access.
+
+They enable metastore integrations to authenticate correctly and ensure proper, controlled catalog access inside Yeedu without exposing credentials in code, UI forms, or configuration files.
+
+## Connect to different types of Metastore
+
+Connecting external catalogs to Yeedu is designed to be effortless: Users only need to fill in minimal details Yeedu handles the rest, making the integration smooth, reliable, and ready for analytics or Spark workloads within minutes.
+
+Navigate to **Metastore → Add Metastore**, then follow the steps below for your chosen metastore type.
+
+### 1\. Databricks Unity Catalog
+
+**When to use:** Migrating from Databricks or adopting Unity Catalog as a governance layer.  
+
+This is where Yeedu’s Databricks Unity Catalog connectivity becomes especially valuable, offering teams a straightforward path to enterprise-grade unity catalog integration.
+
+**In Yeedu UI:**
+
+*   Select **Metastore Type:** _Databricks Unity Catalog_
+
+*   Provide **Name, Description,** and **Databricks Endpoint URL**
+
+*   Specify **Default Catalog, Storage Path**, and optional **Additional Catalogs**
+
+![Adding Basic Unity Metastore details in Yeedu ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198baa31e7a5acb40cc9e2_Integrating%20Glue%2C%20Hive%20and%20Unity1.avif)
+
+Add Unity Metastore Configuration
+
+*   To Create a Personal Access Token on the fly by click on section **Databricks Personal Access Token > Select Personal Access Token > Create >**
+
+![Selecting Personal Access Token in Databricks Unity Catalog](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198be5cf2d3a2813f985a3_Integrating%20Glue%2C%20Hive%20and%20Unity2.avif)
+
+Choose Personal Access Token
+
+![Creating a New Personal Access Token in Databricks Unity Catalog](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198c48bfe7e9dd8e32b216_Integrating%20Glue%2C%20Hive%20and%20Unity3.avif)
+
+Add Personal Access Token
+
+*   You can also create PAT token under **Secrets,** create a secret of type **DATABRICKS UNITY TOKEN**
+
+*   **Required fields:** Token value
+
+![Linking Personal Access Token in Unity Metastore Secrets.](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198c8f09bbdf4db757a7d8_Integrating%20Glue%2C%20Hive%20and%20Unity4.avif)
+
+Add Personal Access Token for Unity Metastore
+
+*   Validate and **Save** Yeedu confirms connection to list Unity catalogs.
+
+### 2\. Hive Metastore
+
+**When to use:** Connecting to on-premises or legacy Hadoop clusters.
+
+The path is ideal for enterprises retaining traditional Hive Metastore architecture while modernizing compute through Yeedu.
+
+**In Yeedu UI:**
+
+*   Select **Metastore Type:** _Hive Metastore_
+
+*   Upload **hive-site.xml** configuration file
+
+*   Upload **krb5.conf** configuration file
+
+![Configuring Hive Metastore](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198d4d7f0b1f1c45eda1a5_Integrating%20Glue%2C%20Hive%20and%20Unity5.avif)
+
+Hive Metastore Configuration
+
+*   Users can create a new secret and link it to a metastore created in the above step.
+
+*   To create a secret, Under **Secrets**, Select a secret of type:
+
+*   **HIVE KERBEROS** → Requires _Principal_ and _Keytab file_, _choose the Hive metastore created in above step_
+
+![Creating a Hive Kerberos Secret](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198da65f1ccb06751133e5_Integrating%20Glue%2C%20Hive%20and%20Unity6.avif)
+
+Add Hive Kerberos Secret
+
+Caption: Add Hive Kerberos Secret
+
+Alt text: Creating a Hive Kerberos Secret
+
+*   **HIVE BASIC** → Requires _Username_ and _Password_, _choose the Hive metastore created in above step_
+
+![Linking Hive Basic Secrets to Metastore](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198e3bda2c4575cba0b677_Integrating%20Glue%2C%20Hive%20and%20Unity7.avif)
+
+Add Hive Basic Secret
+
+Caption: Add Hive Basic Secret
+
+Alt text: Linking Hive Basic Secrets to Metastore
+
+*   Validate and **Save** — Yeedu extracts the Hive connection URL and verifies access.
+
+### 3\. AWS Glue
+
+**When to use:** AWS-native architectures using Glue as the central catalog.
+
+This enables seamless Glue Data Catalog integration for customers running workloads across AWS services.
+
+**In Yeedu UI:**
+
+*   Select **Metastore Type:** _AWS Glue_
+
+*   Provide **Name** and **Description**
+
+![Creating a new metastore in AWS Glue.](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198e6b4db7571336235665_Integrating%20Glue%2C%20Hive%20and%20Unity8.avif)
+
+Glue Catalog Configuration
+
+*   To Provide AWS IAM USER Credentials , **Click on Storage Secret > Create > Provide the** _Access Key ID, Secret Access Key, Default Region_
+
+![Linking AWS Glue Secrets to Metastore](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198ea9b13b5bf33b63b3f6_Integrating%20Glue%2C%20Hive%20and%20Unity9.avif)
+
+Select object storage secret
+
+![Assigning Secret Key to an Object Storage in Glue ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198f8598546d4f3a3dbcc2_Integrating%20Glue%2C%20Hive%20and%20Unity10.avif)
+
+Add Storage Secret for Glue Catalog
+
+*   You can also create **AWS user credenatials** as secrets under **Secrets**, select a secret of type **AWS ACCESS SECRET KEY PAIR**
+*   ‍**Required fields:** _Access Key ID, Secret Access Key, Default Region_
+
+![Creating AWS user credentials as Secrets ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198fe2a149113625c68989_Integrating%20Glue%2C%20Hive%20and%20Unity11.avif)
+
+Add Storage Secret for Glue Catalog
+
+*   When _Validate_ is clicked, Yeedu authenticates the credentials and initiates a connection via AWS Glue APIs.
+
+## Using the Connected Metastore in Yeedu
+
+Once the metastore is created and validated with the required secrets, data engineers can seamlessly use it within their Spark code.
+
+*   Create or open a notebook and attach it to the cluster that has the metastore configured.
+*   Navigate to **Yeedu UI > Workspaces > Click on workspace > Click on Notebook Name**
+*   Users can run SQL directly in Yeedu Notebooks on any catalog they’ve attached allowing data catalog integration to flow directly into analytics.
+
+![Running SQL queries directly on any catalog using Yeedu Notebooks ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a19900ee0c9073d8e0aea73_Integrating%20Glue%2C%20Hive%20and%20Unity12.avif)
+
+Query to list the tables in the bronze catalog under the default schema.
+
+*   The screenshots illustrate running SQL against tables in the _bronze.default_ namespace to inspect and analyze catalog data.
+
+![SQL query to inspect and analyze catalog data on Yeedu Notebooks. ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a19903f8e89f3b118ff9193_Integrating%20Glue%2C%20Hive%20and%20Unity13.avif)
+
+Query to retrieve total spent amount per customer category
+
+SQL query to inspect and analyze catalog data on Yeedu Notebooks.
+
+**Output**
+
+![](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a19906261facbefc51553db_Integrating%20Glue%2C%20Hive%20and%20Unity14.avif)
+
+‍
+
+## Unified Access Inside Yeedu
+
+Once connected, users can:
+
+*   Browse external catalogs in the Catalog Explorer
+
+*   Query tables directly from [Yeedu notebooks](https://yeedu.com/posts/designing-interactive-notebooks-in-yeedu-for-faster-and-collaborative-model-experimentation) or jobs
+
+*   Use existing namespaces without changing SQL or Spark code
+
+Yeedu’s unified catalog layer ensures a consistent and transparent access experience across Glue, Hive, and Unity while optimizing runtime interactions that also contribute to [Spark cost optimization](https://yeedu.com/posts/spark-cost-optimization-diagnosing-expensive-spark-jobs) in larger deployments.
+
+## Conclusion
+
+Yeedu’s Bring Your Own Catalog architecture unifies Glue, Hive, and Unity Catalog under a single access layer without any metadata migration.
+
+You gain instant interoperability, zero governance gaps, and consistent access control across clouds.
+
+Connecting to Cloudera Hive metastore, integrating AWS Glue, or extending Unity Catalog, Yeedu delivers seamless, governed access letting enterprises modernize at their own pace, with full transparency and security.
+
+#### Further Reading
+
+[MetaStore - Unity Catalog | Yeedu Documentation](https://docs.yeedu.io/ui/metastore/)
+
+‍

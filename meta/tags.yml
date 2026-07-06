@@ -1,13 +1,399 @@
 tags:
-  - slug: document
-    name: document
-  - slug: mock
-    name: mock
-  - slug: style
-    name: style
-  - slug: license
-    name: license
-  - slug: mdx
-    name: mdx
-  - slug: markdown
-    name: markdown
+  - slug: data-pipeline-optimization
+    name: Data pipeline optimization
+  - slug: cloud-cost-management
+    name: Cloud cost management
+  - slug: cost-reduction-cloud-computing
+    name: Cost reduction cloud computing
+  - slug: spark-job-optimization
+    name: Spark job optimization
+  - slug: spark-performance-tuning
+    name: Spark performance tuning
+  - slug: data-management-optimization
+    name: Data management optimization
+  - slug: big-data-query-optimization
+    name: Big data query optimization
+  - slug: apache-iceberg-performance
+    name: Apache Iceberg performance
+  - slug: iceberg-puffin
+    name: Iceberg puffin
+  - slug: bigquery-cost-optimization
+    name: BigQuery cost optimization
+  - slug: computing-iceberg-queries-efficiently
+    name: Computing Iceberg queries efficiently
+  - slug: chemical-similarity-computation
+    name: Chemical similarity computation
+  - slug: drug-discovery-optimization
+    name: Drug discovery optimization
+  - slug: high-performance-computing-for-drug-discovery
+    name: High performance computing for drug discovery
+  - slug: avoid-vendor-lock-in
+    name: Avoid vendor lock in
+  - slug: databricks-migration
+    name: Databricks migration
+  - slug: open-data-architecture
+    name: Open data architecture
+  - slug: open-source-data-stack
+    name: Open source data stack
+  - slug: risk-of-vendor-lock-in-in-cloud-computing
+    name: Risk of vendor lock in in cloud computing
+  - slug: vendor-lock-in-problem-in-cloud-computing
+    name: Vendor lock in problem in cloud computing
+  - slug: how-to-avoid-cloud-vendor-lock-in
+    name: How to avoid cloud vendor lock in
+  - slug: cloud-cost-optimization-solutions
+    name: Cloud cost optimization solutions
+  - slug: cloud-audit-logging
+    name: Cloud Audit Logging
+  - slug: multi-cloud-governance
+    name: Multi Cloud Governance
+  - slug: multi-cloud-logging
+    name: Multi Cloud Logging
+  - slug: multi-cloud-monitoring
+    name: Multi Cloud Monitoring
+  - slug: multi-cloud-observability
+    name: Multi Cloud Observability
+  - slug: multicloud-log-management
+    name: Multicloud Log Management
+  - slug: spark-job-logs
+    name: Spark Job Logs
+  - slug: unified-cloud-logging
+    name: Unified Cloud Logging
+  - slug: cross-resource-navigation
+    name: Cross-resource navigation
+  - slug: developer-workflow-optimization
+    name: Developer workflow optimization
+  - slug: data-engineering-productivity
+    name: Data engineering productivity
+  - slug: spark-jobs-efficiently
+    name: Spark jobs efficiently
+  - slug: databricks-cost-optimization
+    name: Databricks cost optimization
+  - slug: how-to-reduce-cloud-costs
+    name: How to reduce cloud costs
+  - slug: managed-spark-clusters
+    name: Managed Spark clusters
+  - slug: spark-cluster-management
+    name: Spark cluster management
+  - slug: interactive-notebooks-for-data-science
+    name: Interactive notebooks for data science
+  - slug: managed-spark-notebook-environment
+    name: Managed spark notebook environment
+  - slug: spark-job-debugging
+    name: Spark Job Debugging
+  - slug: spark-job-execution
+    name: Spark Job Execution
+  - slug: debugging-spark-code
+    name: Debugging Spark Code
+  - slug: spark-debugging-assistant-ai
+    name: Spark Debugging Assistant AI
+  - slug: spark-job-optimization
+    name: Spark Job Optimization
+  - slug: spark-log-analysis
+    name: Spark Log Analysis
+  - slug: spark-performance-tuning
+    name: Spark Performance Tuning
+  - slug: spark-performance-optimization
+    name: Spark Performance Optimization
+  - slug: spark-in-cloud-computing
+    name: Spark In Cloud Computing
+  - slug: spark-cost-based-optimization
+    name: Spark Cost Based Optimization
+  - slug: spark-cluster-management
+    name: Spark Cluster Management
+  - slug: cloud-spark-job-optimization
+    name: Cloud Spark Job Optimization
+  - slug: python-rest-api
+    name: Python REST API
+  - slug: python-function-as-a-service
+    name: Python Function As A Service
+  - slug: serverless-python-api
+    name: Serverless Python API
+  - slug: serving-ml-model-as-restapi
+    name: Serving ML Model As RestAPI
+  - slug: role-based-access-control-in-data-platforms
+    name: Role-based access control in data platforms
+  - slug: enterprise-data-governance-and-access-control
+    name: Enterprise data governance and access control
+  - slug: fine-grained-access-control
+    name: Fine-grained access control
+  - slug: multi-tenant-role-based-access-control
+    name: Multi-tenant role-based access control
+  - slug: rbac-for-data-teams
+    name: RBAC for data teams
+  - slug: workspace-level-access-control
+    name: Workspace-level access control
+  - slug: data-platform-security-and-governance
+    name: Data platform security and governance
+  - slug: tenant-based-access-control-model
+    name: Tenant-based access control model
+  - slug: cloud-cost-optimization
+    name: Cloud cost optimization
+  - slug: finops-framework
+    name: FinOps framework
+  - slug: finops-vs-cloud-cost-optimization
+    name: FinOps vs cloud cost optimization
+  - slug: finops-cloud-cost-management
+    name: FinOps cloud cost management
+  - slug: finops-cost-optimization
+    name: FinOps cost optimization
+  - slug: finops-workload-optimization
+    name: FinOps workload optimization
+  - slug: spark-performance-optimization
+    name: Spark performance optimization
+  - slug: spark-cost-optimization
+    name: Spark cost optimization
+  - slug: spark-workload-optimization
+    name: Spark workload optimization
+  - slug: spark-autoscaling
+    name: Spark autoscaling
+  - slug: spark-architecture-in-big-data
+    name: Spark architecture in big data
+  - slug: hive-metastore-architecture
+    name: Hive Metastore Architecture
+  - slug: databricks-unity-catalog-connectivity
+    name: Databricks Unity Catalog Connectivity
+  - slug: unity-catalog-integration
+    name: Unity Catalog Integration
+  - slug: glue-data-catalog-integration
+    name: Glue Data Catalog Integration
+  - slug: data-catalog-integration
+    name: Data Catalog Integration
+  - slug: deploy-ml-model-as-api
+    name: Deploy ml model as api
+  - slug: intuitive-developer-ux
+    name: Intuitive developer ux
+  - slug: python-function-deployment
+    name: Python function deployment
+  - slug: api-traffic-monitoring
+    name: Api traffic monitoring
+  - slug: databricks-migration-tool
+    name: Databricks Migration Tool
+  - slug: databricks-unity-catalog-setup
+    name: Databricks Unity Catalog Setup
+  - slug: airflow-workflow-orchestration
+    name: Airflow Workflow Orchestration
+  - slug: no-code-data-migration
+    name: No Code Data Migration
+  - slug: databricks-notebook-migration
+    name: Databricks Notebook Migration
+  - slug: migrating-databricks-jobs
+    name: Migrating Databricks Jobs
+  - slug: cloud-storage-mount-management
+    name: cloud storage mount management
+  - slug: multi-cloud-storage-integration
+    name: multi cloud storage integration
+  - slug: mount-external-storage-to-compute-clusters
+    name: mount external storage to compute clusters
+  - slug: cluster-storage-management
+    name: cluster storage management
+  - slug: what-is-a-cloud-storage-mount
+    name: what is a cloud storage mount
+  - slug: spark-submit-multiple-jobs
+    name: Spark Submit Multiple Jobs
+  - slug: spark-run-multiple-jobs-in-parallel
+    name: Spark Run Multiple Jobs In Parallel
+  - slug: spark-shuffle-optimization
+    name: Spark Shuffle Optimization
+  - slug: submit-multiple-spark-jobs
+    name: Submit Multiple Spark Jobs
+  - slug: spark-job-orchestration-using-airflow
+    name: Spark job orchestration using Airflow
+  - slug: spark-orchestration-with-airflow
+    name: Spark orchestration with Airflow
+  - slug: airflow-spark-operator
+    name: Airflow Spark operator
+  - slug: multi-cloud-orchestration
+    name: Multi-cloud orchestration
+  - slug: spark-job-monitoring
+    name: Spark job monitoring
+  - slug: databricks-optimization-techniques
+    name: Databricks optimization techniques
+  - slug: databricks-cost-optimization-tools
+    name: Databricks cost optimization tools
+  - slug: databricks-cost-optimization-best-practices
+    name: Databricks cost optimization best practices
+  - slug: databricks-cost-reduction
+    name: Databricks cost reduction
+  - slug: databricks-cost-optimization-strategies
+    name: Databricks cost optimization strategies
+  - slug: why-is-databricks-so-expensive
+    name: Why is databricks so expensive
+  - slug: spark-thrift-server
+    name: Spark thrift server
+  - slug: spark-jdbc-connection
+    name: Spark jdbc connection
+  - slug: spark-thrift-server-configuration
+    name: Spark thrift server configuration
+  - slug: spark-jdbc-options
+    name: Spark jdbc options
+  - slug: apache-spark-sql-thrift
+    name: Apache Spark SQL thrift
+  - slug: secrets-management-in-data-platforms
+    name: Secrets management in data platforms
+  - slug: multi-cloud-secrets-management
+    name: Multi cloud secrets management
+  - slug: secure-credential-management
+    name: Secure credential management
+  - slug: centralized-secret-management
+    name: Centralized secret management
+  - slug: enterprise-secrets-governance
+    name: Enterprise secrets governance
+  - slug: access-control-management
+    name: Access control management
+  - slug: data-governance-dashboard
+    name: Data governance dashboard
+  - slug: multi-tenant-access-control
+    name: Multi tenant access control
+  - slug: user-permissions-management
+    name: User permissions management
+  - slug: role-based-access-control-dashboard
+    name: Role based access control dashboard
+  - slug: role-based-access-control-system
+    name: Role based access control system
+  - slug: aws-cost-optimization
+    name: AWS Cost Optimization
+  - slug: reduce-aws-costs
+    name: Reduce AWS Costs
+  - slug: aws-cost-saving-strategies
+    name: AWS Cost Saving Strategies
+  - slug: aws-cost-management
+    name: AWS Cost Management
+  - slug: aws-cloud-cost-optimization
+    name: AWS Cloud Cost Optimization
+  - slug: aws-cost-saving-analysis
+    name: AWS Cost Saving Analysis
+  - slug: cloud-optimized-architecture
+    name: Cloud Optimized Architecture
+  - slug: spark-gpu-acceleration
+    name: Spark GPU Acceleration
+  - slug: spark-cluster-architecture
+    name: Spark Cluster Architecture
+  - slug: spark-auto-scaling
+    name: Spark Auto Scaling
+  - slug: spark-cluster-autoscaling
+    name: Spark Cluster Autoscaling
+  - slug: spark-job-running-forever
+    name: Spark Job Running Forever
+  - slug: how-to-debug-long-running-spark-jobs
+    name: How To Debug Long Running Spark Jobs
+  - slug: debugging-spark-jobs
+    name: Debugging Spark Jobs
+  - slug: spark-cluster-optimization
+    name: Spark Cluster Optimization
+  - slug: spark-shuffle-optimization
+    name: Spark shuffle optimization
+  - slug: debugging-spark-jobs
+    name: Debugging spark jobs
+  - slug: how-to-optimize-spark-jobs
+    name: How to optimize spark jobs
+  - slug: why-spark-job-is-expensive
+    name: Why spark job is expensive
+  - slug: microsoft-azure-sso-integration
+    name: Microsoft Azure SSO Integration
+  - slug: centralized-identity-management-system
+    name: Centralized Identity Management System
+  - slug: enterprise-user-authentication
+    name: Enterprise User Authentication
+  - slug: ldap-authentication-workflow
+    name: LDAP Authentication Workflow
+  - slug: sso-authentication
+    name: SSO Authentication
+  - slug: azure-active-directory-authentication
+    name: Azure Active Directory Authentication
+  - slug: big-data-performance-tuning
+    name: Big data performance tuning
+  - slug: data-observability-tools
+    name: Data observability tools
+  - slug: big-data-reduce-costs
+    name: Big data reduce costs
+  - slug: apache-spark-observability
+    name: Apache Spark observability
+  - slug: cloud-cost-comparison
+    name: Cloud Cost Comparison
+  - slug: cloud-cost-optimization
+    name: Cloud Cost Optimization
+  - slug: cloud-cost-visibility
+    name: Cloud Cost Visibility
+  - slug: cloud-cost-estimation
+    name: Cloud Cost Estimation
+  - slug: spark-cost-optimization
+    name: Spark Cost Optimization
+  - slug: cloud-cost-savings
+    name: Cloud Cost Savings
+  - slug: how-to-run-a-spark-job-from-command-line-primary
+    name: How to run a spark job from command line (primary)
+  - slug: faster-data-operations-using-cli
+    name: Faster data operations using CLI
+  - slug: how-cli-improves-operational-efficiency
+    name: How CLI improves operational efficiency
+  - slug: command-line-auto-completion
+    name: Command line auto completion
+  - slug: cli-tab-completion
+    name: CLI tab completion
+  - slug: best-databricks-alternatives
+    name: Best databricks alternatives
+  - slug: databricks-competitors
+    name: Databricks competitors
+  - slug: companies-similar-to-databricks
+    name: Companies similar to databricks
+  - slug: reduce-databricks-cost
+    name: Reduce databricks cost
+  - slug: what-is-the-best-alternative-to-databricks
+    name: What is the best alternative to databricks
+  - slug: how-to-reduce-databricks-costs
+    name: How to reduce databricks costs
+  - slug: is-databricks-expensive
+    name: Is databricks expensive
+  - slug: databricks-vs-open-source-spark
+    name: Databricks vs open source spark
+  - slug: best-spark-platform-for-data-engineering
+    name: Best spark platform for data engineering
+  - slug: data-skew-in-spark
+    name: Data skew in Spark
+  - slug: spark-data-skew-detection
+    name: Spark data skew detection
+  - slug: spark-skewed-partitions
+    name: Spark skewed partitions
+  - slug: spark-hotkeys
+    name: Spark hotkeys
+  - slug: spark-straggler-tasks
+    name: Spark straggler tasks
+  - slug: spark-shuffle-skew
+    name: Spark shuffle skew
+  - slug: spark-salting-technique
+    name: Spark salting technique
+  - slug: spark-aqe-skew-join
+    name: Spark AQE skew join
+  - slug: spark-broadcast-join-optimization
+    name: Spark broadcast join optimization
+  - slug: >-
+      spark-workload-management-spark-workload-scaling-spark-vectorized-engine-spark-performance-optimization-big-data-cost-reduction-reduce-cost-of-cloud-computing-spark-cost-optimization
+    name: >-
+      Spark workload management Spark workload scaling Spark vectorized engine
+      Spark performance optimization big data cost reduction reduce cost of
+      cloud computing spark cost optimization
+  - slug: c-query-engine-vs-jvm
+    name: C++ query engine vs JVM
+  - slug: duckdb-vs-apache-spark
+    name: DuckDB vs Apache Spark
+  - slug: vectorized-query-execution
+    name: Vectorized query execution
+  - slug: >-
+      spark-performance-optimization-spark-performance-tuning-spark-cost-optimization-spark-optimization-techniques
+    name: >-
+      Spark performance optimization spark performance tuning Spark cost
+      optimization spark optimization techniques
+  - slug: >-
+      ec2-instance-type-workload-based-ec2-aws-ec2-instance-selection-ec2-performance-optimization-ec2-performance-troubleshooting
+    name: >-
+      ec2 instance type workload-based EC2 aws ec2 instance selection ec2
+      performance optimization ec2 performance troubleshooting
+  - slug: fortune-500-case-study
+    name: Fortune 500 case study
+  - slug: data-cost-reduction
+    name: Data cost reduction
+  - slug: spark-workloads
+    name: Spark workloads
+  - slug: financial-services
+    name: Financial services

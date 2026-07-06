@@ -3,7 +3,7 @@ import renderToString from "next-mdx-remote/render-to-string";
 import { MdxRemote } from "next-mdx-remote/types";
 import hydrate from "next-mdx-remote/hydrate";
 import matter from "gray-matter";
-import { fetchPostContent } from "../../lib/posts";
+import { fetchPostContent, PostContent } from "../../lib/posts";
 import fs from "fs";
 import yaml from "js-yaml";
 import { parseISO } from 'date-fns';
@@ -20,7 +20,9 @@ export type Props = {
   tags: string[];
   author: string;
   description?: string;
+  thumbnail?: string;
   source: MdxRemote.Source;
+  recentPosts: PostContent[];
 };
 
 const components = { InstagramEmbed, YouTube, TwitterTweetEmbed };
@@ -37,7 +39,9 @@ export default function Post({
   tags,
   author,
   description = "",
+  thumbnail,
   source,
+  recentPosts,
 }: Props) {
   const content = hydrate(source, { components })
   return (
@@ -48,6 +52,8 @@ export default function Post({
       tags={tags}
       author={author}
       description={description}
+      thumbnail={thumbnail}
+      recentPosts={recentPosts}
     >
       {content}
     </PostLayout>
@@ -69,16 +75,24 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object }
   });
   const mdxSource = await renderToString(content, { components, scope: data });
+  
+  // Fetch top 3 recent posts excluding current
+  const allPosts = fetchPostContent();
+  const recentPosts = allPosts
+    .filter(p => p.slug !== slug)
+    .slice(0, 3);
+
   return {
     props: {
       title: data.title,
       dateString: data.date,
       slug: data.slug,
-      description: "",
-      tags: data.tags,
-      author: data.author,
-      source: mdxSource
+      description: data.meta_description || "",
+      tags: data.tags || [],
+      author: data.author || "Yeedu Team",
+      thumbnail: data.thumbnail || null,
+      source: mdxSource,
+      recentPosts
     },
   };
 };
-

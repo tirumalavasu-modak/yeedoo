@@ -17,5 +17,5 @@ function generateAuthorMap(): { [key: string]: AuthorContent } {
 }
 
 export function getAuthor(slug: string) {
-  return authorMap[slug];
+  return authorMap[slug] || { slug, name: slug, introduction: "" };
 }

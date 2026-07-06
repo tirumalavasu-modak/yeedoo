@@ -1,0 +1,130 @@
+---
+slug: accelerating-query-performance-with-iceberg-puffin-0g8k7
+title: 'Accelerating Big Data Query Optimization with Iceberg Puffin '
+date: '2026-06-01'
+author: gaurav-thalpat
+tags:
+  - big-data-query-optimization
+  - apache-iceberg-performance
+  - iceberg-puffin
+  - bigquery-cost-optimization
+  - computing-iceberg-queries-efficiently
+thumbnail: >-
+  https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1ae6f35fed8844a9027a8b_Accelerating%20Big%20Data%20Query%20Optimization%20with%20Iceberg%20Puffin.avif
+thumbnail_alt: 'Accelerating Big Data Query Optimization with Iceberg Puffin '
+meta_title: 'Big Data Query Optimization with Apache Iceberg Puffin '
+meta_description: >-
+  Discover how Iceberg Puffin powers big data query optimization using advanced
+  statistics for faster queries, better efficiency, and reduced cloud costs. 
+og_title: Accelerating Query Performance with Iceberg Puffin
+og_description: >-
+  Explore how Apache Iceberg and its Puffin format help in optimizing query
+  performance in modern data lakes by storing smart statistics and indexes. 
+---
+
+In the last decade, cloud computing has changed how IT infrastructure and applications are deployed and managed. Availability and scalability are no longer a concern; developers can now focus on their code without worrying about the underlying infrastructure requirements. However, cost and performance remain the top challenges for organizations dealing with big data query optimization and analytics use cases.
+
+‍The data community has always strived to develop innovative [**cloud optimization solutions**](https://www.yeedu.io/) to improve resource utilization, reduce costs, and deliver better performance. Leveraging cloud object storage and open-source technologies to support AI and analytics workloads is a big step in that direction. Leading at the forefront is Apache Iceberg, an open table format that provides data warehouse-like capabilities to data lakes. The Iceberg community has also adopted Puffin, a file format that stores statistics to improve Apache Iceberg performance and query efficiency.
+
+This blog will introduce you to Apache Iceberg and Puffin formats and explain how Puffin can help in computing Iceberg queries efficiently for modern datal lakehouses.
+
+## Apache Iceberg Overview
+
+Let’s start with the basics.
+
+As a data practitioner, you would have dealt with file formats like CSV, JSON, or XML. Data engineers are also familiar with file formats like Apache Parquet, Apache ORC, and Apache Avro widely adopted file formats for implementing data lakes and lakehouses. Data files created using these formats are stored in cloud object storage, such as Amazon S3.
+
+Open table formats provide a metadata layer on top of these data files. This metadata layer organizes and maintains data files to support features like ACID transactions, time travel, and schema evolution. Apache Iceberg, Apace Hudi, and Linux Foundation’s Delta Lake are leading open table formats adopted across industries.
+
+Among these, Apache Iceberg stands out for its strong community support and broad vendor adoption. It enables the implementation of data lakehouse architecture from BI to AI use cases. Iceberg also offers unique features like hidden partitions and partition layout evolution and supports Parquet, ORC, and Avro file formats ideal for big data query optimization at scale.
+
+Here is a simplified view of the Apache Iceberg layout based on the table spec documentation.
+
+‍
+
+![Apache Iceberg layout ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a197ddbac9a21b7c5b9a631_Accelerating%20Big%20Data%20Query1.avif)
+
+‍
+
+As shown in the above diagram, Apache Iceberg tables are organized into two key layers the metadata layer and the data layer along with a built-in catalog that stores the mapping of tables and the location of their respective metadata files.
+
+The metadata layer consists of the metadata file, manifest lists, and manifest files as described below:
+
+*   The metadata file maintains and tracks the table schema, partition, and snapshot changes. Snapshot is a "point-in-time" state of data stored in the Iceberg tables
+*   The manifest files point to the data files that hold the actual data. It also holds column-level stats information, like the minimum and maximum values per column.
+*   The data layer consists of actual data files created using open file formats like Apache Parquet.
+
+The manifest list and manifest files help with data skipping. Data skipping is an activity that query engines perform to minimize the volume of data scans when retrieving data from tables. The engine skips reading unwanted manifest and data files, thus reducing I/O and improving the overall query performance.
+
+Apart from the partition and column-level statistics stored in manifest files, query engines can leverage additional stats to improve query performance. Query optimizer, a critical component within a query engine, can use these stats to decide the most efficient query execution method.
+
+Let’s discuss this in a bit more detail.
+
+### How Query Optimizers Use Statistics?
+
+SQL processing engines use optimizers to analyze different execution plans and determine the most efficient one. For example, when you join three tables, the optimizers decide which two tables to join first to get an output to join with the third table. The optimizer decides the optimal plan based on available statistics.
+
+An optimizer based on the cost method is known as a Cost-based Optimizer (CBO). While there are other methods like Rule-based Optimizer (RBO), most compute engines dominantly use CBO as it provides a better query execution approach that reduces the query cost. The CBO method leverages the table statistics to estimate the cost of query. For each execution plan, CBO estimates the utilization of resources like compute, memory, and I/O and the associated cost. It then chooses the lowest of them all for executing the query.
+
+One of the essential stats that optimizers leverage is the ‘approximate Number of Distinct Values’ (NDV) for each column. It is one of the valuable stats that the CBO uses for decision-making.
+
+But how is NDV and CBO related to Iceberg Puffin? Let’s try to understand this.
+
+### Understanding Iceberg Puffin
+
+The Iceberg community adopted the Puffin format to improve the performance of queries that retrieve data from Iceberg tables. Puffin is a file format to store statistics and indexes for Iceberg tables and columns. These are additional stats like NDV that cannot be directly stored in the manifest files. Query engines can leverage the manifest and Puffin files to determine the optimal execution path.
+
+The below diagram shows the different files created as part of Iceberg tables and how they are used for data skipping and performance optimization:
+
+‍
+
+![Iceberg table file structure for performance optimization.](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a197dfa6d63926371b71a4d_Accelerating%20Big%20Data%20Query2.avif)
+
+‍
+
+Files created as part of Iceberg open table format along with the Puffin file
+
+As shown in the above diagram, Puffin stores stats that are different from the regular column-level stats, like max and min values stored in manifest files. Puffin stores stats like distinct value counts per column, which optimizers can use to decide the best execution plans. As these stats are size-intensive, Puffin format was introduced to store them in a different file, enabling multiple engines to read this file and access the stats without recalculating them.
+
+Puffin stores the stats and indexes related information (also known as blobs) and metadata details required to interpret these blobs. For calculating stats like NDV, Puffin uses an algorithm known as "Theta Sketch"
+
+Theta Sketch is part of the Apache DataSketches library. Apache DataSketches provides various algorithms (known as sketches) for operations like distinct counting, calculating frequently occurring items, and others. Theta Sketch helps to estimate distinct counts. It is difficult to calculate the exact distinct counts with 100% accuracy for large volumes of data. Theta Sketch provides approximate values of distinct counts by hashing/sampling the overall dataset. These approximate distinct counts (NDV) are stored in Puffin and are leveraged by the optimizers for efficiently retrieving data from Iceberg tables.
+
+### Iceberg Puffin Benefits
+
+The Puffin file, coupled with NDV stats, can offer multiple measurable benefits:
+
+#### Query optimization
+
+NDV is an important parameter used by the optimizers during query execution. It helps to optimize ‘group by’ ‘distinct’, and ‘count’ queries. It can help decide the join order to optimize Apache Iceberg performance and overall query throughput.
+
+#### Resource optimization
+
+By using Puffin stats, optimizers can choose the most efficient execution path, reducing compute and I/O requirements. This contributes directly to cloud cost optimization, as queries consume fewer resources and complete faster.
+
+#### Engine interoperability
+
+Puffin provides interoperability across query engines for accessing the stats, i.e., a Puffin file created by one engine (like Trino) can be used by other compute engines for query optimization.
+
+While these are benefits of using Puffin with Iceberg, other table formats might also adopt Puffin to manage the stats in the future. This shared optimization layer accelerates analytics across multi-engine architectures and supports enterprise-grade BigQuery cost optimization strategies.
+
+### Conclusion
+
+In this article, we explored how open table formats like Apache Iceberg and Iceberg Puffin, and how it helps accelerate big data query performance optimization by leveraging stats like NDV by storing them in a dedicated file known as Puffin. These stats can help CBOs to select the most efficient path for executing a query.
+
+Amazon Athena, Amazon Redshift Spectrum, and Trino are some of the query engines that leverage Puffin stats while retrieving data from Iceberg tables. You can dive deeper into this topic and explore Apache Iceberg and Puffin and how to leverage these for your use cases.
+
+Looking for a great cloud cost optimization solution with transparent and predictable pricing? Schedule your discovery call today with [Yeedu](https://www.yeedu.io/pricing)!
+
+#### References
+
+1.  ‍[https://docs.oracle.com/cd/B10500\_01/server.920/a96533/optimops.htm](https://docs.oracle.com/cd/B10500_01/server.920/a96533/optimops.htm)[‍](https://aws.amazon.com/blogs/big-data/accelerate-query-performance-with-apache-iceberg-statistics-on-the-aws-glue-data-catalog/)
+2.  [https://aws.amazon.com/blogs/big-data/accelerate-query-performance-with-apache-iceberg-statistics-on-the-aws-glue-data-catalog/](https://aws.amazon.com/blogs/big-data/accelerate-query-performance-with-apache-iceberg-statistics-on-the-aws-glue-data-catalog/)[‍](https://www.tabular.io/blog/iceberg-202207/)
+3.  [https://www.tabular.io/blog/iceberg-202207/](https://www.tabular.io/blog/iceberg-202207/)[‍](https://dev.to/alexmercedcoder/understanding-the-apache-iceberg-manifest-list-snapshot-507)
+4.  [https://dev.to/alexmercedcoder/understanding-the-apache-iceberg-manifest-list-snapshot-507](https://dev.to/alexmercedcoder/understanding-the-apache-iceberg-manifest-list-snapshot-507)[‍](https://dev.to/alexmercedcoder/understanding-the-apache-iceberg-manifest-file-581d)
+5.  [https://dev.to/alexmercedcoder/understanding-the-apache-iceberg-manifest-file-581d](https://dev.to/alexmercedcoder/understanding-the-apache-iceberg-manifest-file-581d)[‍](https://github.com/apache/iceberg/pull/8202)
+6.  [https://github.com/apache/iceberg/pull/8202](https://github.com/apache/iceberg/pull/8202)
+
+‍
+
+‍

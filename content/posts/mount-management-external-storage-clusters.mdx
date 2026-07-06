@@ -1,0 +1,214 @@
+---
+slug: mount-management-external-storage-clusters
+title: 'Mount Management in Yeedu: Attaching External Storage to Compute Clusters'
+date: '2026-06-02'
+author: konda-samaikya
+tags:
+  - cloud-storage-mount-management
+  - multi-cloud-storage-integration
+  - mount-external-storage-to-compute-clusters
+  - cluster-storage-management
+  - what-is-a-cloud-storage-mount
+  - cloud-cost-optimization
+thumbnail: >-
+  https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1e78f374e5b73c5ad549ed_Mount%20management.avif
+thumbnail_alt: >-
+  Mount Management in Yeedu enables secure attachment of external cloud storage
+  systems to compute clusters as part of cloud storage mount management
+meta_title: 'Mount Management in Yeedu: Secure Cloud Storage Mounts '
+meta_description: >-
+  Learn how Yeedu enables secure cloud storage mount management to attach
+  external storage like Amazon S3, Azure Blob, and Google Cloud Storage to
+  compute clusters 
+og_title: 'Mount Management in Yeedu: Secure Cloud Storage Mounts '
+og_description: >-
+  Learn how Yeedu enables secure cloud storage mount management to attach
+  external storage like Amazon S3, Azure Blob, and Google Cloud Storage to
+  compute clusters 
+---
+
+## 1\. Introduction
+
+Mount Management in Yeedu enables secure attachment of external cloud storage systems to compute clusters as part of cloud storage mount management. A mount acts as a logical connection between a cluster and a storage source such as Amazon S3, Azure Blob Storage, or Google Cloud Storage.
+
+Mounts allow clusters to read or write data from external storage in a controlled, secure way, supporting cluster storage management across distributed environments.
+
+## 2\. What is a Mount
+
+What is a cloud storage mount? A mount is a configuration object that contains the following details:
+
+*   Mount name
+*   Storage type
+*   Source path such as bucket or container URL
+*   Storage Credential
+*   Read-only flag
+
+![create mount](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d4f786776ac9319cff9c2_Mount%20Management%20in%20Yeedu1.avif)
+
+## 3**. Supp**orted Storage Providers
+
+Yeedu supports mounting storage from multiple cloud providers including:
+
+*   Amazon S3
+*   Azure Blob Storage
+*   Google Cloud Storage
+
+This [multi cloud storage integration](https://yeedu.com/posts/breaking-silos-yeedus-unified-logging-to-google-aws-azure) capability ensures flexibility and scalability across environments.
+
+## 4\. Core Functional Capabilities
+
+### 4.1 Create Mount
+
+Authorized users such as Platform Admin or Admin can create a mount by providing:
+
+*   Valid storage type
+*   Valid credential configuration
+*   Valid source URL
+*   Unique mount name within the tenant
+
+Validation rules include:
+
+*   Required fields must be provided
+*   Duplicate names within the same tenant are not allowed
+*   Credential and encryption references must exist
+*   Source URL must be correctly formatted
+
+![Filled mount page ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d4f96ab324a0d2eb840c0_Mount%20Management%20in%20Yeedu2.avif)
+
+### 4.2 List and Filter Mounts
+
+Users can:
+
+*   Retrieve all mounts with pagination
+*   Filter mounts by storage type
+*   Retrieve mount details by name
+
+The system ensures correct metadata response and strict tenant-level isolation for reliable cluster storage management.
+
+### 4.3 Update Mount
+
+Mount metadata such as mount point, description, or read-only flag can be modified.
+
+Updates maintain audit timestamps and preserve tenant ownership in the overall cloud storage mount management lifecycle.
+
+![Update mount](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d4faa361baa80c4909641_Mount%20Management%20in%20Yeedu3.avif)
+
+### 4.4 Soft Delete Mechanism
+
+Yeedu implements soft delete instead of permanent deletion.
+
+When a mount is deleted:
+
+*   TO\_DATE is updated with the current timestamp
+*   The mount becomes inactive
+*   Historical records remain preserved
+
+![Delete mount](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d4fc0dc0c568f48031b12_Mount%20Management%20in%20Yeedu4.avif)
+
+## 5\. Cluster-Mount Association
+
+Mounts must be explicitly attached to clusters before use to mount external storage to compute clusters securely.
+
+### 5.1 Attach Mount
+
+Preconditions:
+
+*   Cluster must be in ERROR, or DESTROYED state
+*   Mount must be active
+
+On successful attachment:
+
+*   A mapping record is created
+*   The mount becomes accessible to the cluster
+
+![attach mount](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d4fd684df6e608607231b_Mount%20Management%20in%20Yeedu5.avif)
+
+![attaching mount](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d4feb9b01e87660cbfd3c_Mount%20Management%20in%20Yeedu6.avif)
+
+### 5.2 Detach Mount
+
+When a mount is removed from a cluster:
+
+*   The mapping record TO\_DATE is updated
+*   The cluster no longer has access
+
+Proper detachment helps maintain efficient cluster storage management.
+
+![Detach mount](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d5001a070f624a42c465e_Mount%20Management%20in%20Yeedu7.avif)
+
+## 6\. Security and Access Control
+
+### 6.1 Role-Based Access Control
+
+Platform Admin has full mount lifecycle control.
+
+Admin can manage mounts within the tenant.
+
+Viewer has read-only access and cannot create or delete mounts.
+
+Unauthorized operations return a 403 Access Denied response, ensuring secure cloud storage mount management.
+
+### 6.2 Tenant Isolation
+
+Mounts are strictly tenant-scoped.
+
+Cross-tenant operations are not allowed and return a 404 error. This ensures data segregation and multi-tenant security compliance during [multi cloud storage integration](https://yeedu.com/posts/integrating-glue-hive-and-unity-metastore-seamlessly-into-yeedu-with-zero-migration-overhead).
+
+### 6.3 Credential and Encryption Validation
+
+Mounts depend on valid credential configurations and encryption type references.
+
+Invalid credential ID or encryption reference results in 400 or 404 error responses.
+
+This prevents insecure or broken storage connections when organizations mount external storage to compute clusters.
+
+## 7\. Read-Only Enforcement
+
+If the read-only flag is set to true:
+
+*   Write operations are blocked
+*   A proper error message is returned
+
+This mechanism supports secure cluster storage management policies.
+
+## 8\. Error Handling and Validation
+
+The system properly handles the following scenarios:
+
+*   Missing required fields returns 400
+*   Duplicate mount names returns 409
+*   Invalid credential reference returns 400 or 404
+*   Attaching mount to a running cluster returns 400
+*   Deleting non-existent mount returns 404
+*   Unauthorized access returns 403
+*   Invalid source URL returns 400
+*   Cross-tenant attach attempts return 404
+
+## 9\. Lifecycle and Audit Tracking
+
+Each mount follows a lifecycle:
+
+1.  Created and active
+2.  Updated
+3.  Attached or detached
+4.  Soft deleted and inactive
+
+Lifecycle tracking ensures reliable cloud storage mount management and operational accountability.
+
+## 10\. Architectural Highlights
+
+*   **Multi-cloud compatibility –** Mount Management in Yeedu supports seamless integration across multiple cloud providers, enabling multi cloud storage integration and consistent behavior across environments.
+*   **Strict tenant isolation –** Each tenant’s storage mounts are logically and securely isolated to prevent cross-tenant data access and maintain strong security boundaries.
+*   **Secure credential abstraction –** Sensitive credentials are abstracted and managed securely through encrypted secrets, preventing direct exposure in jobs or cluster configurations.
+*   **Lifecycle enforcement –** Mounts follow defined lifecycle policies, ensuring proper creation, validation, usage, and controlled decommissioning.
+*   **Cluster state validation –** The system validates cluster readiness and state before mount operations to avoid runtime failures and ensure operational stability.
+*   **Read-only governance –** Supports read-only mount configurations to enforce data protection policies and prevent unintended modifications.
+*   **Soft deletion for compliance –** Instead of permanent removal, mounts are soft-deleted to maintain audit trails and meet compliance requirements while allowing controlled recovery and supporting [Cloud cost optimization](https://yeedu.com/posts/cut-cloud-costs-not-corners-cloud-cost-optimization) by avoiding unnecessary storage reconfiguration.
+
+## Conclusion
+
+Mount Management in Yeedu is a secure, lifecycle-driven, tenant-isolated system designed to safely connect clusters with external cloud storage.
+
+Through strong validation, role-based access control, multi-cloud support, soft deletion, and cluster state enforcement, Yeedu ensures that storage integration remains secure, auditable, and production-ready for modern cluster storage management environments.
+
+Mounts are critical components that maintain data security, tenant isolation, and cloud interoperability across the platform while enabling organizations to mount external storage to compute clusters efficiently.

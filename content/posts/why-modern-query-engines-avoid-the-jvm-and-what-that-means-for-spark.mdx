@@ -1,0 +1,183 @@
+---
+slug: why-modern-query-engines-avoid-the-jvm-and-what-that-means-for-spark
+title: Why Modern Query Engines Avoid the JVM And What That Means for Spark
+date: '2026-05-29'
+author: sadhvik-chirunomula
+tags:
+  - spark-performance-optimization
+  - c-query-engine-vs-jvm
+  - duckdb-vs-apache-spark
+  - vectorized-query-execution
+thumbnail: >-
+  https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1971de39df80166ab72b50_Why%20Modern%20Query%20Engines%20Avoid%20the%20JVM%20And%20What%20That%20Means%20for%20Spark.avif
+thumbnail_alt: Why Modern Query Engines Avoid the JVM And What That Means for Spark
+meta_title: 'Spark Performance Optimization: Beyond JVM Limits'
+meta_description: >-
+  Discover why modern engines like DuckDB skip the Java Virtual Machine and how
+  it impacts Apache Spark performance, cost, and scalability with Yeedu Turbo.
+og_title: 'Spark Performance Optimization: Beyond JVM Limits'
+og_description: >-
+  Discover why modern engines like DuckDB skip the Java Virtual Machine and how
+  it impacts Apache Spark performance, cost, and scalability with Yeedu Turbo.
+---
+
+The highest-performing query engines of the last five years: DuckDB, Velox, DataFusion, Polars, are all written in C or C++ and bypass the JVM entirely. This isn't a coincidence. The JVM imposes a structural tax on analytical workloads: garbage collection pauses, memory overhead, inability to exploit SIMD, and serialization costs. This shift has become central to modern Spark performance optimization strategies. Yeedu Turbo brings this same C++-native, SIMD-vectorized approach to distributed Spark, delivering 4–10× faster execution at 60–80% lower compute cost without changing a single line of Spark code, making it a practical path toward [Spark cost optimization](https://yeedu.com/blog/spark-cost-optimization-diagnosing-expensive-spark-jobs) at scale.
+
+## The DuckDB Effect: What Changed (DuckDB vs Apache Spark)
+
+DuckDB appeared in the analytical database landscape around 2019 and rewired expectations. A single-node, in-process columnar engine, written entirely in C++, that could outperform distributed Apache Spark clusters on datasets that fit in memory. Benchmarks showed DuckDB completing TPC-H queries in seconds that took Spark minutes, reshaping how teams evaluate DuckDB vs Apache Spark trade-offs.
+
+The performance gap wasn't about algorithms. DuckDB and Spark use similar query optimization techniques, predicate pushdown, join reordering, hash aggregation. The gap came from how the code executes on the hardware.
+
+DuckDB's designers made a deliberate architectural choice: skip the JVM, write in C++, and exploit the hardware directly. That choice unlocked three capabilities the JVM structurally cannot provide at the same efficiency, highlighting the real impact of a C++ query engine vs JVM runtime.
+
+## Three Things the JVM Can't Do Efficiently
+
+### 1\. SIMD Vectorized Execution (Vectorized query execution)
+
+Modern CPUs have SIMD (Single Instruction, Multiple Data) registers 256-bit or 512-bit wide that can process 8, 16, or even 64 values in a single clock cycle. C++ code can target these registers directly through intrinsics or compiler auto-vectorization.
+
+The JVM cannot exploit SIMD effectively. The JIT compiler produces scalar code for most operations. Even where auto-vectorization kicks in, it's limited to simple loops and often falls back to scalar paths. The result, and the reason vectorized query execution has become foundational in modern engines:
+
+.yeedu-workload-wrap { width: 100%; margin: 32px 0; font-family: Inter, sans-serif; } /\* ===== DESKTOP TABLE ===== \*/ .yeedu-workload-box { border: 1px solid #334155; border-radius: 18px; overflow: hidden; background: #020617; } .yeedu-workload-table { width: 100%; border-collapse: collapse; } .yeedu-workload-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-workload-table th { padding: 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; } .yeedu-workload-table td { padding: 18px 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e2e8f0; vertical-align: top; } .yeedu-workload-table tbody tr { transition: all 0.2s ease; } .yeedu-workload-table tbody tr:hover { background: rgba(255,255,255,0.03); } /\* ===== COLUMN STYLES ===== \*/ .job-col { font-weight: 600; color: #f8fafc; width: 30%; } .spark-col { background: rgba(239, 68, 68, 0.04); } .turbo-col { background: rgba(34, 197, 94, 0.05); } /\* ===== BADGES ===== \*/ .metric-badge { display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 10px; font-size: 12px; font-weight: 700; line-height: 1.4; } /\* RED = STANDARD SPARK (JVM) \*/ .standard { background: rgba(239, 68, 68, 0.14); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.18); } /\* GREEN = YEEDU (C++) \*/ .turbo { background: rgba(34, 197, 94, 0.14); color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.18); } .turbo-tag { display: inline-block; margin-left: 8px; padding: 3px 8px; border-radius: 999px; background: rgba(242, 96, 12, 0.14); color: #f2600c; font-size: 10px; font-weight: 700; letter-spacing: 0.05em; } /\* ===== MOBILE CARDS ===== \*/ .mobile-job-cards { display: none; } @media (max-width: 768px) { .yeedu-workload-box { display: none; } .mobile-job-cards { display: flex; flex-direction: column; gap: 14px; } .job-card { background: #020617; border: 1px solid #334155; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 24px rgba(0,0,0,0.28); } .job-header { padding: 14px 16px; border-bottom: 1px solid #1e293b; background: linear-gradient(90deg, #020617, #0f172a); } .job-title { font-size: 15px; font-weight: 700; color: #f8fafc; line-height: 1.4; } .job-body { padding: 14px; display: flex; flex-direction: column; gap: 12px; } .compare-block { border-radius: 14px; padding: 12px; } .standard-block { background: rgba(239, 68, 68, 0.06); border: 1px solid rgba(248, 113, 113, 0.16); } .turbo-block { background: rgba(34, 197, 94, 0.06); border: 1px solid rgba(74, 222, 128, 0.16); } .compare-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; color: #94a3b8; font-weight: 700; } .compare-value { font-size: 13px; line-height: 1.6; font-weight: 700; display: flex; align-items: center; } .standard-block .compare-value { color: #f87171; } .turbo-block .compare-value { color: #4ade80; } }
+
+Operation
+
+JVM (HotSpot JIT)
+
+C++ with AVX-512
+
+Column scan + filter (INT64)
+
+~2.5 GB/s
+
+~12 GB/s 4.8× SPEEDUP
+
+Hash aggregation (GROUP BY)
+
+~1.8 GB/s
+
+~8 GB/s 4.4× SPEEDUP
+
+Columnar join probe
+
+~1.2 GB/s
+
+~6 GB/s 5.0× SPEEDUP
+
+String comparison (dictionary)
+
+~1.5 GB/s
+
+~10 GB/s 6.7× SPEEDUP
+
+Column scan + filter (INT64)
+
+JVM (HotSpot JIT)
+
+~2.5 GB/s
+
+C++ with AVX-512
+
+~12 GB/s 4.8× SPEEDUP
+
+Hash aggregation (GROUP BY)
+
+JVM (HotSpot JIT)
+
+~1.8 GB/s
+
+C++ with AVX-512
+
+~8 GB/s 4.4× SPEEDUP
+
+Columnar join probe
+
+JVM (HotSpot JIT)
+
+~1.2 GB/s
+
+C++ with AVX-512
+
+~6 GB/s 5.0× SPEEDUP
+
+String comparison (dictionary)
+
+JVM (HotSpot JIT)
+
+~1.5 GB/s
+
+C++ with AVX-512
+
+~10 GB/s 6.7× SPEEDUP
+
+_  
+Approximate throughput on a single core, modern Xeon/EPYC. Exact numbers depend on data distribution and query pattern._
+
+This isn't a minor optimization. SIMD is a 4–7× multiplier on the core operations that dominate analytical workloads: scans, filters, aggregations, and joins, making vectorized query execution a primary driver of [Spark performance optimization](https://yeedu.com/blog/enhancing-cross-cloud-spark-performance-tuning-with-a-single-unified-execution-engine-for-predictable-results).
+
+### 2\. Predictable Memory Management (C++ query engine vs JVM)
+
+The JVM uses garbage collection (GC) to manage memory. For transactional workloads with short-lived objects, GC works well. For analytical workloads that allocate large buffers, build hash tables, and sort billions of rows, GC becomes a liability, and this is where the C++ query engine vs JVM distinction becomes most visible:
+
+*   **GC pauses.** Even G1GC or ZGC introduce stop-the-world pauses that stall execution. On large heaps (32–128 GB, common for Spark executors), GC pauses of 200ms–2s are routine. Over a multi-stage query, cumulative GC time can reach 10–20% of total execution.
+*   **Memory overhead.** Every Java object carries a 12–16 byte header. An array of 1 billion integers needs 4 GB in C++ and ~20 GB on the JVM after accounting for object headers, padding, and pointer indirection.
+*   **Heap pressure.** Large intermediate results (shuffle buffers, hash tables) stress the GC, causing more frequent collections and longer pauses a feedback loop that degrades performance non-linearly as data grows.
+
+C++ engines manage memory explicitly: arena allocators, memory-mapped buffers, and Every one of these engines was designed from scratch to avoid the JVM. Every one delivers performance that JVM-based engines cannot match on equivalent hardware, which has redefined expectations for both Spark performance optimization and Spark cost optimization.
+
+## The Spark Problem: Distributed Scale, JVM Overhead
+
+Spark solves a different problem than DuckDB. DuckDB handles single-node analytics. Spark handles distributed data processing at petabyte scale shuffles across hundreds of nodes, fault tolerance, dynamic resource allocation.
+
+But Spark's execution layer is JVM-based. Every map, filter, join, and aggregation runs through the JVM with all the overhead described above. The distributed architecture is sound. The per-node execution efficiency is not, which is why the DuckDB vs Apache Spark comparison often comes down to execution efficiency rather than capability.
+
+This creates a frustrating reality: Spark does the right thing architecturally but executes it on the wrong runtime.
+
+The result shows up in cost:
+
+*   A 10-node Spark cluster running a 2-hour ETL job uses 20 node-hours.
+*   The same job on a C++ vectorized engine completes in 20–30 minutes on 6 nodes, 3 node-hours, demonstrating the direct link between execution efficiency and Spark cost optimization.
+*   The workload is identical. The data is identical. The difference is execution efficiency.
+
+## Yeedu Turbo: The C++ Engine for Distributed Spark
+
+The [Yeedu Turbo Engine](https://yeedu.com/product/turbo-engine) brings the DuckDB-class execution model to distributed Spark, bridging the gap between C++ query engine vs JVM performance limitations:
+
+*   **Written in C++:** the same language as DuckDB, ClickHouse, and Velox.
+*   **SIMD-vectorized execution:** processes columnar batches through AVX2/AVX-512 instructions, achieving the same 4–7× per-core throughput advantage, a direct application of vectorized query execution in distributed systems.
+*   **No GC pauses:** memory is managed explicitly with arena allocators. Execution latency is predictable regardless of data size.
+*   **Cache-optimized columnar processing:** data flows through CPU caches in contiguous buffers, not scattered JVM objects.
+*   **Drop-in Spark compatibility:** runs existing Spark SQL, DataFrame, and Dataset APIs without code changes. The engine replaces Spark's JVM execution layer while preserving the distributed coordination, fault tolerance, and ecosystem compatibility, making it a viable path for real-world Spark performance optimization without migration risk.
+
+## Why Not Just Fix the JVM?
+
+This is a fair question. The JVM has improved significantly ZGC reduces GC pauses, Project Panama targets native memory, Project Valhalla addresses object overhead. But these improvements face a fundamental constraint: backward compatibility.
+
+The JVM must remain compatible with billions of lines of existing Java code. It cannot change the object model, the memory layout, or the garbage collection contract without breaking the ecosystem. Every improvement is incremental, constrained by the architecture, which is why the gap between C++ query engine vs JVM execution models persists.
+
+C++ engines start with a clean sheet. They design the memory layout for the workload, target the hardware directly, and accept no legacy constraints. The gap will narrow, but it won't close.
+
+### Frequently Asked Questions
+
+**If DuckDB is so fast, why not just use it instead of Spark?**
+
+DuckDB is a single-node, in-process engine. It's exceptional for datasets that fit in memory on one machine (up to ~100–200 GB). For distributed workloads spanning terabytes to petabytes across hundreds of nodes, which is where most enterprise data processing lives you need Spark's distributed architecture. Yeedu Turbo gives you DuckDB-class execution efficiency with Spark, effectively combining the strengths highlighted in DuckDB vs Apache Spark comparisons.
+
+**Does Yeedu Turbo require rewriting Spark jobs?**
+
+No. Turbo replaces Spark's internal execution engine, not the API surface. Existing Spark SQL, DataFrame, and PySpark code runs unmodified. The change is at the infrastructure layer, not the application layer, which makes it a low-friction approach to Spark performance optimization.
+
+**How does Yeedu Turbo handle Spark features like UDFs and custom serializers?**
+
+UDFs that call into JVM code still run on the JVM. Turbo accelerates the core query execution scans, filters, joins, aggregations, sorts which typically account for 80–90% of job runtime. The net effect is still a 4–10× improvement on overall job duration, delivering meaningful Spark cost optimization even with partial JVM dependency.
+
+**What about Spark's Tungsten and whole-stage codegen?**
+
+Tungsten was Spark's attempt to address JVM overhead with off-heap memory and runtime code generation. It helped moving Spark from 10× slower than native to 3–5× slower. But code generation in the JVM still produces scalar code without SIMD, still runs through the JIT compiler, and still faces GC pressure on non-Tungsten paths, limiting its ability to match true vectorized query execution. A native C++ engine starts where Tungsten ends.
+
+**Is the 4–10× improvement consistent across all workloads?**
+
+The improvement range depends on the workload profile. Compute-heavy jobs (large joins, aggregations, complex filters) see 6–10×. I/O-bound jobs (simple scans of very large datasets) see 3–5×. The median across production workloads is 5–7×, which aligns with real-world Spark performance optimization benchmarks observed in native execution engines.
+
+‍

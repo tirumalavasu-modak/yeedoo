@@ -1,0 +1,142 @@
+---
+slug: run-spark-job-from-command-line
+title: 'Yeedu CLI: Running Spark Jobs from the Command Line'
+date: '2026-06-02'
+author: vishnu-prasad-boorla
+tags:
+  - how-to-run-a-spark-job-from-command-line-primary
+  - faster-data-operations-using-cli
+  - how-cli-improves-operational-efficiency
+  - command-line-auto-completion
+  - cli-tab-completion
+  - spark-performance-optimization
+thumbnail: >-
+  https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1e796ed4ba43c9a67a787b_Yeedu%20CLI%20Running%20Spark%20Jobs%20from%20the%20Command.avif
+thumbnail_alt: 'Yeedu CLI Powering Yeedu Operations from the Command Line '
+meta_title: 'How to Run a Spark Job from Command Line with Yeedu CLI '
+meta_description: >-
+  Learn how to run a Spark job from the command line using Yeedu CLI. Execute,
+  monitor, and optimize Spark workloads faster with secure, scriptable CLI
+  workflows. 
+og_title: How to Run a Spark Job from Command Line Using a CLI
+og_description: >-
+  Learn how to run a Spark job from command line to automate workflows, monitor
+  jobs in real time, and manage data operations faster than UI-based workflows. 
+---
+
+Modern data engineering teams spend a significant amount of time managing infrastructure clusters, jobs, notebooks, and environments. While graphical interfaces are useful for exploration and visibility, they are not always the most efficient option for repetitive or operational workflows, especially when teams are aiming for faster data operations using a CLI-first approach.
+
+Yeedu CLI is a native command-line interface for the [Yeedu data platform](https://yeedu.com/product/overview), designed to give engineers direct, scriptable access to everything they can do in the Yeedu UI straight from the terminal. It enables teams to run, monitor, and optimize Spark workloads entirely from the command line, without relying on slow, click-heavy workflows.
+
+It is not a separate product. It is not an external tool. It is simply the fastest way to work with Yeedu and a practical example of how CLI improves operational efficiency in modern data platforms
+
+## **A Native Interface to the Yeedu Platform**
+
+Yeedu CLI is built on top of the same APIs, security model, and permissions used by the Yeedu UI. Every command you run through the CLI operates on your actual Yeedu workspaces, clusters, jobs, and notebooks.
+
+Whether you prefer visual interaction or terminal-driven workflows, you are working with the same Yeedu platform, just through different interfaces. This parity ensures that automations created in the CLI behave exactly the same as actions performed in the UI, making it safe to operationalize critical workflows.
+
+## **Consistent Experience Across Operating Systems**
+
+Data teams rarely operate on a single operating system. Production environments often run on Linux, data scientists prefer macOS, and analysts frequently work on Windows.
+
+Yeedu CLI delivers a consistent experience across Windows, Linux, and macOS, allowing teams using Yeedu to share scripts, automation, and operational workflows without platform-specific adjustments.
+
+Install once. Use everywhere. Operate Yeedu the same way across your entire team as an essential requirement for scalable, CLI-driven data operations.
+
+## **From Minutes in the UI to Seconds in the CLI**
+
+Many routine operational tasks such as creating clusters, triggering jobs, monitoring execution, or retrieving logs require multiple steps when performed through a web interface. Each action involves navigation, page loads, and manual refreshes, which slows down day-to-day operations.
+
+With **Yeedu CLI**, the same workflows are reduced to single, explicit commands that can be executed directly from the terminal. This is one of the most direct ways teams experience faster data operations using CLI-based tooling.
+
+For teams wondering how to run a Spark job from the command line, Yeedu CLI removes the need for custom scripts or brittle integrations. Job execution, monitoring, and log access are all first-class CLI operations.
+
+For teams [running multiple jobs](https://yeedu.com/posts/multiplexing-your-spark-submit-multiple-spark-jobs-kill-the-queue-and-cut-costs) daily, these time savings quickly add up. Tasks that previously took several minutes through the UI can now be completed in seconds using the CLI.
+
+### **Real-Time Job Monitoring**
+
+Yeedu CLI also supports real-time job monitoring directly from the terminal. By using the --follow flag while starting a job, you can continuously track its execution status.
+
+When --follow is enabled, the CLI continuously fetches the job’s status until it reaches a terminal state:
+
+*   DONE
+*   ERROR
+*   STOPPED
+*   TERMINATED
+
+This is especially useful during development, debugging, or production monitoring, where immediate feedback is critical. By reducing delays in detection and response, CLI-based monitoring directly contributes to better [Spark performance optimization](https://yeedu.com/posts/enhancing-cross-cloud-spark-performance-tuning-with-a-single-unified-execution-engine-for-predictable-results) at runtime.  
+
+Instead of switching between the terminal and the UI, engineers can start a job and monitor its progress in a single, uninterrupted workflow.
+
+At scale, this level of control and visibility significantly improves operational efficiency and reduces context switching across tools.
+
+## **Simple Installation and Secure Authentication**
+
+Installing Yeedu CLI takes a single command:
+
+Once installed, authentication can be configured in multiple secure ways.
+
+### **Username and Password**
+
+### **Token-Based Authentication**
+
+The CLI automatically manages sessions and token refresh, allowing you to authenticate once and continue working without interruption, a key requirement for secure, [automated Spark job execution](https://yeedu.com/product/overview) from the command line.
+
+## **Intelligent Tab Completion for Faster Workflows**
+
+Yeedu CLI includes built-in tab completion to help users discover commands and options as they work.
+
+This CLI tab completion capability reduces the need to constantly reference documentation and minimizes errors when constructing complex commands especially useful during active development or incident response.
+
+By speeding up command discovery and reducing syntax errors, auto completion plays a direct role in improving day-to-day operational efficiency.
+
+## **Everything You Can Do in Yeedu From the Terminal**
+
+Yeedu CLI provides comprehensive access to platform capabilities.
+
+### **Resource Discovery**
+
+### **Workspace Operations**
+
+### **Cluster Management**
+
+### **Job Orchestration**
+
+Create and manage Spark jobs, schedule executions using cron expressions, monitor runs in real time, and retrieve logs all without leaving the terminal. This end-to-end control is central to how CLI improves operational efficiency for Spark-based data platforms.
+
+## **Designed with Familiar CLI Conventions**
+
+Yeedu CLI follows well-established command-line patterns, making it intuitive for engineers already familiar with modern CLIs.
+
+*   Predictable command structure: yeedu &lt;resource&gt; &lt;action&gt; &lt;options&gt;
+
+*   Consistent flag naming across commands
+
+*   Output formats including JSON, and YAML
+
+*   Built-in help using --help
+
+*   Backward compatibility across versions
+
+Every command is designed around real Yeedu workflows managing Spark jobs, notebooks, and distributed compute environments.
+
+## **Final Thoughts**
+
+Visual interfaces are essential for understanding and monitoring systems. However, when it comes to executing repeatable workflows at scale, Yeedu CLI gives engineers a more efficient, scriptable, and predictable way to work with Yeedu.
+
+Yeedu CLI is the fastest way to interact with the [Yeedu platform](https://yeedu.com/), and a practical foundation for Spark performance optimization through automation and repeatability.
+
+Whether you are testing a single Spark job or orchestrating large-scale production workloads, Yeedu CLI enables you to operate Yeedu with precision, speed, and confidence directly from your terminal.
+
+### **Documentation**
+
+Complete documentation is available at [**docs.yeedu.io**](https://docs.yeedu.io/):
+
+*   Setup and configuration guides
+
+*   Full command reference with examples
+
+*   Tutorials and advanced usage patterns
+
+These resources are designed to help teams adopt Yeedu CLI quickly and safely.

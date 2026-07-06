@@ -1,0 +1,176 @@
+---
+slug: customized-disk-configuration-in-yeedu
+title: Customized Disk Configuration in Yeedu
+date: '2026-06-01'
+author: vineela-bellamkonda
+tags: []
+thumbnail: >-
+  https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d3abe6b2ac4768f89b65d_Customized%20Disk%20Configuration%20in%20Yeedu.avif
+thumbnail_alt: Customized Disk Configuration in Yeedu
+meta_title: 'Custom Disk Configuration in Yeedu: Cloud Storage Performance Control'
+meta_description: ''
+og_title: 'Custom Disk Configuration in Yeedu: Cloud Storage Performance Control'
+og_description: ''
+---
+
+## Introduction
+
+Cloud platforms make compute scaling easy, but **storage performance** often becomes the limiting factor in distributed environments. Workloads such as analytics pipelines, machine learning training, databases, and streaming services generate diverse disk I/O patterns. When cluster storage is not aligned with these patterns, job execution slows, latency increases, and compute resources remain underutilized creating a classic disk bottleneck in distributed systems.
+
+Yeedu addresses this challenge through **customized disk configuration,** enabling users to attach cloud-native disks to clusters with precisely defined size, IOPS, and throughput directly from a unified interface, without manual cloud provisioning. This approach enables effective cloud disk performance optimization while keeping infrastructure management simple.
+
+## When Disk Configuration Becomes Necessary
+
+Disk configuration becomes essential when workload performance is limited by storage I/O rather than compute. Below are common real-world situations where default cluster disks are unable to meet workload demands.
+
+### High-Volume Analytics Pipelines  
+
+A data engineering team runs a Spark ETL pipeline processing terabytes of data daily. The cluster scales compute nodes successfully, but job runtimes remain high. Monitoring shows CPU cores waiting on disk operations. Default general-purpose disks cannot deliver the throughput required for shuffle and spill activity. Increasing compute does not help storage performance becomes the limiting factor, requiring targeted Spark disk performance tuning instead of additional cores.
+
+### Real-Time Streaming Ingestion  
+
+A streaming platform ingests millions of events per minute using Kafka and Spark Structured Streaming. During peak traffic, message processing falls behind, and consumer offsets lag. The root cause is insufficient sustained disk throughput for continuous writes, highlighting the need for better cloud storage performance control at the infrastructure layer.
+
+### Production Database Latency  
+
+A production database supporting application traffic experiences unpredictable query latency under high concurrent load. Investigation shows that default disks cannot provide consistent IOPS for random read/write operations, causing request delays.
+
+### Machine Learning Training Bottlenecks  
+
+A GPU-based training cluster shows low GPU utilization. Training jobs frequently wait for data loading from disk. The bottleneck is, insufficient disk throughput to stream large datasets fast enough to keep GPUs busy another example of a disk bottleneck in distributed systems impacting expensive compute resources.
+
+### Large-Scale Sort and Join Operations  
+
+Analytics jobs performing global sort and join operations generate heavy shuffle and spill data. Slow intermediate disk storage increases stage execution time and delays pipeline completion, reinforcing the importance of proactive cloud disk performance optimization.
+
+In all these cases, scaling compute resources does not resolve the issue. The only effective solution is to configure storage performance to match workload I/O demands. This is where custom disk configuration becomes critical.
+
+## The Traditional Storage Tuning Challenge
+
+Improving disk performance in typical cloud environments requires:
+
+*   Understanding cloud-specific disk types
+
+*   Manually creating disks in cloud consoles
+
+*   Attaching disks to cluster nodes
+
+*   Managing disk lifecycle
+
+This workflow introduces operational overhead and demands infrastructure expertise, slowing down teams focused on application development and data engineering. Achieving proper cloud storage performance control often becomes an infrastructure-heavy exercise rather than an application-focused optimization.
+
+## How Yeedu Solves the Problem
+
+Yeedu eliminates manual storage operations through a dedicated **Disk Configuration** panel in the cluster creation flow. Users select:
+
+*   Disk type
+
+*   Disk size
+
+*   Required IOPS
+
+*   Required throughput
+
+Yeedu automatically validates the configuration, provisions the disks, and attaches them to cluster nodes. The Spark pipeline in the earlier scenario is re-deployed with high-throughput SSD disks. Shuffle operations accelerate; CPU utilization improves, and job runtime drops significantly delivering measurable Spark disk performance tuning without code changes or manual cloud configuration.
+
+## Understanding IOPS and Throughput
+
+Two metrics define disk performance.
+
+**IOPS** measures the number of read/write operations per second. It is critical for workloads performing many small or random operations, such as databases and metadata services.
+
+**Throughput** measures how much data can be transferred per second. It is essential for large sequential operations such as Spark shuffles, ETL pipelines, and dataset streaming.
+
+Different workloads require different IOPS-to-throughput ratios. Yeedu exposes both parameters so users can align disk performance with real workload behavior, enabling precise cloud storage performance control across environments.
+
+### User Experience: Flexible and Cloud-Agnostic
+
+Yeedu provides a unified, intuitive UI for disk configuration. Users can configure storage performance directly within the cluster setup workflow, with validation of allowed ranges. No cloud-specific knowledge or manual disk allocation is required.
+
+This delivers a consistent, self-service experience across AWS, GCP, and Azure environments, simplifying cloud disk performance optimization in multi-cloud architectures.
+
+### Multi-Cloud Native Disk Support
+
+Yeedu integrates directly with major cloud storage services.
+
+#### Google Cloud
+
+1.  pd-ssd
+
+2.  pd-balanced
+
+3.  local-ssd
+
+GCP cloud customized disk configuration in cluster:
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d3ad915123a2d970dfd61_Customized%20Disk%20Configuration%20in%20Yeedu1.avif)
+
+**GCP disk configuration options on the cluster page for custom disks**
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d3aefef314aad21d0847d_Customized%20Disk%20Configuration%20in%20Yeedu2.avif)
+
+**Set disk size, IOPS, and throughput within the allowed ranges and see the total values calculated automatically.**
+
+#### Amazon Web Services
+
+1.  gp2
+
+2.  gp3
+
+**AWS cloud customized disk configuration in cluster:**
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d3b0115123a2d970e557f_Customized%20Disk%20Configuration%20in%20Yeedu3.avif)
+
+**AWS disk configuration options on the cluster page for custom disks**
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d3b14e73a8e4ef70f8956_Customized%20Disk%20Configuration%20in%20Yeedu4.avif)
+
+**Set disk size, IOPS, and throughput within the allowed ranges and see the total values calculated automatically.**
+
+#### Microsoft Azure
+
+1.  Standard\_LRS
+
+2.  StandardSSD\_LRS
+
+3.  Premium\_LRS
+
+4.  PremiumV2\_LRS
+
+5.  UltraSSD\_LRS
+
+**AZURE cloud customised disk configuration in cluster:**
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d3b2ab78bb1b18ceb8e74_Customized%20Disk%20Configuration%20in%20Yeedu5.avif)
+
+**AZURE disk configuration options on the cluster page for custom disks**
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d3b3de73a8e4ef70f9b2c_Customized%20Disk%20Configuration%20in%20Yeedu6.avif)
+
+**Set disk size, IOPS, and throughput within the allowed ranges and see the total values calculated automatically.**
+
+Each disk type follows provider-defined limits for size, IOPS, and throughput. Yeedu enforces these constraints automatically to ensure valid configurations reducing risk while maintaining full cloud storage performance control.
+
+### Workload-Oriented Disk Selection
+
+Different workloads stress storage in different ways. Yeedu enables users to choose disk configurations based on workload behavior rather than infrastructure complexity.
+
+*   **Analytics and ETL pipelines** benefit from high-throughput SSD disks to accelerate shuffle and spill operations and improve Spark disk performance tuning outcomes.
+
+*   **Databases and stateful services** require high-IOPS persistent disks for consistent low-latency access to data.
+
+*   **Machine learning workloads** rely on balanced SSD disks for fast dataset streaming and reliable checkpoint storage.
+
+*   **Intermediate compute stages** can utilize ultra-fast ephemeral disks where data persistence is unnecessary, optimizing temporary processing performance.
+
+*   **Backup and staging workloads** leverage cost-efficient balanced disks to minimize storage costs while maintaining reliability.
+
+This workload-driven approach ensures storage performance is aligned with application needs, avoiding both under-provisioning and unnecessary over-provisioning.
+
+## Conclusion
+
+Disk I/O performance is often the hidden constraint in distributed computing. When workloads outgrow default storage capabilities, disk configuration becomes essential. Yeedu transforms this process into a simple, controlled configuration step providing cloud-native disk selection, tunable IOPS and throughput, and fully automated provisioning through a unified UI.
+
+The result is faster workloads, predictable performance, and optimized cloud spending achieved through structured custom disk configuration, targeted Spark disk performance tuning, and precise cloud storage performance control without manual infrastructure operations.
+
+‍

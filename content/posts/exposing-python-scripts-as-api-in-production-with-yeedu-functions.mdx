@@ -1,0 +1,366 @@
+---
+slug: exposing-python-scripts-as-api-in-production-with-yeedu-functions
+title: Exposing Python Scripts as API in Production with Yeedu Functions
+date: '2026-06-01'
+author: akhil-dharani-sadhvik-chirunomula
+tags:
+  - python-rest-api
+  - python-function-as-a-service
+  - serverless-python-api
+  - serving-ml-model-as-restapi
+thumbnail: >-
+  https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d224665d062b2a6031203_Exposing%20Python%20Scripts%20as%20API.avif
+thumbnail_alt: Exposing Python Scripts as API in Production with Yeedu Functions
+meta_title: Serving ML Models as REST APIs with Python | Yeedu Functions
+meta_description: >-
+  Learn how to serve ML models as REST APIs using Python without Docker or cloud
+  complexity. Deploy secure, scalable APIs instantly with Yeedu Functions. 
+og_title: Expose Python Scripts as Production APIs with Yeedu Functions
+og_description: >-
+  Deploy any Python script as a secure, scalable REST API in minutes. No Docker,
+  no cloud setup just your code running in Yeedu Functions. 
+---
+
+**_A data engineer’s dream - write Python, click Deploy, get an API._**
+
+![Yeedu Functions Flow](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/69786103a34ff7e5e25c8997_Yeedu%20Workspace.gif)
+
+Yeedu Functions Flow
+
+‍
+
+Every data or ML engineer knows this story: you’ve built a great Python program - maybe it scores insurance claims, analyzes patient notes, or validates datasets. It works perfectly in your local environment. But when it’s time to share it or connect it to real applications, that is to turn a Python Script into an API, the deployment friction begins: Docker containers, API gateways, scaling limits, security tokens… things get messy fast.
+
+That’s where [**Yeedu Functions**](https://yeedu.com/product/overview) comes in. It lets you deploy any Python file as a production‑ready REST API on the Yeedu Functions managed compute - with complete control, governance, and observability. No external cloud setup. No juggling multiple services. Just your code, running in Yeedu
+
+## What Is Yeedu Functions?
+
+Yeedu Functions lets you execute and serve Python programs as REST APIs inside your Yeedu Workspace, acting as a [**python function**](https://yeedu.com/posts/intuitive-ux-for-deployment-of-python-functions-ml-models-and-much-more-with-yeedu-functions) as a service purpose built for data teams. The underlying platform is Yeedu, a unified data platform designed to orchestrate workloads across clouds.
+
+It’s built for data‑driven enterprises - insurance, pharma, life sciences - where Python logic must move from the lab to production quickly, securely, and at scale. You upload a .py file, define which function to expose, and Yeedu handles:
+
+*   Packaging your Python file as a REST API and deployment on workspace compute
+
+*   Authentication via bearer token
+
+*   Scaling and concurrency management
+
+*   Monitoring, logging, and control
+
+It’s Python -> API - without the DevOps bottleneck
+
+## How It Works
+
+Here’s a streamlined workflow for how **Yeedu Functions** helps you build an API with Python in minutes:
+
+### Create or Import Your Python File
+
+Upload your .py file (for example, iris\_model.py) into your Yeedu Workspace.
+
+![Upload the script file to the Workspace Files at the desired location](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2269cb2062e8111a1aa2_Exposing%20Python%20Scripts%20as%20API2.avif)
+
+Upload the script file to the Workspace Files at the desired location
+
+‍
+
+### Create a Yeedu Function Job
+
+Go to **Jobs → Create Job → Yeedu Function**, and point it to your iris\_model.py file. Configure options like project path, parallelism, concurrent request limits, maximum scale.
+
+![Create the Yeedu Functions job with the required configurations and dependencies](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d22a71f5da43c33ce881f_Exposing%20Python%20Scripts%20as%20API3.avif)
+
+Create the Yeedu Functions job with the required configurations and dependencies
+
+‍
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d23111a9d535903f1563a_Exposing%20Python%20Scripts%20as%20API4.avif)
+
+### Define Your Entry Method and Dependencies
+
+Specify the Python method to expose (e.g., prediction(...)) and list PyPI dependencies (like pandas, pickle, etc.). This is where deploying an ML model as an API becomes straightforward.  
+
+Here’s the code inside iris\_model.py:
+
+This pattern allows stateful model loading, making it ideal for serving ML models as Rest API endpoints.
+
+### Click “Create” and Run the Job
+
+Yeedu packages your code and instantly exposes it as a secure serverless Python API.
+
+### Invoke the Endpoint Anywhere
+
+You’ll find endpoint details in your job configuration screen within Yeedu. Use it from apps, data pipelines, or workflows - authenticated with your bearer token.  
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d232d8def5a8ce0ac7065_Exposing%20Python%20Scripts%20as%20API5.avif)
+
+![Call the functions API using the provided URL](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d233db5cdd3b7b56b08bf_Exposing%20Python%20Scripts%20as%20API6.avif)
+
+Call the functions API using the provided URL
+
+![Yeedu Functions Logs](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d23801f5da43c33cec3af_Exposing%20Python%20Scripts%20as%20API7.avif)
+
+### Example: Deploying a Sentiment Analysis Function
+
+Here’s a small Python file named sentiment.py:
+
+Once deployed, you can invoke it directly:
+
+**Response:**
+
+No containers. No API Gateway. Just a Python file as a REST API, live in production
+
+### Real‑World Scenarios: Insurance, Pharma & Life Sciences
+
+Yeedu Functions is deisgned for real enterprise use cases where exposing Python logic as APIs in production is critical.
+
+### Life Sciences: Clinical Text Mining
+
+**Challenge:** Extracting adverse‑drug reaction pairs from unstructured clinical notes.  
+
+**Yeedu Solution:** Deploy clinical\_nlp.py exposing extract\_entities(), and then call it from EHR workflows.
+
+### Insurance: Fraud Detection & Risk Scoring
+
+**Challenge:** Real‑time model scoring at claim intake.  
+
+**Yeedu Solution:** Deploy fraud\_score.py exposing score\_claim(); call it from claim‑processing systems.
+
+### Pharma: Molecular Property Prediction
+
+**Challenge:** Serving models that predict toxicity or solubility for new compounds. **Yeedu Solution:** Deploy toxicity\_model.py exposing predict\_properties() for chemists to call via internal apps.
+
+Whether it’s a rule engine, NLP pipeline, or model inference - Yeedu Functions makes operationalizing Python logic effortless
+
+## Why Yeedu Simplifies What Clouds Complicate
+
+Traditional cloud platforms require juggling between multiple services just to build and deploy a Python REST API. Here’s how the flows compare:
+
+### AWS Lambda Flow
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/697863142e5d73587ac1c062_AWS%20Lambda%20Flow.gif)
+
+AWS Lambda Flow
+
+### Azure Functions Flow
+
+![Azure Functions Flow](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/69786335f5550d82c47864a3_Azure%20Function%20flow.gif)
+
+Azure Functions Flow
+
+### Google Cloud Functions Flow
+
+![Google Cloud Functions Flow ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/69786357cf17ab4ac2f917f3_Google%20Cloud%20Functions%20Flow.gif)
+
+Google Cloud Functions Flow
+
+### Yeedu Functions Flow
+
+![Yeedu Functions Flow](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6978637251d5448cc4f9a79c_Yeedu%20Functions_Flow.gif)
+
+Yeedu Functions Flow
+
+One environment. One flow. One click. Yeedu enables serverless Python APIs without forcing data teams to become infrastructure experts.  
+
+## Cloud vs. Yeedu Comparison
+
+.yeedu-functions-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } /\* ===== DESKTOP TABLE ===== \*/ .yeedu-functions-box { border: 1px solid #334155; border-radius: 18px; overflow: hidden; background: #020617; box-shadow: 0 12px 30px rgba(0,0,0,0.28); } .yeedu-functions-table { width: 100%; border-collapse: collapse; } /\* ===== HEADER ===== \*/ .yeedu-functions-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-functions-table th { padding: 18px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; border-bottom: 1px solid #1e293b; white-space: nowrap; } /\* ===== ROWS ===== \*/ .yeedu-functions-table td { padding: 18px 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e5e7eb; vertical-align: top; line-height: 1.6; } .yeedu-functions-table tbody tr { transition: all 0.25s ease; } .yeedu-functions-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* ===== FEATURE COLUMN ===== \*/ .feature-name { font-weight: 600; color: #f8fafc; min-width: 200px; } /\* ===== YEEDU COLUMN ===== \*/ .yeedu-functions-table td:nth-child(5) { background: rgba(249, 115, 22, 0.05); } /\* ===== BADGES ===== \*/ .badge { display: inline-flex; align-items: center; padding: 7px 12px; border-radius: 10px; font-size: 12px; font-weight: 600; line-height: 1.4; } .positive { background: rgba(34, 197, 94, 0.12); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.18); } .negative { background: rgba(248, 113, 113, 0.12); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.18); } .neutral { background: rgba(148, 163, 184, 0.12); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.18); } /\* ===== YEEDU TAG ===== \*/ .yeedu-tag { display: inline-block; margin-left: 8px; font-size: 10px; padding: 4px 9px; border-radius: 999px; background: rgba(249, 115, 22, 0.15); color: #f97316; font-weight: 700; letter-spacing: 0.04em; } /\* ================= MOBILE ================= \*/ .mobile-cards { display: none; } @media (max-width: 768px) { .yeedu-functions-box { display: none; } .mobile-cards { display: flex; flex-direction: column; gap: 18px; } .platform-card { background: linear-gradient(180deg, rgba(15,23,42,0.95), rgba(2,6,23,1)); border: 1px solid #334155; border-radius: 18px; padding: 18px; box-shadow: 0 12px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.03); position: relative; overflow: hidden; } .platform-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right, rgba(249,115,22,0.08), transparent 35%); pointer-events: none; } .platform-card.featured { border: 1px solid rgba(249,115,22,0.5); box-shadow: 0 0 0 1px rgba(249,115,22,0.15), 0 14px 35px rgba(0,0,0,0.4); } .badge-top { display: inline-block; margin-bottom: 12px; font-size: 10px; padding: 5px 10px; border-radius: 999px; background: rgba(249,115,22,0.15); color: #f97316; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid rgba(249,115,22,0.2); } .card-title { font-size: 18px; font-weight: 700; color: #f8fafc; margin-bottom: 16px; } .metric { background: rgba(15, 23, 42, 0.7); border: 1px solid #1e293b; border-radius: 14px; padding: 14px; margin-bottom: 12px; } .metric:last-child { margin-bottom: 0; } .metric-label { font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; font-weight: 600; } .metric-value { font-size: 14px; line-height: 1.6; color: #f1f5f9; font-weight: 500; } .positive-card { border: 1px solid rgba(34, 197, 94, 0.18); background: rgba(34, 197, 94, 0.06); } .negative-card { border: 1px solid rgba(248, 113, 113, 0.18); background: rgba(248, 113, 113, 0.06); } .positive-card .metric-value { color: #4ade80; } .negative-card .metric-value { color: #f87171; } }
+
+Feature
+
+AWS Lambda
+
+Azure Functions
+
+GCP Functions
+
+Yeedu Functions
+
+Where It Runs
+
+AWS Cloud
+
+Azure Cloud
+
+GCP Cloud
+
+Yeedu Workspace Compute YEEDU
+
+Setup Complexity
+
+Multi-step
+
+Multi-step
+
+Multi-step
+
+Single-step
+
+Scaling
+
+Configurable
+
+Plan-based
+
+Auto
+
+Configurable Inside Yeedu
+
+Authentication
+
+IAM / Cognito
+
+Azure AD
+
+IAM
+
+Bearer Token (Yeedu)
+
+Monitoring
+
+CloudWatch
+
+App Insights
+
+Cloud Logging
+
+Yeedu Dashboard
+
+Data Access
+
+External
+
+External
+
+External
+
+Native Workspace Access
+
+Users
+
+DevOps
+
+Developers
+
+Developers
+
+Data Engineers & Scientists
+
+Modern Data Functions
+
+Yeedu Functions
+
+Where It Runs
+
+Yeedu Workspace Compute
+
+Setup Complexity
+
+Single-step
+
+Scaling
+
+Configurable Inside Yeedu
+
+Authentication
+
+Bearer Token (Yeedu)
+
+Monitoring
+
+Yeedu Dashboard
+
+Data Access
+
+Native Workspace Access
+
+Users
+
+Data Engineers & Scientists
+
+AWS Lambda
+
+Where It Runs
+
+AWS Cloud
+
+Setup Complexity
+
+Multi-step
+
+Scaling
+
+Configurable
+
+Authentication
+
+IAM / Cognito
+
+Monitoring
+
+CloudWatch
+
+Data Access
+
+External
+
+Users
+
+DevOps
+
+## Why Teams Love Yeedu Functions
+
+*   **Zero external services.** Everything runs inside Yeedu’s governed environment.
+
+*   **Data‑native execution.** Connects directly to your data and secrets stores.
+
+*   **Instant deployment.** Publish APIs in minutes, not days.
+
+*   **Enterprise‑grade security.** Built on Yeedu’s workspace authentication & controls.
+
+*   **Full observability.** Logs, metrics, usage analytics built‑in.
+
+## Intuitive UX & Monitoring Built In
+
+Beyond just deployment, Yeedu focuses heavily on the user experience for data engineers, analysts, and scientists. The UX is streamlined:
+
+1.  **Select Python Script** - Choose any uploaded script or notebook.
+
+2.  **Define Your Function** - Pick the method to expose (must follow payload, context input pattern).
+
+3.  **Configure Runtime** - Optionally list dependencies, environment variables, project paths.
+
+4.  **Deploy & Test Instantly** - One click, REST endpoint is live.
+
+Once live, you can monitor and manage the API directly within the UI - without writing backend or infrastructure code. Real‑time request metrics, concurrency controls, and logs are baked into the job view.  
+
+## Example Template & Use Cases
+
+### Function Syntax
+
+### Use Case: PySpark Data Processing
+
+### Use Case: External API Integration
+
+## Conclusion: Your Python Scripts Deserve Better
+
+The journey from local script to production API shouldn’t require weeks of infrastructure work. With Yeedu Function, exposing Python as an API in production becomes one-click operation.
+
+**Why choose Yeedu Functions?**
+
+*   5‑10× faster deployment
+
+*   Built purpose‑built for data teams
+
+*   Simpler than AWS Lambda or other cloud functions
+
+*   Stateful model loading, native PySpark support
+
+*   Built‑in performance metrics and monitoring
+
+You wrote that Python script. Now let it serve your business as a production-grade REST API.
+
+Ready to transform your Python scripts into production‑ready APIs? Explore Yeedu’s documentation and platform today: [**Yeedu Docs**](https://docs.yeedu.io/)
+
+‍
+
+‍

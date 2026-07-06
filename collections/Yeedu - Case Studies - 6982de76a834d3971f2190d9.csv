@@ -1,0 +1,644 @@
+Case Study Title,Slug,Collection ID,Locale ID,Item ID,Archived,Draft,Created On,Updated On,Published On,Hero Desc,Case Study Thumbnail image,Thumbnail ALT text,Content,Meta Title,Meta Description,OG Title,OG Description,Keywords
+How a Fortune 500 Financial Services Firm Cut Data Costs by 80%,how-a-fortune-500-financial-services-firm-cut-data-costs-by-80,6982de76a834d3971f2190d9,6781106372f1ec1571cf150a,6982e4c1b3edd04226edc77b,false,false,Wed Feb 04 2026 06:18:41 GMT+0000 (Coordinated Universal Time),Mon Jun 01 2026 11:54:40 GMT+0000 (Coordinated Universal Time),Mon Jun 01 2026 12:51:37 GMT+0000 (Coordinated Universal Time),"A global financial services company achieved $143,000 in annual savings while improving processing performance by 2.5x with minimal code changes.",https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d71ddc549e928029ddded_How%20a%20Fortune%20500%20Financial%20Services%20Firm%20Cut%20Data%20Costs%20by%2080.avif,How a Fortune 500 Financial Services Firm Cut Data Costs by 80%,"<h2>The Challenge</h2><p>A global financial services company was facing a common but costly problem: their mission-critical data processing workloads were consuming an increasingly large share of their cloud infrastructure budget. With strict SLA requirements and growing data volumes, costs were becoming difficult to justify.</p><p>Two workloads in particular were driving the majority of their data infrastructure spend:</p><h3>Real-Time Streaming Pipeline</h3><p>A complex streaming job that processes incoming JSON files with a strict SLA of under 5 minutes per file. The pipeline handles approximately 1,500 files daily, each undergoing 32 transformations before records are written to Delta tables.</p><ul><li>57 folders containing 127 Python files (~18,000 lines of code)</li><li>400 JSON configuration files defining transformation logic</li><li>Required 4 worker nodes during peak hours to maintain SLA compliance</li></ul><h3>Cross-Region Data Replication</h3><p>A data replication job responsible for synchronizing data lakes in Delta format between AWS regions (us-east-1 to eu-east-1) every 2 hours, ensuring business continuity and regional compliance.</p><ul><li>7,223 tables in scope for replication</li><li>7,679,367 S3 objects totaling 1.9 TB of data</li><li>Required dedicated driver and worker instances running continuously</li></ul><blockquote><strong>Combined, these two workloads were costing the organization over $180,000 annually in compute and licensing fees and costs were projected to increase as data volumes continued to grow.</strong></blockquote><h3>The Solution</h3><p>The company integrated Yeedu alongside their existing data infrastructure. Rather than a disruptive migration, they strategically redirected their most expensive workloads to Yeedu while maintaining their current governance and data architecture.</p><p>One of the key advantages was how little modification was needed to run existing Spark workloads on Yeedu:</p><pre></pre><p>‍</p><p>Yeedu's Turbo Engine delivered such significant performance improvements that the company was able to dramatically simplify their infrastructure replacing multi-node clusters with single-instance configurations while eliminating the need for auto-scaling.</p><blockquote><strong>We expected cost savings, but we didn't expect to also see performance improvements. Getting both simultaneously changed how we think about our entire data infrastructure strategy.</strong></blockquote><p>‍</p><h2>By the Numbers</h2><p>‍</p><h4>Streaming Pipeline: Production Cost Comparison</h4><div data-rt-embed-type='true'><style>
+  .yeedu-cost-wrap {
+    width: 100%;
+    margin: 30px 0;
+    font-family: Inter, sans-serif;
+  }
+
+  /* ================= DESKTOP TABLE ================= */
+  .yeedu-cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .yeedu-cost-table thead {
+    background: linear-gradient(90deg, #020617, #0f172a);
+  }
+
+  .yeedu-cost-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+  }
+
+  .yeedu-cost-table td {
+    padding: 16px;
+    border-top: 1px solid #1e293b;
+    font-size: 14px;
+    color: #e5e7eb;
+  }
+
+  .platform {
+    font-weight: 600;
+    color: #f8fafc;
+  }
+
+  .saving {
+    color: #4ade80;
+    font-weight: 700;
+    background: rgba(34, 197, 94, 0.08);
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .neutral {
+    color: #64748b;
+  }
+
+  .highlight {
+    background: rgba(34, 197, 94, 0.03);
+  }
+
+  .yeedu-cost-table tbody tr:hover {
+    background: rgba(59, 130, 246, 0.05);
+  }
+
+  /* ================= MOBILE CARDS ================= */
+  .mobile-cards {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+
+    .yeedu-cost-table {
+      display: none;
+    }
+
+    .mobile-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cost-card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    /* Highlight Yeedu */
+    .cost-card.highlight {
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.15);
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #f8fafc;
+      margin-bottom: 10px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 12px;
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .metric-label {
+      font-size: 11px;
+      color: #64748b;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      font-size: 14px;
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .metric-value.saving {
+      color: #4ade80;
+      font-weight: 700;
+    }
+
+    .metric-value.neutral {
+      color: #64748b;
+    }
+  }
+</style>
+
+<div class=""yeedu-cost-wrap"">
+
+  <!-- DESKTOP TABLE -->
+  <table class=""yeedu-cost-table"">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Annual Cost</th>
+        <th>Savings</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class=""platform"">Previous Platform</td>
+        <td>$143,523</td>
+        <td class=""neutral"">–</td>
+      </tr>
+
+      <tr class=""highlight"">
+        <td class=""platform"">Yeedu (x86 instances)</td>
+        <td>$31,676</td>
+        <td><span class=""saving"">$111,847 (77.9%)</span></td>
+      </tr>
+
+      <tr class=""highlight"">
+        <td class=""platform"">Yeedu (Graviton instances)</td>
+        <td>$28,506</td>
+        <td><span class=""saving"">$115,017 (80.1%)</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- MOBILE CARDS -->
+  <div class=""mobile-cards"">
+
+    <!-- Previous -->
+    <div class=""cost-card"">
+      <div class=""card-title"">Previous Platform</div>
+      <div class=""card-grid"">
+        <div class=""metric"">
+          <span class=""metric-label"">Annual Cost</span>
+          <span class=""metric-value"">$143,523</span>
+        </div>
+        <div class=""metric"">
+          <span class=""metric-label"">Savings</span>
+          <span class=""metric-value neutral"">–</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yeedu x86 -->
+    <div class=""cost-card highlight"">
+      <div class=""card-title"">Yeedu (x86)</div>
+      <div class=""card-grid"">
+        <div class=""metric"">
+          <span class=""metric-label"">Annual Cost</span>
+          <span class=""metric-value"">$31,676</span>
+        </div>
+        <div class=""metric"">
+          <span class=""metric-label"">Savings</span>
+          <span class=""metric-value saving"">$111,847 (77.9%)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yeedu Graviton -->
+    <div class=""cost-card highlight"">
+      <div class=""card-title"">Yeedu (Graviton)</div>
+      <div class=""card-grid"">
+        <div class=""metric"">
+          <span class=""metric-label"">Annual Cost</span>
+          <span class=""metric-value"">$28,506</span>
+        </div>
+        <div class=""metric"">
+          <span class=""metric-label"">Savings</span>
+          <span class=""metric-value saving"">$115,017 (80.1%)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div></div><p>‍</p><h4>Data Replication: Performance Comparison</h4><div data-rt-embed-type='true'><style>
+  .yeedu-perf-wrap {
+    width: 100%;
+    margin: 30px 0;
+    font-family: Inter, sans-serif;
+  }
+
+  /* ================= DESKTOP TABLE ================= */
+  .yeedu-perf-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .yeedu-perf-table thead {
+    background: linear-gradient(90deg, #020617, #0f172a);
+  }
+
+  .yeedu-perf-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+  }
+
+  .yeedu-perf-table td {
+    padding: 16px;
+    border-top: 1px solid #1e293b;
+    font-size: 14px;
+    color: #e5e7eb;
+  }
+
+  .platform {
+    font-weight: 600;
+    color: #f8fafc;
+  }
+
+  .good {
+    color: #4ade80;
+    font-weight: 700;
+    background: rgba(34, 197, 94, 0.08);
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .neutral {
+    color: #94a3b8;
+  }
+
+  .highlight {
+    background: rgba(34, 197, 94, 0.03);
+  }
+
+  .yeedu-perf-table tbody tr:hover {
+    background: rgba(59, 130, 246, 0.05);
+  }
+
+  /* ================= MOBILE PREMIUM CARDS ================= */
+  .mobile-cards {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+
+    .yeedu-perf-table {
+      display: none;
+    }
+
+    .mobile-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .perf-card {
+      background: linear-gradient(180deg, #020617, #020617);
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 16px;
+      position: relative;
+    }
+
+    /* Highlight Yeedu card */
+    .perf-card.highlight {
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.15);
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #f8fafc;
+      margin-bottom: 12px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 12px;
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .metric-label {
+      font-size: 11px;
+      color: #64748b;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      font-size: 14px;
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .metric-value.good {
+      color: #4ade80;
+      font-weight: 700;
+    }
+
+    .metric-value.neutral {
+      color: #94a3b8;
+    }
+  }
+</style>
+
+<div class=""yeedu-perf-wrap"">
+
+  <!-- DESKTOP TABLE -->
+  <table class=""yeedu-perf-table"">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Execution Time</th>
+        <th>Tables Processed</th>
+        <th>Annual Cost</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class=""platform"">Previous Platform</td>
+        <td class=""neutral"">100 minutes</td>
+        <td class=""neutral"">4,100</td>
+        <td class=""neutral"">$37,668</td>
+      </tr>
+
+      <tr class=""highlight"">
+        <td class=""platform"">Yeedu (Graviton)</td>
+        <td><span class=""good"">39 minutes</span></td>
+        <td><span class=""good"">7,200</span></td>
+        <td><span class=""good"">$9,252</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- MOBILE CARDS -->
+  <div class=""mobile-cards"">
+
+    <!-- Previous -->
+    <div class=""perf-card"">
+      <div class=""card-title"">Previous Platform</div>
+      <div class=""card-grid"">
+        <div class=""metric"">
+          <span class=""metric-label"">Execution</span>
+          <span class=""metric-value neutral"">100 min</span>
+        </div>
+        <div class=""metric"">
+          <span class=""metric-label"">Tables</span>
+          <span class=""metric-value neutral"">4,100</span>
+        </div>
+        <div class=""metric"">
+          <span class=""metric-label"">Annual Cost</span>
+          <span class=""metric-value neutral"">$37,668</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yeedu -->
+    <div class=""perf-card highlight"">
+      <div class=""card-title"">Yeedu (Graviton)</div>
+      <div class=""card-grid"">
+        <div class=""metric"">
+          <span class=""metric-label"">Execution</span>
+          <span class=""metric-value good"">39 min</span>
+        </div>
+        <div class=""metric"">
+          <span class=""metric-label"">Tables</span>
+          <span class=""metric-value good"">7,200</span>
+        </div>
+        <div class=""metric"">
+          <span class=""metric-label"">Annual Cost</span>
+          <span class=""metric-value good"">$9,252</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div></div><p>‍</p><h4>Total Annual Savings</h4><div data-rt-embed-type='true'><style>
+  .yeedu-savings-wrap {
+    width: 100%;
+    margin: 30px 0;
+    font-family: Inter, sans-serif;
+  }
+
+  /* ================= DESKTOP TABLE ================= */
+  .yeedu-savings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #020617;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .yeedu-savings-table thead {
+    background: linear-gradient(90deg, #020617, #0f172a);
+  }
+
+  .yeedu-savings-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #cbd5f5;
+    border-bottom: 1px solid #334155;
+  }
+
+  .yeedu-savings-table td {
+    padding: 16px;
+    border-top: 1px solid #334155;
+    font-size: 14px;
+    color: #e5e7eb;
+  }
+
+  .workload {
+    font-weight: 600;
+    color: #f8fafc;
+  }
+
+  .saving {
+    color: #4ade80;
+    font-weight: 700;
+    background: rgba(34, 197, 94, 0.08);
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .total {
+    background: rgba(34, 197, 94, 0.05);
+  }
+
+  .yeedu-savings-table tbody tr:hover {
+    background: rgba(59, 130, 246, 0.05);
+  }
+
+  /* ================= PREMIUM MOBILE ================= */
+  .mobile-cards {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .yeedu-savings-table {
+      display: none;
+    }
+
+    .mobile-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #020617, #020617);
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    }
+
+    .card-header {
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #f8fafc;
+      line-height: 1.4;
+    }
+
+    .card-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .metric {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .metric-label {
+      font-size: 11px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .metric-value {
+      font-size: 14px;
+      font-weight: 700;
+      color: #4ade80;
+    }
+
+    .total-card {
+      border: 1px solid #22c55e;
+      background: linear-gradient(180deg, rgba(34,197,94,0.08), rgba(0,0,0,0));
+    }
+  }
+</style>
+
+<div class=""yeedu-savings-wrap"">
+
+  <!-- DESKTOP TABLE -->
+  <table class=""yeedu-savings-table"">
+    <thead>
+      <tr>
+        <th>Workload</th>
+        <th>Annual Savings</th>
+        <th>Reduction</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class=""workload"">Real-Time Streaming Pipeline</td>
+        <td><span class=""saving"">~$115,000</span></td>
+        <td><span class=""saving"">~80%</span></td>
+      </tr>
+
+      <tr>
+        <td class=""workload"">Cross-Region Data Replication</td>
+        <td><span class=""saving"">~$28,000</span></td>
+        <td><span class=""saving"">~75%</span></td>
+      </tr>
+
+      <tr class=""total"">
+        <td class=""workload"">Total Combined Savings</td>
+        <td><span class=""saving"">~$143,000</span></td>
+        <td><span class=""saving"">75–80%</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- PREMIUM MOBILE CARDS -->
+  <div class=""mobile-cards"">
+
+    <div class=""card"">
+      <div class=""card-header"">
+        <div class=""card-title"">Real-Time Streaming Pipeline</div>
+      </div>
+      <div class=""card-metrics"">
+        <div class=""metric"">
+          <div class=""metric-label"">Annual Savings</div>
+          <div class=""metric-value"">~$115,000</div>
+        </div>
+        <div class=""metric"">
+          <div class=""metric-label"">Reduction</div>
+          <div class=""metric-value"">~80%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class=""card"">
+      <div class=""card-header"">
+        <div class=""card-title"">Cross-Region Data Replication</div>
+      </div>
+      <div class=""card-metrics"">
+        <div class=""metric"">
+          <div class=""metric-label"">Annual Savings</div>
+          <div class=""metric-value"">~$28,000</div>
+        </div>
+        <div class=""metric"">
+          <div class=""metric-label"">Reduction</div>
+          <div class=""metric-value"">~75%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class=""card total-card"">
+      <div class=""card-header"">
+        <div class=""card-title"">Total Combined Savings</div>
+      </div>
+      <div class=""card-metrics"">
+        <div class=""metric"">
+          <div class=""metric-label"">Annual Savings</div>
+          <div class=""metric-value"">~$143,000</div>
+        </div>
+        <div class=""metric"">
+          <div class=""metric-label"">Reduction</div>
+          <div class=""metric-value"">75–80%</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div></div><p>‍</p>",Fortune 500 Cuts Data Costs 80% with Yeedu | Case Study,"See how a Fortune 500 financial services firm cut data costs by 80%, saved $143K annually, and improved Spark performance 2.5x using Yeedu on AWS.",How a Fortune 500 Financial Services Firm Cut Data Costs by 80%,A Fortune 500 financial services company saved $143K annually and improved Spark workload performance by 2.5x on AWS - with minimal code changes using Yeedu.,"Fortune 500 case study, Data cost reduction, Spark workloads, Financial services"

@@ -1,0 +1,168 @@
+---
+slug: governance-access-control-managing-workspaces-securely-with-yeedu
+title: 'Governance & Access Control: Managing Workspaces Securely with Yeedu'
+date: '2026-06-01'
+author: likhith-bedudhuri
+tags:
+  - role-based-access-control-in-data-platforms
+  - enterprise-data-governance-and-access-control
+  - fine-grained-access-control
+  - multi-tenant-role-based-access-control
+  - rbac-for-data-teams
+  - workspace-level-access-control
+  - data-platform-security-and-governance
+  - tenant-based-access-control-model
+thumbnail: >-
+  https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d1cf01a9d535903ef9247_Governance%20%26%20Access%20Control.avif
+thumbnail_alt: 'Governance & Access Control: Managing Workspaces Securely with Yeedu'
+meta_title: Role-Based Access Control in Data Platforms | Yeedu Governance
+meta_description: >-
+  Learn how Yeedu implements role-based access control in data platforms with
+  fine-grained, tenant and workspace-level governance for secure collaboration.
+og_title: Role-Based Access Control in Data Platforms | Yeedu Governance
+og_description: >-
+  Learn how Yeedu implements role-based access control in data platforms with
+  fine-grained, tenant and workspace-level governance for secure collaboration.
+---
+
+In modern enterprises, data lives everywhere across teams, regions, and projects. Managing who can access what and where quickly becomes a nightmare. You’ve got engineers, analysts, vendors, and partners all needing just the right access. Give too much, and you risk security issues, give too little, and work slows down.
+
+That’s where fine-grained role-based access control (RBAC) comes in. Instead of blanket permissions, teams need fine-grained access control that adapts to real organizational structures.
+
+And this is exactly what Yeedu enables through its built-in governance model, delivering enterprise data governance and access control through tenants, workspaces, and access management.
+
+## The Challenge
+
+As enterprises scale, managing access across regions, teams, and projects gets complex fast.
+
+Take an e-commerce company selling products globally, it has teams for Marketing, Data Science, DevOps, and Finance. Additional to that, regional divisions (US, EU) and partner sellers. Now imagine everyone sharing the same data platform.
+
+Without a tenant-based access control model and strong governance:
+
+*   Teams might accidentally access each other’s data.
+
+*   Region-specific compliance could be violated.
+
+*   Partners could see internal assets they shouldn’t.
+
+*   Admin chaos sets in, too many permissions, too little clarity.
+
+This is where RBAC for data teams must balance security with autonomy.
+
+So how do you stay secure and keep teams productive?
+
+## Why It Matters
+
+Good governance isn’t just about security, it’s about confidence. When access control is clear and consistent:
+
+*   Data stays where it belongs.
+
+*   Teams move faster without fear of “breaking” something.
+
+*   Compliance becomes simpler, regional data never leaves its tenant.
+
+*   Leaders have visibility and accountability, they know who changed what, and when.
+
+In short, well-implemented RBAC keeps everyone focused on building, not firefighting.
+
+## How Yeedu Is Solving It
+
+Yeedu’s platform is designed with **secure collaboration** in mind. It brings structure and flexibility together using a multi-tenant role based access control approach.
+
+### Access Management – Fine-Grained Control, Simplified
+
+Yeedu’s Access Management framework provides a flexible, layered system for defining who can take action across the platform. This structure is designed to support security, operational clarity, and autonomy for fine-grained access control at every level of use from entire platform-wide control down to individual workspace-level access control.  
+
+Roles can be granted to groups as well.
+
+Yeedu permissions are organized into distinct layers:
+
+### 1\. Platform Roles
+
+Platform roles apply across the entire Yeedu platform and are typically limited to central administrators responsible for overall data platform security and governance.
+
+*   **Platform Admin**‍  
+    *   Full administrative access across the platform
+    *   Can manage settings, resources, tenant creation, configuration, user onboarding, and global policies
+    *   Access to all platform billing and usage data
+
+*   **Platform Billing**‍  
+    *   Focused visibility into platform financial and usage data
+    *   Can view billing reports, invoices, and subscription information
+    *   No configuration or administrative rights beyond billing-related tasks
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d1d0a3cdc8575d5ae344b_Governance%20%26%20Access%20Control1.avif)
+
+#### i.Platform Admin
+
+These roles ensure that platform-wide responsibilities can be clearly separated.
+
+### 2\. Tenant Roles
+
+Tenant roles apply within a specific tenant environment and are core to Yeedu’s tenant-based access control model. These users have full or partial access to tenant-level resources, helping distributed teams operate independently within the same platform.
+
+*   **Tenant Admin**  
+    *   Full control over tenant resources, including user management and resource configuration
+    *   Can create, manage, and delete clusters, workspaces, and users
+    *   Ideal for team or department leads who need broad operational authority
+
+*   **Can Manage Cluster**  
+    *   Focused permission to create, configure, manage, scale, or delete clusters
+    *   Ensures infrastructure capabilities can be delegated without granting full admin rights
+
+*   **User**  
+    *   Standard tenant-level user role
+    *   Access is defined by workspace-level permissions
+    *   Ideal for day-to-day contributors and operators
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d1d23b53fa628779cb8ce_Governance%20%26%20Access%20Control2.avif)
+
+#### ii.Tenant Roles
+
+Tenant roles are foundational to multi-tenant role-based access control, enabling autonomy without compromising isolation or compliance.
+
+### 3\. Workspace Permissions
+
+Workspace permissions define what individual users can do within a specific workspace. This makes workspace-level access control highly precise and collaboration-safe.
+
+Workspace roles include:
+
+*   **Manage**  
+    *   Full workspace control
+    *   Can create, run, edit, delete jobs, notebooks at entire workspace level
+
+*   **Edit**  
+    *   Can modify workspace assets, including notebooks, jobs.
+
+*   **Run**  
+    *   Can run jobs, notebooks
+
+*   **View**  
+    *   Read-only access
+    *   Ideal for reporting, reviews, approvals, or oversight
+
+![\_\_wf\_reserved\_inherit](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d1d37ba03ba59acaea864_Governance%20%26%20Access%20Control3.avif)
+
+#### iii.Workspace
+
+Workspace permissions are isolated, so being an Admin in one workspace does not automatically grant access to another. This separation protects data integrity and collaboration boundaries across teams.
+
+### In a Nutshell
+
+Governance and access control aren’t just IT concerns they are core business drivers. They enable organizations to innovate, onboard new teams, and share data at speed, without compromising security or compliance.
+
+They let teams move fast _without losing control_.
+
+With Yeedu’s approach to role-based access control in data platforms ensures:
+
+*   **Tenants** isolate large organizational boundaries.
+
+*   **Workspaces** organize collaboration.
+
+*   **Access Management** enforces precision and trust.
+
+The result?
+
+Your enterprise scales confidently. secure, compliant, and ready for whatever’s next.
+
+‍

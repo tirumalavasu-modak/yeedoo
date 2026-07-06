@@ -139,3 +139,142 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+
+  - name: "benchmarks"
+    label: "Benchmarks"
+    folder: "content/benchmarks/"
+    extension: "mdx"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title}}"
+    fields:
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        dateFormat: "YYYY-MM-DD"
+        timeFormat: false
+      - label: "Hero Description"
+        name: "hero_desc"
+        widget: "string"
+      - label: "Thumbnail Image"
+        name: "thumbnail"
+        widget: "image"
+        required: false
+      - label: "Thumbnail ALT Text"
+        name: "thumbnail_alt"
+        widget: "string"
+        required: false
+      - label: Tags
+        label_singular: "Tag"
+        name: "tags"
+        widget: list
+        summary: "{{fields.tag}}"
+        field:
+          label: Tag
+          name: tag
+          widget: relation
+          collection: "meta"
+          file: "tags"
+          searchFields:
+            - "tags.*.name"
+          displayFields:
+            - "tags.*.name"
+          valueField: "tags.*.slug"
+      - label: "Meta Title"
+        name: "meta_title"
+        widget: "string"
+        required: false
+      - label: "Meta Description"
+        name: "meta_description"
+        widget: "text"
+        required: false
+      - label: "OG Title"
+        name: "og_title"
+        widget: "string"
+        required: false
+      - label: "OG Description"
+        name: "og_description"
+        widget: "text"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
+  - name: "case-studies"
+    label: "Case Studies"
+    folder: "content/case-studies/"
+    extension: "mdx"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title}}"
+    fields:
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        dateFormat: "YYYY-MM-DD"
+        timeFormat: false
+      - label: "Hero Description"
+        name: "hero_desc"
+        widget: "string"
+      - label: "Thumbnail Image"
+        name: "thumbnail"
+        widget: "image"
+        required: false
+      - label: "Thumbnail ALT Text"
+        name: "thumbnail_alt"
+        widget: "string"
+        required: false
+      - label: Tags
+        label_singular: "Tag"
+        name: "tags"
+        widget: list
+        summary: "{{fields.tag}}"
+        field:
+          label: Tag
+          name: tag
+          widget: relation
+          collection: "meta"
+          file: "tags"
+          searchFields:
+            - "tags.*.name"
+          displayFields:
+            - "tags.*.name"
+          valueField: "tags.*.slug"
+      - label: "Meta Title"
+        name: "meta_title"
+        widget: "string"
+        required: false
+      - label: "Meta Description"
+        name: "meta_description"
+        widget: "text"
+        required: false
+      - label: "OG Title"
+        name: "og_title"
+        widget: "string"
+        required: false
+      - label: "OG Description"
+        name: "og_description"
+        widget: "text"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
