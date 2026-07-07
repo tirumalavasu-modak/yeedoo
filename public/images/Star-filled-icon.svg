@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512"
+     xml:space="preserve">
+
+  <defs>
+    <linearGradient id="starGradient"
+      x1="0" y1="0"
+      x2="0" y2="1">
+      <stop offset="0%" stop-color="#DE4313"/>
+      <stop offset="100%" stop-color="#f2600c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base star fill -->
+  <path
+    d="M256 48
+       L317 188
+       L468 204
+       L354 316
+       L386 464
+       L256 392
+       L126 464
+       L158 316
+       L44 204
+       L195 188
+       Z"
+    fill="url(#starGradient)"
+  />
+
+  <!-- Inner rounded orange edge (this creates rounded inner corners) -->
+  <path
+    d="M256 48
+       L317 188
+       L468 204
+       L354 316
+       L386 464
+       L256 392
+       L126 464
+       L158 316
+       L44 204
+       L195 188
+       Z"
+    fill="none"
+    stroke="url(#starGradient)"
+    stroke-width="16"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    stroke-miterlimit="0.5"
+  /> 
+
+</svg>
