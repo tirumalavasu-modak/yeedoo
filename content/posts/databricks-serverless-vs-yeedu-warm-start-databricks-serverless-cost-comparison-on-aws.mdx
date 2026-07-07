@@ -239,7 +239,9 @@ Cost per job = 2.25 DBU × $0.50 = $1.125
 
 Monthly:
 
-‍\
+```
+1,500 jobs × $1.125 = $1,687/month (compute)
+```
 
 * Warm pool idle cost:\
    Databricks keeps VMs running 24/7 in their account.\
@@ -265,13 +267,30 @@ Monthly Databricks Serverless total ≈ $1,687\
 
 Per job (with Turbo Engine 5× speedup):
 
-‍
+```
+Actual job duration = 30 min ÷ 5 = 6 min = 0.1 hr    
+Node-hours = 6 nodes × 0.1 hr = 0.6 node-hours    
+EC2 cost per job = 0.6 × $0.9426 = $0.566 
+```
 
 Monthly compute:
 
+```
+ 1,500 jobs × $0.566 = $849/month
+```
+
 Between jobs:
 
+```
+Machines are STOPPED - $0 cloud charges
+```
+
 Yeedu license (mid-tier, flat):
+
+```
+$4,500/month - regardless of job count  
+Monthly Yeedu total = $849 + $4,500 = $5,349/month 
+```
 
 Wait, Yeedu looks more expensive? Let's look at what you're actually getting.
 
