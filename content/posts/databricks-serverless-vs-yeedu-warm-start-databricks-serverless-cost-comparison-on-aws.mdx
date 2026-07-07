@@ -30,8 +30,6 @@ Let's take a concrete example, a mid-size financial services company running an 
 
 This is not a heavy enterprise. This is a normal, active data team.
 
-‍
-
 ### Spark job cost on AWS: AWS Instance Prices (Published, April 2025, us-east-1)
 
 ```
@@ -231,7 +229,7 @@ Same specs. Graviton4 is 6.5% cheaper and Yeedu's Turbo Engine extracts signific
 
 Per job:
 
-```
+```cpp
 ‍Node-hours = 6 nodes × 0.5 hr = 3.0 node-hours   
 DBUs consumed = 3.0 × 0.75 = 2.25 DBU   
 Cost per job = 2.25 DBU × $0.50 = $1.125 
@@ -426,7 +424,7 @@ Here's what this looks like for a real team:
 Total: 50 jobs/day, mixed duration averaging ~30 min on standard Spark
 ```
 
-\*\*
+
 
 **On Databricks Serverless:** - Bill fluctuates $3,000–$6,000/month (autoscaling unpredictability) - Data crosses Databricks' network compliance review required - Engineers self-censor on exploratory runs to avoid surprise costs - Platform team spends ~6 hrs/week monitoring DBU consumption
 
