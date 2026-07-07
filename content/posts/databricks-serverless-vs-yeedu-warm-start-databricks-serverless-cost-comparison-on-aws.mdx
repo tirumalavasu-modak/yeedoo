@@ -26,15 +26,162 @@ Let's take a concrete example, a mid-size financial services company running an 
 * **50 Spark jobs per day** - ETL pipelines, ML feature engineering, aggregations
 * **~30 minutes average job duration** on standard Spark
 * **6 nodes per job** - r6i.4xlarge on Databricks, r8g.4xlarge (Graviton4) on Yeedu
-* Running **every day**, 30 days a month = **1,500 job runs/month**
-
-‍
+* Running **every day**, 30 days a month = **1,500 job runs/month**‍
 
 This is not a heavy enterprise. This is a normal, active data team.
 
 ‍
 
 ### Spark job cost on AWS: AWS Instance Prices (Published, April 2025, us-east-1)
+
+```
+<style>
+  .yeedu-instance-wrap {
+    width: 100%;
+    margin: 30px 0;
+    font-family: Inter, sans-serif;
+  }
+
+  .yeedu-instance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  /* Header */
+  .yeedu-instance-table thead {
+    background: linear-gradient(90deg, #020617, #0f172a);
+  }
+
+  .yeedu-instance-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+  }
+
+  /* Rows */
+  .yeedu-instance-table td {
+    padding: 16px;
+    border-top: 1px solid #1e293b;
+    font-size: 14px;
+    color: #e5e7eb;
+    position: relative;
+  }
+
+  /* Hover */
+  .yeedu-instance-table tbody tr:hover {
+    background: rgba(59, 130, 246, 0.05);
+  }
+
+  /* ✅ PREMIUM GREEN */
+  .prices {
+    color: #4ade80 !important;
+    font-weight: 700;
+    background: rgba(34, 197, 94, 0.08);
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  /* ✅ Highlight better option (Graviton) */
+  .highlight {
+    background: rgba(34, 197, 94, 0.03);
+  }
+
+  .highlight td:first-child {
+    border-left: 3px solid #22c55e;
+  }
+
+  /* ================= MOBILE ================= */
+  @media (max-width: 768px) {
+    .yeedu-instance-table thead {
+      display: none;
+    }
+
+    .yeedu-instance-table,
+    .yeedu-instance-table tbody,
+    .yeedu-instance-table tr {
+      display: block;
+      width: 100%;
+    }
+
+    .yeedu-instance-table tr {
+      margin-bottom: 14px;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #020617;
+      padding: 6px 0;
+    }
+
+    .yeedu-instance-table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      border-bottom: 1px solid #1e293b;
+      font-size: 13px;
+      gap: 10px;
+    }
+
+    .yeedu-instance-table td:last-child {
+      border-bottom: none;
+    }
+
+    .yeedu-instance-table td::before {
+      content: attr(data-label);
+      font-size: 11px;
+      color: #94a3b8;
+      text-transform: uppercase;
+    }
+
+    /* remove highlight bg for cleaner mobile cards */
+    .highlight {
+      background: transparent;
+    }
+  }
+</style>
+
+<div class="yeedu-instance-wrap">
+  <table class="yeedu-instance-table">
+    <thead>
+      <tr>
+        <th>Instance</th>
+        <th>Chip</th>
+        <th>vCPUs</th>
+        <th>RAM</th>
+        <th>On-Demand $/hr</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- Intel -->
+      <tr>
+        <td data-label="Instance">r6i.4xlarge</td>
+        <td data-label="Chip">Intel x86</td>
+        <td data-label="vCPUs">16</td>
+        <td data-label="RAM">128 GB</td>
+        <td data-label="On-Demand $/hr"><span class="prices">$1.008/hr</span></td>
+      </tr>
+
+      <!-- Graviton -->
+      <tr class="highlight">
+        <td data-label="Instance">r8g.4xlarge</td>
+        <td data-label="Chip">Graviton4 ARM</td>
+        <td data-label="vCPUs">16</td>
+        <td data-label="RAM">128 GB</td>
+        <td data-label="On-Demand $/hr"><span class="prices">$0.9426/hr</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
 
 .yeedu-instance-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } .yeedu-instance-table { width: 100%; border-collapse: collapse; background: #020617; border: 1px solid #1e293b; border-radius: 12px; overflow: hidden; } /\* Header \*/ .yeedu-instance-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-instance-table th { padding: 14px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; } /\* Rows \*/ .yeedu-instance-table td { padding: 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e5e7eb; position: relative; } /\* Hover \*/ .yeedu-instance-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* ✅ PREMIUM GREEN \*/ .prices { color: #4ade80 !important; font-weight: 700; background: rgba(34, 197, 94, 0.08); padding: 4px 8px; border-radius: 6px; display: inline-block; } /\* ✅ Highlight better option (Graviton) \*/ .highlight { background: rgba(34, 197, 94, 0.03); } .highlight td:first-child { border-left: 3px solid #22c55e; } /\* ================= MOBILE ================= \*/ @media (max-width: 768px) { .yeedu-instance-table thead { display: none; } .yeedu-instance-table, .yeedu-instance-table tbody, .yeedu-instance-table tr { display: block; width: 100%; } .yeedu-instance-table tr { margin-bottom: 14px; border: 1px solid #1e293b; border-radius: 12px; overflow: hidden; background: #020617; padding: 6px 0; } .yeedu-instance-table td { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-bottom: 1px solid #1e293b; font-size: 13px; gap: 10px; } .yeedu-instance-table td:last-child { border-bottom: none; } .yeedu-instance-table td::before { content: attr(data-label); font-size: 11px; color: #94a3b8; text-transform: uppercase; } /\* remove highlight bg for cleaner mobile cards \*/ .highlight { background: transparent; } }
 
@@ -93,14 +240,14 @@ Cost per job = 2.25 DBU × $0.50 = $1.125
 Monthly:
 
 ‍\
-+ Warm pool idle cost:\
- Databricks keeps VMs running 24/7 in their account.\
- This cost is baked into the DBU rate - you cannot opt out.\
- You are effectively paying for readiness even between jobs.  
 
-+ Premium tier licensing:\
- Serverless requires Premium or Enterprise.\
- DBU rate itself is already 2-5× higher than Classic Jobs Compute.  
+* Warm pool idle cost:\
+   Databricks keeps VMs running 24/7 in their account.\
+   This cost is baked into the DBU rate - you cannot opt out.\
+   You are effectively paying for readiness even between jobs.  
+* Premium tier licensing:\
+   Serverless requires Premium or Enterprise.\
+   DBU rate itself is already 2-5× higher than Classic Jobs Compute.  
 
 Monthly Databricks Serverless total ≈ $1,687\
 (compute charges only tier cost and markup already in DBU rate)  
