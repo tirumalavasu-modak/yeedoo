@@ -153,7 +153,9 @@ function migrateBlogs() {
           meta_title: row['Meta Title'] || '',
           meta_description: row['Meta Description'] || '',
           og_title: row['OG Title'] || '',
-          og_description: row['OG Description'] || ''
+          og_description: row['OG Description'] || '',
+          keywords: row['Keywords'] || '',
+          about_author_link: row['About Author Link'] || ''
         };
 
         const fileContent = `---\n${yaml.dump(frontmatter)}---\n\n${bodyMarkdown}\n`;

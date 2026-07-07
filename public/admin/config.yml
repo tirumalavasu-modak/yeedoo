@@ -160,6 +160,14 @@ collections:
         name: "og_description"
         widget: "text"
         required: false
+      - label: "Keywords"
+        name: "keywords"
+        widget: "string"
+        required: false
+      - label: "About Author Link"
+        name: "about_author_link"
+        widget: "string"
+        required: false
       - label: "Body"
         name: "body"
         widget: "markdown"

@@ -19,6 +19,10 @@ og_title: 'Spark Performance Optimization: Beyond JVM Limits'
 og_description: >-
   Discover why modern engines like DuckDB skip the Java Virtual Machine and how
   it impacts Apache Spark performance, cost, and scalability with Yeedu Turbo.
+keywords: >-
+  Spark performance optimization, C++ query engine vs JVM, DuckDB vs Apache
+  Spark, Vectorized query execution
+about_author_link: ''
 ---
 
 The highest-performing query engines of the last five years: DuckDB, Velox, DataFusion, Polars, are all written in C or C++ and bypass the JVM entirely. This isn't a coincidence. The JVM imposes a structural tax on analytical workloads: garbage collection pauses, memory overhead, inability to exploit SIMD, and serialization costs. This shift has become central to modern Spark performance optimization strategies. Yeedu Turbo brings this same C++-native, SIMD-vectorized approach to distributed Spark, delivering 4–10× faster execution at 60–80% lower compute cost without changing a single line of Spark code, making it a practical path toward [Spark cost optimization](https://yeedu.com/blog/spark-cost-optimization-diagnosing-expensive-spark-jobs) at scale.
