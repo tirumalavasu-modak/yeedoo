@@ -418,13 +418,9 @@ Here's what this looks like for a real team:
 
 **The team:** 8 data engineers at a mid-size fintech. They run: - 20 daily ETL jobs pulling from trading systems → data lake (avg 45 min each) - 15 ML feature pipelines for risk scoring (avg 20 min each) - 15 aggregation and reporting jobs (avg 15 min each)
 
-\*\*
-
 ```
 Total: 50 jobs/day, mixed duration averaging ~30 min on standard Spark
 ```
-
-
 
 **On Databricks Serverless:** - Bill fluctuates $3,000–$6,000/month (autoscaling unpredictability) - Data crosses Databricks' network compliance review required - Engineers self-censor on exploratory runs to avoid surprise costs - Platform team spends ~6 hrs/week monitoring DBU consumption
 
