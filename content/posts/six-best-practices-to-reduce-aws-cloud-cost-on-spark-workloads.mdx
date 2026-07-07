@@ -45,7 +45,7 @@ Yeedu tracks real-time CPU and memory utilization metrics for every cluster. Rat
 *   Right-sizing recommendations based on observed workload behavior
 *   Ability to compare instance families and identify cost-optimal alternatives
 
-![System Metrics Dashboard for Machine Type Selection and Resizing ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d50c55470266fe2de5ddb_Six%20Best%20Practices%20to%20Reduce%20AWS%20Cloud%20Cost%20on%20Spark%20Workloads1.avif)
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1463px"><div><img alt="System Metrics Dashboard for Machine Type Selection and Resizing " src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d50c55470266fe2de5ddb_Six%20Best%20Practices%20to%20Reduce%20AWS%20Cloud%20Cost%20on%20Spark%20Workloads1.avif" loading="lazy" /></div></figure>
 
 **3× Cost spread between wrong and right instance type**
 
@@ -89,69 +89,7 @@ AWS Lambda is widely used for lightweight event-driven tasks, but it is poorly s
 
 Yeedu Functions are purpose-built for data pipeline tasks transformations, validation checks, pre and post-processing hooks. They run within the existing cluster context, share compute resources efficiently, and avoid the pricing inefficiencies that complicate AWS cost saving analysis.
 
-.yeedu-table-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } /\* ===== OUTER CONTAINER (NEW) ===== \*/ .yeedu-table-box { border: 1px solid #334155; /\* 👈 grey outer border \*/ border-radius: 16px; overflow: hidden; background: #020617; } .yeedu-table { width: 100%; border-collapse: collapse; } /\* ===== HEADER ===== \*/ .yeedu-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-table th { padding: 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; } /\* ===== ROWS ===== \*/ .yeedu-table td { padding: 18px 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e5e7eb; } .yeedu-table tbody tr { transition: all 0.2s ease; } .yeedu-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* ===== FIRST COLUMN ===== \*/ .feature { font-weight: 600; color: #f8fafc; } /\* ===== YEEDU COLUMN HIGHLIGHT ===== \*/ .yeedu-table td:nth-child(3) { background: rgba(249, 115, 22, 0.05); } /\* ===== BADGES ===== \*/ .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px; font-size: 12px; font-weight: 600; } .positive { background: rgba(34, 197, 94, 0.12); color: #22c55e; } .negative { background: rgba(248, 113, 113, 0.12); color: #f87171; } .neutral { background: rgba(148, 163, 184, 0.12); color: #94a3b8; } /\* ===== YEEDU TAG ===== \*/ .yeedu-tag { display: inline-block; font-size: 10px; padding: 3px 8px; border-radius: 999px; background: rgba(249, 115, 22, 0.15); color: #f97316; margin-left: 6px; font-weight: 600; } /\* ================= MOBILE ================= \*/ .mobile-cards { display: none; } @media (max-width: 768px) { .yeedu-table-box { display: none; } .mobile-cards { display: flex; flex-direction: column; gap: 16px; } .compare-card { background: #020617; border: 1px solid #334155; /\* 👈 premium grey border \*/ border-radius: 16px; padding: 16px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); } .compare-card.featured { border: 1px solid rgba(249, 115, 22, 0.6); box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.2); } .badge-top { font-size: 10px; padding: 3px 8px; border-radius: 999px; background: rgba(249, 115, 22, 0.15); color: #f97316; display: inline-block; margin-bottom: 8px; font-weight: 600; } .card-title { font-size: 16px; font-weight: 600; color: #f8fafc; margin-bottom: 12px; } .card-grid { display: grid; grid-template-columns: 1fr; gap: 10px; } .metric { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-radius: 10px; background: rgba(15, 23, 42, 0.6); border: 1px solid #1e293b; } .metric-label { font-size: 11px; color: #94a3b8; text-transform: uppercase; } .metric-value { font-size: 13px; font-weight: 600; color: #e5e7eb; } }
-
-Capability
-
-AWS Lambda
-
-Yeedu Functions
-
-Execution time limit
-
-✖ 15 minutes
-
-✔ No limit YEEDU
-
-Cold start latency
-
-✖ 100 ms – 2 s
-
-✔ None
-
-Data-aware context
-
-✖ Not available
-
-✔ Full Spark context
-
-Pricing model
-
-Per invocation
-
-✔ Cluster-based
-
-Memory ceiling
-
-✖ 10 GB
-
-✔ Full node memory
-
-BEST CHOICE
-
-Yeedu Functions
-
-ExecutionNo limit
-
-Cold StartNone
-
-ContextFull Spark
-
-PricingCluster-based
-
-MemoryFull node
-
-AWS Lambda
-
-Execution15 min
-
-Cold Start100ms–2s
-
-ContextNo
-
-PricingPer invocation
-
-Memory10 GB
+<div data-rt-embed-type="true"><div class="yeedu-table-wrap"><div class="yeedu-table-box"><table class="yeedu-table"><thead><tr><th>Capability</th><th>AWS Lambda</th><th>Yeedu Functions</th></tr></thead><tbody><tr><td class="feature">Execution time limit</td><td><span class="badge negative">✖ 15 minutes</span></td><td><span class="badge positive">✔ No limit</span> <span class="yeedu-tag">YEEDU</span></td></tr><tr><td class="feature">Cold start latency</td><td><span class="badge negative">✖ 100 ms – 2 s</span></td><td><span class="badge positive">✔ None</span></td></tr><tr><td class="feature">Data-aware context</td><td><span class="badge negative">✖ Not available</span></td><td><span class="badge positive">✔ Full Spark context</span></td></tr><tr><td class="feature">Pricing model</td><td><span class="badge neutral">Per invocation</span></td><td><span class="badge positive">✔ Cluster-based</span></td></tr><tr><td class="feature">Memory ceiling</td><td><span class="badge negative">✖ 10 GB</span></td><td><span class="badge positive">✔ Full node memory</span></td></tr></tbody></table></div><div class="mobile-cards"><div class="compare-card featured"><div class="badge-top">BEST CHOICE</div><div class="card-title">Yeedu Functions</div><div class="card-grid"><div class="metric"><span class="metric-label">Execution</span><span class="badge positive">No limit</span></div><div class="metric"><span class="metric-label">Cold Start</span><span class="badge positive">None</span></div><div class="metric"><span class="metric-label">Context</span><span class="badge positive">Full Spark</span></div><div class="metric"><span class="metric-label">Pricing</span><span class="badge positive">Cluster-based</span></div><div class="metric"><span class="metric-label">Memory</span><span class="badge positive">Full node</span></div></div></div><div class="compare-card"><div class="card-title">AWS Lambda</div><div class="card-grid"><div class="metric"><span class="metric-label">Execution</span><span class="badge negative">15 min</span></div><div class="metric"><span class="metric-label">Cold Start</span><span class="badge negative">100ms–2s</span></div><div class="metric"><span class="metric-label">Context</span><span class="badge negative">No</span></div><div class="metric"><span class="metric-label">Pricing</span><span class="metric-value">Per invocation</span></div><div class="metric"><span class="metric-label">Memory</span><span class="badge negative">10 GB</span></div></div></div></div></div></div>
 
 ## 5\. Replace Amazon EMR with Yeedu to Improve AWS Cost Saving Strategies
 
@@ -159,83 +97,9 @@ Amazon EMR is the default managed Spark offering on AWS, but it carries a per-in
 
 Yeedu is a fully managed, [multi-cloud Apache Spark platform](https://yeedu.com/) that runs natively on AWS without the EMR surcharge. It provides equivalent capabilities cluster lifecycle management, auto-scaling, monitoring, and observability while supporting deployment across AWS, GCP, and Azure from a single control plane, strengthening long-term AWS cost management flexibility.
 
-.yeedu-table-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } /\* ===== OUTER CONTAINER ===== \*/ .yeedu-table-box { border: 1px solid #334155; border-radius: 16px; overflow: hidden; background: #020617; } .yeedu-table { width: 100%; border-collapse: collapse; } /\* HEADER \*/ .yeedu-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-table th { padding: 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; } /\* ROWS \*/ .yeedu-table td { padding: 18px 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e5e7eb; } .yeedu-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* FIRST COLUMN \*/ .feature { font-weight: 600; color: #f8fafc; } /\* YEEDU COLUMN HIGHLIGHT \*/ .yeedu-table td:nth-child(3) { background: rgba(249, 115, 22, 0.05); } /\* BADGES \*/ .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px; font-size: 12px; font-weight: 600; } .positive { background: rgba(34, 197, 94, 0.12); color: #22c55e; } .negative { background: rgba(248, 113, 113, 0.12); color: #f87171; } .neutral { background: rgba(148, 163, 184, 0.12); color: #94a3b8; } /\* YEEDU TAG \*/ .yeedu-tag { display: inline-block; font-size: 10px; padding: 3px 8px; border-radius: 999px; background: rgba(249, 115, 22, 0.15); color: #f97316; margin-left: 6px; font-weight: 600; } /\* ================= MOBILE ================= \*/ .mobile-cards { display: none; } @media (max-width: 768px) { .yeedu-table-box { display: none; } .mobile-cards { display: flex; flex-direction: column; gap: 16px; } .compare-card { background: #020617; border: 1px solid #334155; border-radius: 16px; padding: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.25); } .compare-card.featured { border: 1px solid rgba(249,115,22,0.6); box-shadow: 0 0 0 1px rgba(249,115,22,0.2); } .badge-top { font-size: 10px; padding: 3px 8px; border-radius: 999px; background: rgba(249,115,22,0.15); color: #f97316; display: inline-block; margin-bottom: 8px; font-weight: 600; } .card-title { font-size: 16px; font-weight: 600; color: #f8fafc; margin-bottom: 12px; } .card-grid { display: flex; flex-direction: column; gap: 10px; } .metric { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-radius: 10px; background: rgba(15,23,42,0.6); border: 1px solid #1e293b; } .metric-label { font-size: 11px; color: #94a3b8; text-transform: uppercase; } }
+<div data-rt-embed-type="true"><div class="yeedu-table-wrap"><div class="yeedu-table-box"><table class="yeedu-table"><thead><tr><th>Feature</th><th>Amazon EMR</th><th>Yeedu</th></tr></thead><tbody><tr><td class="feature">EMR pricing surcharge</td><td><span class="badge negative">✖ Yes (per vCPU/hr)</span></td><td><span class="badge positive">✔ None</span> <span class="yeedu-tag">YEEDU</span></td></tr><tr><td class="feature">Multi-cloud support</td><td><span class="badge negative">✖ AWS only</span></td><td><span class="badge positive">✔ AWS, GCP, Azure</span></td></tr><tr><td class="feature">Idle auto-stop / terminate</td><td><span class="badge neutral">Partial</span></td><td><span class="badge positive">✔ Full policy control</span></td></tr></tbody></table></div><div class="mobile-cards"><div class="compare-card featured"><div class="badge-top">BEST VALUE</div><div class="card-title">Yeedu</div><div class="card-grid"><div class="metric"><span class="metric-label">Pricing</span><span class="badge positive">No surcharge</span></div><div class="metric"><span class="metric-label">Cloud</span><span class="badge positive">Multi-cloud</span></div><div class="metric"><span class="metric-label">Idle Control</span><span class="badge positive">Full control</span></div></div></div><div class="compare-card"><div class="card-title">Amazon EMR</div><div class="card-grid"><div class="metric"><span class="metric-label">Pricing</span><span class="badge negative">Surcharge</span></div><div class="metric"><span class="metric-label">Cloud</span><span class="badge negative">AWS only</span></div><div class="metric"><span class="metric-label">Idle Control</span><span class="badge neutral">Partial</span></div></div></div></div></div></div>
 
-Feature
-
-Amazon EMR
-
-Yeedu
-
-EMR pricing surcharge
-
-✖ Yes (per vCPU/hr)
-
-✔ None YEEDU
-
-Multi-cloud support
-
-✖ AWS only
-
-✔ AWS, GCP, Azure
-
-Idle auto-stop / terminate
-
-Partial
-
-✔ Full policy control
-
-BEST VALUE
-
-Yeedu
-
-PricingNo surcharge
-
-CloudMulti-cloud
-
-Idle ControlFull control
-
-Amazon EMR
-
-PricingSurcharge
-
-CloudAWS only
-
-Idle ControlPartial
-
-.yeedu-table-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } /\* ===== OUTER BOX ===== \*/ .yeedu-table-box { border: 1px solid #334155; border-radius: 16px; overflow: hidden; background: #020617; } .yeedu-table { width: 100%; border-collapse: collapse; } /\* ===== HEADER ===== \*/ .yeedu-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-table th { padding: 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; } /\* ===== ROWS ===== \*/ .yeedu-table td { padding: 18px 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e5e7eb; } .yeedu-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* ===== FIRST COLUMN ===== \*/ .feature { font-weight: 600; color: #f8fafc; } /\* ===== YEEDU COLUMN ===== \*/ .yeedu-table td:nth-child(3) { background: rgba(249, 115, 22, 0.05); } /\* ===== BADGES ===== \*/ .badge { padding: 6px 10px; border-radius: 8px; font-size: 12px; font-weight: 600; display: inline-block; } .positive { background: rgba(34, 197, 94, 0.12); color: #22c55e; } .negative { background: rgba(248, 113, 113, 0.12); color: #f87171; } .neutral { background: rgba(148, 163, 184, 0.12); color: #94a3b8; } /\* ===== YEEDU TAG ===== \*/ .yeedu-tag { margin-left: 6px; font-size: 10px; padding: 3px 8px; border-radius: 999px; background: rgba(249, 115, 22, 0.15); color: #f97316; font-weight: 600; } /\* ================= MOBILE ================= \*/ .mobile-cards { display: none; } @media (max-width: 768px) { /\* Hide table \*/ .yeedu-table-box { display: none; } /\* Show premium cards \*/ .mobile-cards { display: flex; flex-direction: column; gap: 16px; } .compare-card { background: #020617; border: 1px solid #334155; border-radius: 16px; padding: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.35); } .compare-card.featured { border: 1px solid rgba(249, 115, 22, 0.6); box-shadow: 0 0 0 1px rgba(249,115,22,0.2); } .badge-top { font-size: 10px; padding: 4px 10px; border-radius: 999px; background: rgba(249,115,22,0.15); color: #f97316; display: inline-block; margin-bottom: 8px; font-weight: 600; } .card-title { font-size: 16px; font-weight: 600; color: #f8fafc; margin-bottom: 14px; } .metric { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-radius: 10px; background: rgba(15, 23, 42, 0.7); border: 1px solid #1e293b; margin-bottom: 10px; } .metric-label { font-size: 11px; color: #94a3b8; text-transform: uppercase; } }
-
-Feature
-
-Amazon EMR
-
-Yeedu
-
-Cluster metrics
-
-CloudWatch only
-
-✔ Built-in intelligence YEEDU
-
-Vendor lock-in
-
-✖ High
-
-✔ None
-
-BEST CHOICE
-
-Yeedu
-
-Cluster metrics Built-in intelligence
-
-Vendor lock-in None
-
-Amazon EMR
-
-Cluster metrics CloudWatch
-
-Vendor lock-in High
+<div data-rt-embed-type="true"><div class="yeedu-table-wrap"><div class="yeedu-table-box"><table class="yeedu-table"><thead><tr><th>Feature</th><th>Amazon EMR</th><th>Yeedu</th></tr></thead><tbody><tr><td class="feature">Cluster metrics</td><td><span class="badge neutral">CloudWatch only</span></td><td><span class="badge positive">✔ Built-in intelligence</span> <span class="yeedu-tag">YEEDU</span></td></tr><tr><td class="feature">Vendor lock-in</td><td><span class="badge negative">✖ High</span></td><td><span class="badge positive">✔ None</span></td></tr></tbody></table></div><div class="mobile-cards"><div class="compare-card featured"><div class="badge-top">BEST CHOICE</div><div class="card-title">Yeedu</div><div class="metric"><span class="metric-label">Cluster metrics</span> <span class="badge positive">Built-in intelligence</span></div><div class="metric"><span class="metric-label">Vendor lock-in</span> <span class="badge positive">None</span></div></div><div class="compare-card"><div class="card-title">Amazon EMR</div><div class="metric"><span class="metric-label">Cluster metrics</span> <span class="badge neutral">CloudWatch</span></div><div class="metric"><span class="metric-label">Vendor lock-in</span> <span class="badge negative">High</span></div></div></div></div></div>
 
 ### **MIGRATION IMPACT**
 
@@ -267,85 +131,7 @@ Without Yeedu, estimating a Savings Plan commitment requires days of manual anal
 
 A structured, data-driven approach combining these six strategies provides a complete framework for **AWS cost optimization**, enabling teams to move from reactive cost control to proactive cost engineering.
 
-.yeedu-table-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } /\* ===== OUTER BOX ===== \*/ .yeedu-table-box { border: 1px solid #334155; border-radius: 16px; overflow: hidden; background: #020617; } .yeedu-table { width: 100%; border-collapse: collapse; } /\* ===== HEADER ===== \*/ .yeedu-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-table th { padding: 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; } /\* ===== ROWS ===== \*/ .yeedu-table td { padding: 18px 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e5e7eb; vertical-align: top; } .yeedu-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* ===== INDEX (ORANGE) ===== \*/ .index-col { width: 70px; text-align: center; } .index-badge { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(249, 115, 22, 0.15); color: #f97316; font-weight: 700; font-size: 13px; } /\* ===== TEXT STYLES ===== \*/ .strategy { font-weight: 600; color: #f8fafc; } .action { color: #cbd5f5; line-height: 1.6; } /\* ================= MOBILE ================= \*/ .mobile-cards { display: none; } @media (max-width: 768px) { /\* Hide table \*/ .yeedu-table-box { display: none; } /\* Show cards \*/ .mobile-cards { display: flex; flex-direction: column; gap: 16px; } .strategy-card { background: #020617; border: 1px solid #334155; border-radius: 16px; padding: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); } .card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; } .card-title { font-size: 15px; font-weight: 600; color: #f8fafc; } .card-desc { font-size: 13px; color: #cbd5f5; line-height: 1.6; } }
-
-#
-
-Strategy
-
-Action
-
-01
-
-Right-size compute
-
-Use Yeedu cluster metrics to identify CPU/memory mismatch and select the correct instance family.
-
-02
-
-Right-size disk
-
-Review actual disk usage per cluster and provision storage based on real consumption data.
-
-03
-
-Auto stop / terminate
-
-Configure auto stop for idle clusters, auto terminate for batch workloads with a defined end point.
-
-04
-
-Replace Lambda
-
-Migrate data-centric Lambda functions to Yeedu Functions - no cold starts, no time limits, no invocation cost.
-
-05
-
-Replace EMR
-
-Move Spark workloads from EMR to Yeedu to eliminate the per-instance surcharge and gain multi-cloud flexibility.
-
-06
-
-Commit to Savings Plan
-
-Use Yeedu usage data to determine the correct commitment level and purchase an AWS Compute Savings Plan.
-
-01
-
-Right-size compute
-
-Use Yeedu cluster metrics to identify CPU/memory mismatch and select the correct instance family.
-
-02
-
-Right-size disk
-
-Review actual disk usage per cluster and provision storage based on real consumption data.
-
-03
-
-Auto stop / terminate
-
-Configure auto stop for idle clusters, auto terminate for batch workloads with a defined end point.
-
-04
-
-Replace Lambda
-
-Migrate data-centric Lambda functions to Yeedu Functions - no cold starts, no time limits, no invocation cost.
-
-05
-
-Replace EMR
-
-Move Spark workloads from EMR to Yeedu to eliminate the per-instance surcharge and gain multi-cloud flexibility.
-
-06
-
-Commit to Savings Plan
-
-Use Yeedu usage data to determine the correct commitment level and purchase an AWS Compute Savings Plan.
+<div data-rt-embed-type="true"><div class="yeedu-table-wrap"><div class="yeedu-table-box"><table class="yeedu-table"><thead><tr><th>#</th><th>Strategy</th><th>Action</th></tr></thead><tbody><tr><td class="index-col"><span class="index-badge">01</span></td><td class="strategy">Right-size compute</td><td class="action">Use Yeedu cluster metrics to identify CPU/memory mismatch and select the correct instance family.</td></tr><tr><td class="index-col"><span class="index-badge">02</span></td><td class="strategy">Right-size disk</td><td class="action">Review actual disk usage per cluster and provision storage based on real consumption data.</td></tr><tr><td class="index-col"><span class="index-badge">03</span></td><td class="strategy">Auto stop / terminate</td><td class="action">Configure auto stop for idle clusters, auto terminate for batch workloads with a defined end point.</td></tr><tr><td class="index-col"><span class="index-badge">04</span></td><td class="strategy">Replace Lambda</td><td class="action">Migrate data-centric Lambda functions to Yeedu Functions - no cold starts, no time limits, no invocation cost.</td></tr><tr><td class="index-col"><span class="index-badge">05</span></td><td class="strategy">Replace EMR</td><td class="action">Move Spark workloads from EMR to Yeedu to eliminate the per-instance surcharge and gain multi-cloud flexibility.</td></tr><tr><td class="index-col"><span class="index-badge">06</span></td><td class="strategy">Commit to Savings Plan</td><td class="action">Use Yeedu usage data to determine the correct commitment level and purchase an AWS Compute Savings Plan.</td></tr></tbody></table></div><div class="mobile-cards"><div class="strategy-card"><div class="card-top"><span class="index-badge">01</span><div class="card-title">Right-size compute</div></div><div class="card-desc">Use Yeedu cluster metrics to identify CPU/memory mismatch and select the correct instance family.</div></div><div class="strategy-card"><div class="card-top"><span class="index-badge">02</span><div class="card-title">Right-size disk</div></div><div class="card-desc">Review actual disk usage per cluster and provision storage based on real consumption data.</div></div><div class="strategy-card"><div class="card-top"><span class="index-badge">03</span><div class="card-title">Auto stop / terminate</div></div><div class="card-desc">Configure auto stop for idle clusters, auto terminate for batch workloads with a defined end point.</div></div><div class="strategy-card"><div class="card-top"><span class="index-badge">04</span><div class="card-title">Replace Lambda</div></div><div class="card-desc">Migrate data-centric Lambda functions to Yeedu Functions - no cold starts, no time limits, no invocation cost.</div></div><div class="strategy-card"><div class="card-top"><span class="index-badge">05</span><div class="card-title">Replace EMR</div></div><div class="card-desc">Move Spark workloads from EMR to Yeedu to eliminate the per-instance surcharge and gain multi-cloud flexibility.</div></div><div class="strategy-card"><div class="card-top"><span class="index-badge">06</span><div class="card-title">Commit to Savings Plan</div></div><div class="card-desc">Use Yeedu usage data to determine the correct commitment level and purchase an AWS Compute Savings Plan.</div></div></div></div></div>
 
 Ready to Reduce Your AWS Bill?  
 

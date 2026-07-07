@@ -83,15 +83,11 @@ Yeedu Thrift relies on a [Hive Metastore](https://yeedu.com/posts/integrating-gl
 
 This standalone metastore will be used by the Spark Thrift Server to manage metadata centrally.
 
-![Hive-site.xml](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2aafb13450c3315606db_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu1.avif)
-
-Hive-site.xml
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1055px"><div><img alt="Hive-site.xml" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2aafb13450c3315606db_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu1.avif" loading="lazy" /></div><figcaption>Hive-site.xml</figcaption></figure>
 
 ‍
 
-![Core-site.xml](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2ad24ca6d8d7ad30a971_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu2.avif)
-
-Core-site.xml
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1055px"><div><img alt="Core-site.xml" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2ad24ca6d8d7ad30a971_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu2.avif" loading="lazy" /></div><figcaption>Core-site.xml</figcaption></figure>
 
 ### Step 2: Create a Thrift-Enabled Cluster
 
@@ -104,11 +100,9 @@ From the Yeedu UI, create a new cluster with the following settings:
 
 Once created, the cluster will be capable of running workloads on Spark Thrift Server.
 
-![Association of cluster](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2af1639079868dcc968f_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu3.avif)
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="2300px"><div><img alt="Association of cluster" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2af1639079868dcc968f_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu3.avif" loading="lazy" /></div><figcaption>Association of cluster</figcaption></figure>
 
-Association of cluster
-
-![Cluster type and Spark Versions](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2b187b5b4344bc5ff8b1_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu4.avif)
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1360px"><div><img alt="Cluster type and Spark Versions" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2b187b5b4344bc5ff8b1_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu4.avif" loading="lazy" /></div></figure>
 
 ### Step 3: Add Required Packages and Configurations
 
@@ -120,9 +114,7 @@ Example : **org.apache.hadoop:hadoop-aws:3.2.4**
 
 This package is required for accessing S3-compatible object storagew hen queries are executed through Apache Spark SQL Thrift.
 
-![Packages](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2b2e652294c9f8e53ca0_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu5.avif)
-
-Packages
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1360px"><div><img alt="Packages" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2b2e652294c9f8e53ca0_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu5.avif" loading="lazy" /></div><figcaption>Packages</figcaption></figure>
 
 #### Add Spark Configuration
 
@@ -130,9 +122,7 @@ Add the Spark configuration to the cluster to complete the Spark Thrift Server c
 
 This ensures that the PostgreSQL JDBC driver is available to the Spark driver for Hive Metastore connectivity.
 
-![Spark Configurations](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2b463b6c083723199eae_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu6.avif)
-
-Spark Configurations
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1360px"><div><img alt="Spark Configurations" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2b463b6c083723199eae_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu6.avif" loading="lazy" /></div><figcaption>Spark Configurations</figcaption></figure>
 
 ### Step 4: Retrieve JDBC Details from Yeedu UI
 
@@ -164,9 +154,7 @@ The following connection details are displayed for establishing a Spark JDBC con
 
 ‍
 
-![JDBC tab](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2b6e8a19b2a16b143140_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu7.avif)
-
-JDBC tab
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1360px"><div><img alt="JDBC tab" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2b6e8a19b2a16b143140_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu7.avif" loading="lazy" /></div><figcaption>JDBC tab</figcaption></figure>
 
 ‍
 
@@ -188,9 +176,7 @@ Example: Connecting with DBeaver
 
 Once connected, you can execute Spark SQL queries directly from the client via the managed Spark Thrift Server.
 
-![Dbeaver setup](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2baab832f54624c08dd1_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu8.avif)
-
-Dbeaver setup
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1360px"><div><img alt="Dbeaver setup" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2baab832f54624c08dd1_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu8.avif" loading="lazy" /></div><figcaption>Dbeaver setup</figcaption></figure>
 
 ### Step 6: Performing Queries in DBeaver Submits a Thrift Job in Yeedu
 
@@ -208,9 +194,7 @@ After the setup is done:
 *   Secure, [workspace-based access control](https://yeedu.com/posts/governance-access-control-managing-workspaces-securely-with-yeedu)
 *   [Optimized for multi-user and interactive SQL workloads](https://yeedu.com/posts/spark-cost-optimization-diagnosing-expensive-spark-jobs) on a shared Spark Thrift Server
 
-![Runs tab](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2bca25a0a23d1541e01c_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu9.avif)
-
-Runs tab
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1360px"><div><img alt="Runs tab" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1d2bca25a0a23d1541e01c_Running%20Thrift%20Jobs%20Seamlessly%20in%20Yeedu9.avif" loading="lazy" /></div><figcaption>Runs tab</figcaption></figure>
 
 ### Conclusion
 

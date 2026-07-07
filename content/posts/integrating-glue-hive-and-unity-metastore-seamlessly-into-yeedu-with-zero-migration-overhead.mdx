@@ -91,27 +91,7 @@ Yeedu’s unified catalog layer abstracts over Glue and Hive while maintaining m
 
 ## Key Design Principles
 
-.yeedu-principle-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } /\* ===== TABLE BOX ===== \*/ .yeedu-principle-box { border: 1px solid #334155; border-radius: 14px; overflow: hidden; background: #020617; } .yeedu-principle-table { width: 100%; border-collapse: collapse; table-layout: auto; } /\* ===== HEADER ===== \*/ .yeedu-principle-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-principle-table th { padding: 14px 16px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; white-space: nowrap; } /\* ===== BODY ===== \*/ .yeedu-principle-table td { padding: 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e5e7eb; vertical-align: top; line-height: 1.6; } .yeedu-principle-table tbody tr { transition: 0.2s ease; } .yeedu-principle-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* ===== PRINCIPLE COLUMN ===== \*/ .principle { width: 34%; font-weight: 600; color: #f8fafc; background: rgba(249, 115, 22, 0.04); } /\* ===== DESCRIPTION ===== \*/ .description { color: #cbd5e1; } /\* ================= MOBILE ================= \*/ @media (max-width: 768px) { .yeedu-principle-table th { padding: 10px 12px; font-size: 10px; } .yeedu-principle-table td { padding: 12px; font-size: 12px; line-height: 1.5; } .principle { width: 40%; font-size: 12px; } } /\* ===== EXTRA SMALL ===== \*/ @media (max-width: 480px) { .yeedu-principle-table th { padding: 9px 10px; font-size: 9px; } .yeedu-principle-table td { padding: 10px; font-size: 11px; } .principle { width: 42%; font-size: 11px; } }
-
-Principle
-
-Description
-
-Zero Migration Overhead
-
-Connect Glue, Hive, or Unity directly, no duplication.
-
-Unified Access Layer
-
-Query all catalogs from one interface.
-
-Consistency & Security
-
-Uses access policies and metadata definitions from the source catalog.
-
-Plug-and-Play Setup
-
-Metastores can be configured using XML files or by filling required details in the Yeedu UI.
+<div data-rt-embed-type="true"><div class="yeedu-principle-wrap"><div class="yeedu-principle-box"><table class="yeedu-principle-table"><thead><tr><th>Principle</th><th>Description</th></tr></thead><tbody><tr><td class="principle">Zero Migration Overhead</td><td class="description">Connect Glue, Hive, or Unity directly, no duplication.</td></tr><tr><td class="principle">Unified Access Layer</td><td class="description">Query all catalogs from one interface.</td></tr><tr><td class="principle">Consistency &amp; Security</td><td class="description">Uses access policies and metadata definitions from the source catalog.</td></tr><tr><td class="principle">Plug-and-Play Setup</td><td class="description">Metastores can be configured using XML files or by filling required details in the Yeedu UI.</td></tr></tbody></table></div></div></div>
 
 Yeedu supports external metastore integration for **Glue, Hive**, and **Unity**, giving enterprises a single control plane for data discovery and governance and forming the foundation for scalable Hive metastore architecture in hybrid environments.
 
@@ -151,27 +131,19 @@ This is where Yeedu’s Databricks Unity Catalog connectivity becomes especially
 
 *   Specify **Default Catalog, Storage Path**, and optional **Additional Catalogs**
 
-![Adding Basic Unity Metastore details in Yeedu ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198baa31e7a5acb40cc9e2_Integrating%20Glue%2C%20Hive%20and%20Unity1.avif)
-
-Add Unity Metastore Configuration
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1300px"><div><img alt="Adding Basic Unity Metastore details in Yeedu " src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198baa31e7a5acb40cc9e2_Integrating%20Glue%2C%20Hive%20and%20Unity1.avif" loading="lazy" /></div><figcaption>Add Unity Metastore Configuration</figcaption></figure>
 
 *   To Create a Personal Access Token on the fly by click on section **Databricks Personal Access Token > Select Personal Access Token > Create >**
 
-![Selecting Personal Access Token in Databricks Unity Catalog](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198be5cf2d3a2813f985a3_Integrating%20Glue%2C%20Hive%20and%20Unity2.avif)
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1231px"><div><img alt="Selecting Personal Access Token in Databricks Unity Catalog" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198be5cf2d3a2813f985a3_Integrating%20Glue%2C%20Hive%20and%20Unity2.avif" loading="lazy" /></div><figcaption>Choose Personal Access Token</figcaption></figure>
 
-Choose Personal Access Token
-
-![Creating a New Personal Access Token in Databricks Unity Catalog](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198c48bfe7e9dd8e32b216_Integrating%20Glue%2C%20Hive%20and%20Unity3.avif)
-
-Add Personal Access Token
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="880px"><div><img alt="Creating a New Personal Access Token in Databricks Unity Catalog" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198c48bfe7e9dd8e32b216_Integrating%20Glue%2C%20Hive%20and%20Unity3.avif" loading="lazy" /></div><figcaption>Add Personal Access Token</figcaption></figure>
 
 *   You can also create PAT token under **Secrets,** create a secret of type **DATABRICKS UNITY TOKEN**
 
 *   **Required fields:** Token value
 
-![Linking Personal Access Token in Unity Metastore Secrets.](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198c8f09bbdf4db757a7d8_Integrating%20Glue%2C%20Hive%20and%20Unity4.avif)
-
-Add Personal Access Token for Unity Metastore
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1286px"><div><img alt="Linking Personal Access Token in Unity Metastore Secrets." src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198c8f09bbdf4db757a7d8_Integrating%20Glue%2C%20Hive%20and%20Unity4.avif" loading="lazy" /></div><figcaption>Add Personal Access Token for Unity Metastore</figcaption></figure>
 
 *   Validate and **Save** Yeedu confirms connection to list Unity catalogs.
 
@@ -189,9 +161,7 @@ The path is ideal for enterprises retaining traditional Hive Metastore architect
 
 *   Upload **krb5.conf** configuration file
 
-![Configuring Hive Metastore](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198d4d7f0b1f1c45eda1a5_Integrating%20Glue%2C%20Hive%20and%20Unity5.avif)
-
-Hive Metastore Configuration
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1300px"><div><img alt="Configuring Hive Metastore" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198d4d7f0b1f1c45eda1a5_Integrating%20Glue%2C%20Hive%20and%20Unity5.avif" loading="lazy" /></div><figcaption>Hive Metastore Configuration</figcaption></figure>
 
 *   Users can create a new secret and link it to a metastore created in the above step.
 
@@ -199,9 +169,7 @@ Hive Metastore Configuration
 
 *   **HIVE KERBEROS** → Requires _Principal_ and _Keytab file_, _choose the Hive metastore created in above step_
 
-![Creating a Hive Kerberos Secret](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198da65f1ccb06751133e5_Integrating%20Glue%2C%20Hive%20and%20Unity6.avif)
-
-Add Hive Kerberos Secret
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="880px"><div><img alt="Creating a Hive Kerberos Secret" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198da65f1ccb06751133e5_Integrating%20Glue%2C%20Hive%20and%20Unity6.avif" loading="lazy" /></div><figcaption>Add Hive Kerberos Secret</figcaption></figure>
 
 Caption: Add Hive Kerberos Secret
 
@@ -209,9 +177,7 @@ Alt text: Creating a Hive Kerberos Secret
 
 *   **HIVE BASIC** → Requires _Username_ and _Password_, _choose the Hive metastore created in above step_
 
-![Linking Hive Basic Secrets to Metastore](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198e3bda2c4575cba0b677_Integrating%20Glue%2C%20Hive%20and%20Unity7.avif)
-
-Add Hive Basic Secret
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1300px"><div><img alt="Linking Hive Basic Secrets to Metastore" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198e3bda2c4575cba0b677_Integrating%20Glue%2C%20Hive%20and%20Unity7.avif" loading="lazy" /></div><figcaption>Add Hive Basic Secret</figcaption></figure>
 
 Caption: Add Hive Basic Secret
 
@@ -231,26 +197,18 @@ This enables seamless Glue Data Catalog integration for customers running worklo
 
 *   Provide **Name** and **Description**
 
-![Creating a new metastore in AWS Glue.](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198e6b4db7571336235665_Integrating%20Glue%2C%20Hive%20and%20Unity8.avif)
-
-Glue Catalog Configuration
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1360px"><div><img alt="Creating a new metastore in AWS Glue." src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198e6b4db7571336235665_Integrating%20Glue%2C%20Hive%20and%20Unity8.avif" loading="lazy" /></div><figcaption>Glue Catalog Configuration</figcaption></figure>
 
 *   To Provide AWS IAM USER Credentials , **Click on Storage Secret > Create > Provide the** _Access Key ID, Secret Access Key, Default Region_
 
-![Linking AWS Glue Secrets to Metastore](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198ea9b13b5bf33b63b3f6_Integrating%20Glue%2C%20Hive%20and%20Unity9.avif)
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1231px"><div><img alt="Linking AWS Glue Secrets to Metastore" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198ea9b13b5bf33b63b3f6_Integrating%20Glue%2C%20Hive%20and%20Unity9.avif" loading="lazy" /></div><figcaption>Select object storage secret</figcaption></figure>
 
-Select object storage secret
-
-![Assigning Secret Key to an Object Storage in Glue ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198f8598546d4f3a3dbcc2_Integrating%20Glue%2C%20Hive%20and%20Unity10.avif)
-
-Add Storage Secret for Glue Catalog
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="880px"><div><img alt="Assigning Secret Key to an Object Storage in Glue " src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198f8598546d4f3a3dbcc2_Integrating%20Glue%2C%20Hive%20and%20Unity10.avif" loading="lazy" /></div><figcaption>Add Storage Secret for Glue Catalog</figcaption></figure>
 
 *   You can also create **AWS user credenatials** as secrets under **Secrets**, select a secret of type **AWS ACCESS SECRET KEY PAIR**
 *   ‍**Required fields:** _Access Key ID, Secret Access Key, Default Region_
 
-![Creating AWS user credentials as Secrets ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198fe2a149113625c68989_Integrating%20Glue%2C%20Hive%20and%20Unity11.avif)
-
-Add Storage Secret for Glue Catalog
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1360px"><div><img alt="Creating AWS user credentials as Secrets " src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a198fe2a149113625c68989_Integrating%20Glue%2C%20Hive%20and%20Unity11.avif" loading="lazy" /></div><figcaption>Add Storage Secret for Glue Catalog</figcaption></figure>
 
 *   When _Validate_ is clicked, Yeedu authenticates the credentials and initiates a connection via AWS Glue APIs.
 
@@ -262,21 +220,17 @@ Once the metastore is created and validated with the required secrets, data engi
 *   Navigate to **Yeedu UI > Workspaces > Click on workspace > Click on Notebook Name**
 *   Users can run SQL directly in Yeedu Notebooks on any catalog they’ve attached allowing data catalog integration to flow directly into analytics.
 
-![Running SQL queries directly on any catalog using Yeedu Notebooks ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a19900ee0c9073d8e0aea73_Integrating%20Glue%2C%20Hive%20and%20Unity12.avif)
-
-Query to list the tables in the bronze catalog under the default schema.
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1324px"><div><img alt="Running SQL queries directly on any catalog using Yeedu Notebooks " src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a19900ee0c9073d8e0aea73_Integrating%20Glue%2C%20Hive%20and%20Unity12.avif" loading="lazy" /></div><figcaption>Query to list the tables in the bronze catalog under the default schema.</figcaption></figure>
 
 *   The screenshots illustrate running SQL against tables in the _bronze.default_ namespace to inspect and analyze catalog data.
 
-![SQL query to inspect and analyze catalog data on Yeedu Notebooks. ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a19903f8e89f3b118ff9193_Integrating%20Glue%2C%20Hive%20and%20Unity13.avif)
-
-Query to retrieve total spent amount per customer category
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1360px"><div><img alt="SQL query to inspect and analyze catalog data on Yeedu Notebooks. " src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a19903f8e89f3b118ff9193_Integrating%20Glue%2C%20Hive%20and%20Unity13.avif" loading="lazy" /></div><figcaption>Query to retrieve total spent amount per customer category</figcaption></figure>
 
 SQL query to inspect and analyze catalog data on Yeedu Notebooks.
 
 **Output**
 
-![](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a19906261facbefc51553db_Integrating%20Glue%2C%20Hive%20and%20Unity14.avif)
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1015px"><div><img alt="" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a19906261facbefc51553db_Integrating%20Glue%2C%20Hive%20and%20Unity14.avif" loading="lazy" /></div></figure>
 
 ‍
 

@@ -41,3 +41,131 @@ a:hover {
   top: 0;
   left: 0;
 }
+
+/* Custom Table Components (Comparison, Instances, and Visual States) */
+.yeedu-compare-wrap, .yeedu-instance-wrap {
+  width: 100%;
+  margin: 30px 0;
+  font-family: 'Inter', sans-serif;
+}
+.yeedu-compare-table, .yeedu-instance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.yeedu-compare-table thead, .yeedu-instance-table thead {
+  background: linear-gradient(90deg, #020617, #0f172a);
+}
+.yeedu-compare-table th, .yeedu-instance-table th {
+  padding: 14px 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  text-align: left;
+}
+.yeedu-compare-table th:first-child {
+  color: transparent;
+}
+.yeedu-compare-table td, .yeedu-instance-table td {
+  padding: 16px;
+  border-top: 1px solid #1e293b;
+  font-size: 14px;
+  color: #e5e7eb;
+  position: relative;
+}
+.yeedu-compare-table td:nth-child(3) {
+  background: rgba(34, 197, 94, 0.03);
+}
+.yeedu-compare-table tbody tr:hover, .yeedu-instance-table tbody tr:hover {
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.label, .jobs {
+  font-weight: 600;
+  color: #f8fafc;
+}
+.price {
+  font-weight: 600;
+  color: #22c55e;
+}
+.good {
+  color: #4ade80 !important;
+  font-weight: 700;
+  background: rgba(34, 197, 94, 0.08);
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.bad {
+  color: #f87171 !important;
+  font-weight: 700;
+  background: rgba(248, 113, 113, 0.08);
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.neutral {
+  color: #facc15 !important;
+  font-weight: 700;
+  background: rgba(250, 204, 21, 0.08);
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.prices {
+  color: #4ade80 !important;
+  font-weight: 700;
+  background: rgba(34, 197, 94, 0.08);
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.highlight {
+  background: rgba(34, 197, 94, 0.03);
+}
+.highlight td:first-child {
+  border-left: 3px solid #22c55e;
+}
+
+@media (max-width: 768px) {
+  .yeedu-compare-table thead, .yeedu-instance-table thead {
+    display: none;
+  }
+  .yeedu-compare-table, .yeedu-compare-table tbody, .yeedu-compare-table tr,
+  .yeedu-instance-table, .yeedu-instance-table tbody, .yeedu-instance-table tr {
+    display: block;
+    width: 100%;
+  }
+  .yeedu-compare-table tr, .yeedu-instance-table tr {
+    margin-bottom: 14px;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #020617;
+  }
+  .yeedu-compare-table td, .yeedu-instance-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    border-bottom: 1px solid #1e293b;
+    font-size: 13px;
+    gap: 10px;
+  }
+  .yeedu-compare-table td:last-child, .yeedu-instance-table td:last-child {
+    border-bottom: none;
+  }
+  .yeedu-compare-table td::before, .yeedu-instance-table td::before {
+    content: attr(data-label);
+    font-size: 11px;
+    color: #94a3b8;
+    text-transform: uppercase;
+  }
+  .yeedu-compare-table td:nth-child(3), .highlight {
+    background: transparent;
+  }
+}

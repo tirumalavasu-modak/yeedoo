@@ -47,6 +47,23 @@ function escapeUnallowedHtml(text) {
   });
 }
 
+// Sanitize HTML/Markdown for MDX compatibility
+function sanitizeForMdx(text) {
+  if (!text) return '';
+  // 1. Strip style blocks entirely (styling is in global.css)
+  let clean = text.replace(/<style>[\s\S]*?<\/style>/gi, '');
+
+  // 2. Strip inline style attributes to prevent React Error #62 (expects object, not string)
+  clean = clean.replace(/ style="[^"]*?"/gi, '');
+
+  // 3. Self-close unclosed tags (img, br, hr) for JSX compatibility
+  clean = clean.replace(/<img([^>]*?)\/?>/gi, '<img$1 />');
+  clean = clean.replace(/<br([^>]*?)\/?>/gi, '<br$1 />');
+  clean = clean.replace(/<hr([^>]*?)\/?>/gi, '<hr$1 />');
+
+  return clean;
+}
+
 // Scan collections directory
 if (!fs.existsSync(collectionsDir)) {
   console.error("Collections directory not found!");
@@ -71,6 +88,9 @@ turndownService.addRule('preformatted', {
     return '\n```\n' + content.trim() + '\n```\n';
   }
 });
+
+// Keep tables, style blocks, and structural tags intact in MDX
+turndownService.keep(['table', 'thead', 'tbody', 'tr', 'th', 'td', 'style', 'div', 'span', 'i', 'figure']);
 
 const allTags = new Map(); // name -> slug
 
@@ -139,8 +159,8 @@ function migrateBlogs() {
         const authorSlug = row['Author'] ? slugify(row['Author']) : 'milind-chitgupakar';
         const tags = registerTags(row['Keywords']);
 
-        const bodyHTML = row['Post Content'] || '';
-        const bodyMarkdown = escapeUnallowedHtml(turndownService.turndown(bodyHTML));
+        const bodyHTML = sanitizeForMdx(row['Post Content'] || '');
+        const bodyMarkdown = sanitizeForMdx(escapeUnallowedHtml(turndownService.turndown(bodyHTML)));
 
         const frontmatter = {
           slug,
@@ -190,8 +210,8 @@ function migrateBenchmarks() {
         const date = formatDate(row['Published On'] || row['Created On']);
         const tags = registerTags(row['Keywords']);
 
-        const bodyHTML = row['Benchmark Content'] || '';
-        const bodyMarkdown = escapeUnallowedHtml(turndownService.turndown(bodyHTML));
+        const bodyHTML = sanitizeForMdx(row['Benchmark Content'] || '');
+        const bodyMarkdown = sanitizeForMdx(escapeUnallowedHtml(turndownService.turndown(bodyHTML)));
 
         const frontmatter = {
           slug,
@@ -239,8 +259,8 @@ function migrateCaseStudies() {
         const date = formatDate(row['Published On'] || row['Created On']);
         const tags = registerTags(row['Keywords']);
 
-        const bodyHTML = row['Content'] || '';
-        const bodyMarkdown = escapeUnallowedHtml(turndownService.turndown(bodyHTML));
+        const bodyHTML = sanitizeForMdx(row['Content'] || '');
+        const bodyMarkdown = sanitizeForMdx(escapeUnallowedHtml(turndownService.turndown(bodyHTML)));
 
         const frontmatter = {
           slug,

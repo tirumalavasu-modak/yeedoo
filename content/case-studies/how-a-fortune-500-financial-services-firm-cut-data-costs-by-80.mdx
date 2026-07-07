@@ -68,154 +68,18 @@ Yeedu's Turbo Engine delivered such significant performance improvements that th
 
 #### Streaming Pipeline: Production Cost Comparison
 
-.yeedu-cost-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } /\* ================= DESKTOP TABLE ================= \*/ .yeedu-cost-table { width: 100%; border-collapse: collapse; background: #020617; border: 1px solid #1e293b; border-radius: 12px; overflow: hidden; } .yeedu-cost-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-cost-table th { padding: 14px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; } .yeedu-cost-table td { padding: 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e5e7eb; } .platform { font-weight: 600; color: #f8fafc; } .saving { color: #4ade80; font-weight: 700; background: rgba(34, 197, 94, 0.08); padding: 4px 8px; border-radius: 6px; display: inline-block; } .neutral { color: #64748b; } .highlight { background: rgba(34, 197, 94, 0.03); } .yeedu-cost-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* ================= MOBILE CARDS ================= \*/ .mobile-cards { display: none; } @media (max-width: 768px) { .yeedu-cost-table { display: none; } .mobile-cards { display: flex; flex-direction: column; gap: 16px; } .cost-card { background: #020617; border: 1px solid #1e293b; border-radius: 14px; padding: 16px; } /\* Highlight Yeedu \*/ .cost-card.highlight { border: 1px solid rgba(34, 197, 94, 0.4); box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.15); } .card-title { font-size: 15px; font-weight: 600; color: #f8fafc; margin-bottom: 10px; } .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; } .metric { display: flex; flex-direction: column; gap: 2px; } .metric-label { font-size: 11px; color: #64748b; text-transform: uppercase; } .metric-value { font-size: 14px; color: #e5e7eb; font-weight: 500; } .metric-value.saving { color: #4ade80; font-weight: 700; } .metric-value.neutral { color: #64748b; } }
-
-Platform
-
-Annual Cost
-
-Savings
-
-Previous Platform
-
-$143,523
-
-–
-
-Yeedu (x86 instances)
-
-$31,676
-
-$111,847 (77.9%)
-
-Yeedu (Graviton instances)
-
-$28,506
-
-$115,017 (80.1%)
-
-Previous Platform
-
-Annual Cost $143,523
-
-Savings –
-
-Yeedu (x86)
-
-Annual Cost $31,676
-
-Savings $111,847 (77.9%)
-
-Yeedu (Graviton)
-
-Annual Cost $28,506
-
-Savings $115,017 (80.1%)
+<div data-rt-embed-type="true"><div class="yeedu-cost-wrap"><table class="yeedu-cost-table"><thead><tr><th>Platform</th><th>Annual Cost</th><th>Savings</th></tr></thead><tbody><tr><td class="platform">Previous Platform</td><td>$143,523</td><td class="neutral">–</td></tr><tr class="highlight"><td class="platform">Yeedu (x86 instances)</td><td>$31,676</td><td><span class="saving">$111,847 (77.9%)</span></td></tr><tr class="highlight"><td class="platform">Yeedu (Graviton instances)</td><td>$28,506</td><td><span class="saving">$115,017 (80.1%)</span></td></tr></tbody></table><div class="mobile-cards"><div class="cost-card"><div class="card-title">Previous Platform</div><div class="card-grid"><div class="metric"><span class="metric-label">Annual Cost</span> <span class="metric-value">$143,523</span></div><div class="metric"><span class="metric-label">Savings</span> <span class="metric-value neutral">–</span></div></div></div><div class="cost-card highlight"><div class="card-title">Yeedu (x86)</div><div class="card-grid"><div class="metric"><span class="metric-label">Annual Cost</span> <span class="metric-value">$31,676</span></div><div class="metric"><span class="metric-label">Savings</span> <span class="metric-value saving">$111,847 (77.9%)</span></div></div></div><div class="cost-card highlight"><div class="card-title">Yeedu (Graviton)</div><div class="card-grid"><div class="metric"><span class="metric-label">Annual Cost</span> <span class="metric-value">$28,506</span></div><div class="metric"><span class="metric-label">Savings</span> <span class="metric-value saving">$115,017 (80.1%)</span></div></div></div></div></div></div>
 
 ‍
 
 #### Data Replication: Performance Comparison
 
-.yeedu-perf-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } /\* ================= DESKTOP TABLE ================= \*/ .yeedu-perf-table { width: 100%; border-collapse: collapse; background: #020617; border: 1px solid #1e293b; border-radius: 12px; overflow: hidden; } .yeedu-perf-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-perf-table th { padding: 14px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; } .yeedu-perf-table td { padding: 16px; border-top: 1px solid #1e293b; font-size: 14px; color: #e5e7eb; } .platform { font-weight: 600; color: #f8fafc; } .good { color: #4ade80; font-weight: 700; background: rgba(34, 197, 94, 0.08); padding: 4px 8px; border-radius: 6px; display: inline-block; } .neutral { color: #94a3b8; } .highlight { background: rgba(34, 197, 94, 0.03); } .yeedu-perf-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* ================= MOBILE PREMIUM CARDS ================= \*/ .mobile-cards { display: none; } @media (max-width: 768px) { .yeedu-perf-table { display: none; } .mobile-cards { display: flex; flex-direction: column; gap: 16px; } .perf-card { background: linear-gradient(180deg, #020617, #020617); border: 1px solid #1e293b; border-radius: 14px; padding: 16px; position: relative; } /\* Highlight Yeedu card \*/ .perf-card.highlight { border: 1px solid rgba(34, 197, 94, 0.4); box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.15); } .card-title { font-size: 15px; font-weight: 600; color: #f8fafc; margin-bottom: 12px; } .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; } .metric { display: flex; flex-direction: column; gap: 2px; } .metric-label { font-size: 11px; color: #64748b; text-transform: uppercase; } .metric-value { font-size: 14px; color: #e5e7eb; font-weight: 500; } .metric-value.good { color: #4ade80; font-weight: 700; } .metric-value.neutral { color: #94a3b8; } }
-
-Platform
-
-Execution Time
-
-Tables Processed
-
-Annual Cost
-
-Previous Platform
-
-100 minutes
-
-4,100
-
-$37,668
-
-Yeedu (Graviton)
-
-39 minutes
-
-7,200
-
-$9,252
-
-Previous Platform
-
-Execution 100 min
-
-Tables 4,100
-
-Annual Cost $37,668
-
-Yeedu (Graviton)
-
-Execution 39 min
-
-Tables 7,200
-
-Annual Cost $9,252
+<div data-rt-embed-type="true"><div class="yeedu-perf-wrap"><table class="yeedu-perf-table"><thead><tr><th>Platform</th><th>Execution Time</th><th>Tables Processed</th><th>Annual Cost</th></tr></thead><tbody><tr><td class="platform">Previous Platform</td><td class="neutral">100 minutes</td><td class="neutral">4,100</td><td class="neutral">$37,668</td></tr><tr class="highlight"><td class="platform">Yeedu (Graviton)</td><td><span class="good">39 minutes</span></td><td><span class="good">7,200</span></td><td><span class="good">$9,252</span></td></tr></tbody></table><div class="mobile-cards"><div class="perf-card"><div class="card-title">Previous Platform</div><div class="card-grid"><div class="metric"><span class="metric-label">Execution</span> <span class="metric-value neutral">100 min</span></div><div class="metric"><span class="metric-label">Tables</span> <span class="metric-value neutral">4,100</span></div><div class="metric"><span class="metric-label">Annual Cost</span> <span class="metric-value neutral">$37,668</span></div></div></div><div class="perf-card highlight"><div class="card-title">Yeedu (Graviton)</div><div class="card-grid"><div class="metric"><span class="metric-label">Execution</span> <span class="metric-value good">39 min</span></div><div class="metric"><span class="metric-label">Tables</span> <span class="metric-value good">7,200</span></div><div class="metric"><span class="metric-label">Annual Cost</span> <span class="metric-value good">$9,252</span></div></div></div></div></div></div>
 
 ‍
 
 #### Total Annual Savings
 
-.yeedu-savings-wrap { width: 100%; margin: 30px 0; font-family: Inter, sans-serif; } /\* ================= DESKTOP TABLE ================= \*/ .yeedu-savings-table { width: 100%; border-collapse: collapse; background: #020617; border: 1px solid #334155; border-radius: 12px; overflow: hidden; } .yeedu-savings-table thead { background: linear-gradient(90deg, #020617, #0f172a); } .yeedu-savings-table th { padding: 14px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #cbd5f5; border-bottom: 1px solid #334155; } .yeedu-savings-table td { padding: 16px; border-top: 1px solid #334155; font-size: 14px; color: #e5e7eb; } .workload { font-weight: 600; color: #f8fafc; } .saving { color: #4ade80; font-weight: 700; background: rgba(34, 197, 94, 0.08); padding: 4px 8px; border-radius: 6px; display: inline-block; } .total { background: rgba(34, 197, 94, 0.05); } .yeedu-savings-table tbody tr:hover { background: rgba(59, 130, 246, 0.05); } /\* ================= PREMIUM MOBILE ================= \*/ .mobile-cards { display: none; } @media (max-width: 768px) { .yeedu-savings-table { display: none; } .mobile-cards { display: flex; flex-direction: column; gap: 16px; } .card { background: linear-gradient(180deg, #020617, #020617); border: 1px solid #334155; border-radius: 14px; padding: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.35); } .card-header { margin-bottom: 12px; } .card-title { font-size: 15px; font-weight: 600; color: #f8fafc; line-height: 1.4; } .card-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; } .metric { background: rgba(255,255,255,0.02); border: 1px solid #1e293b; border-radius: 10px; padding: 10px; } .metric-label { font-size: 11px; color: #94a3b8; text-transform: uppercase; margin-bottom: 4px; } .metric-value { font-size: 14px; font-weight: 700; color: #4ade80; } .total-card { border: 1px solid #22c55e; background: linear-gradient(180deg, rgba(34,197,94,0.08), rgba(0,0,0,0)); } }
-
-Workload
-
-Annual Savings
-
-Reduction
-
-Real-Time Streaming Pipeline
-
-~$115,000
-
-~80%
-
-Cross-Region Data Replication
-
-~$28,000
-
-~75%
-
-Total Combined Savings
-
-~$143,000
-
-75–80%
-
-Real-Time Streaming Pipeline
-
-Annual Savings
-
-~$115,000
-
-Reduction
-
-~80%
-
-Cross-Region Data Replication
-
-Annual Savings
-
-~$28,000
-
-Reduction
-
-~75%
-
-Total Combined Savings
-
-Annual Savings
-
-~$143,000
-
-Reduction
-
-75–80%
+<div data-rt-embed-type="true"><div class="yeedu-savings-wrap"><table class="yeedu-savings-table"><thead><tr><th>Workload</th><th>Annual Savings</th><th>Reduction</th></tr></thead><tbody><tr><td class="workload">Real-Time Streaming Pipeline</td><td><span class="saving">~$115,000</span></td><td><span class="saving">~80%</span></td></tr><tr><td class="workload">Cross-Region Data Replication</td><td><span class="saving">~$28,000</span></td><td><span class="saving">~75%</span></td></tr><tr class="total"><td class="workload">Total Combined Savings</td><td><span class="saving">~$143,000</span></td><td><span class="saving">75–80%</span></td></tr></tbody></table><div class="mobile-cards"><div class="card"><div class="card-header"><div class="card-title">Real-Time Streaming Pipeline</div></div><div class="card-metrics"><div class="metric"><div class="metric-label">Annual Savings</div><div class="metric-value">~$115,000</div></div><div class="metric"><div class="metric-label">Reduction</div><div class="metric-value">~80%</div></div></div></div><div class="card"><div class="card-header"><div class="card-title">Cross-Region Data Replication</div></div><div class="card-metrics"><div class="metric"><div class="metric-label">Annual Savings</div><div class="metric-value">~$28,000</div></div><div class="metric"><div class="metric-label">Reduction</div><div class="metric-value">~75%</div></div></div></div><div class="card total-card"><div class="card-header"><div class="card-title">Total Combined Savings</div></div><div class="card-metrics"><div class="metric"><div class="metric-label">Annual Savings</div><div class="metric-value">~$143,000</div></div><div class="metric"><div class="metric-label">Reduction</div><div class="metric-value">75–80%</div></div></div></div></div></div></div>
 
 ‍

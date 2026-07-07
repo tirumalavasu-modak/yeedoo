@@ -57,23 +57,17 @@ The result? Wasted time, wasted compute, and eroded confidence in your data pipe
 
 Yeedu introduces a new approach to Spark cluster autoscaling: automated detection and resubmission for Spark jobs that fail due to resource exhaustion.
 
-![Spark job failed with OOM error](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1add0eb3db0157960a1bda_Smarter%20Spark%20Scaling1.avif)
-
-Job failed with OOM Error
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1324px"><div><img alt="Spark job failed with OOM error" src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1add0eb3db0157960a1bda_Smarter%20Spark%20Scaling1.avif" loading="lazy" /></div><figcaption>Job failed with OOM Error</figcaption></figure>
 
 Instead of manual troubleshooting, Yeedu continuously monitors jobs and if it detects any job fails with resource limitations, Yeedu automatically triggers a new submission of the same job, this time on the next-level cluster configuration from provided list of already configured clusters and will remain on that once the job succeeds. This directly supports smarter, data-driven [Spark performance optimization](https://yeedu.com/product) without human intervention.
 
 For example, scales up from 4 cores / 16 GB (xsmall) → 8 cores / 32 GB (small) -> 16 cores / 64 GB (Medium). If job succeeds on 16 cores/64 GB configuration, for the upcoming runs, job will run on 16 cores / 64 GB itself a practical form of Spark performance optimization.
 
-![Airflow logs showing job rescheduled on a larger cluster ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1add62f1b54cc361943c89_Smarter%20Spark%20Scaling2.avif)
-
-Job scheduling on bumped cluster
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1360px"><div><img alt="Airflow logs showing job rescheduled on a larger cluster " src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1add62f1b54cc361943c89_Smarter%20Spark%20Scaling2.avif" loading="lazy" /></div><figcaption>Job scheduling on bumped cluster</figcaption></figure>
 
 ‍
 
-![Yeedu UI showing notebook running on the next configured cluster ](https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1add9711b6e405a1c34cba_Smarter%20Spark%20Scaling3.avif)
-
-Notebook ran on bumped cluster
+<figure class="w-richtext-figure-type-image w-richtext-align-fullwidth" data-rt-type="image" data-rt-align="fullwidth" data-rt-max-width="1015px"><div><img alt="Yeedu UI showing notebook running on the next configured cluster " src="https://cdn.prod.website-files.com/6781106372f1ec1571cf150b/6a1add9711b6e405a1c34cba_Smarter%20Spark%20Scaling3.avif" loading="lazy" /></div><figcaption>Notebook ran on bumped cluster</figcaption></figure>
 
 ‍
 
