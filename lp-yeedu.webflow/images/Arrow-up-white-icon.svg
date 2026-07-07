@@ -1,0 +1,51 @@
+<svg version="1.1" id="Layer_1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px" y="0px"
+  viewBox="0 0 512 512"
+  xml:space="preserve">
+
+  <!-- Gradient definition -->
+  <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse"
+    x1="285.7625" y1="436.0468"
+    x2="285.7625" y2="56.0416">
+    <stop offset="0" style="stop-color:#FEC163"/>
+    <stop offset="1" style="stop-color:#DE4313"/>
+  </linearGradient>
+
+  <!-- Gradient-filled main shape -->
+  <path fill="url(#SVGID_1_)" d="
+    M261.4,57.3l-122,122
+    c-4.6,4.6-1.3,12.4,5.1,12.4h95.2
+    c29.3,0,53.1,23.8,53.1,53.1v157.5
+    c0,4.9,4,8.8,8.8,8.8h16.8
+    c4.8,0,8.7-3.9,8.7-8.7V238.8
+    c0-4.8,3.9-8.7,8.7-8.7h89.6
+    c7.8,0,11.6-9.4,6.2-14.9
+    L273.7,57.3
+    c-3.4-3.4-8.9-3.4-12.3,0z
+  "/>
+
+  <!-- White outline (stroke only, correct path) -->
+  <path
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="16"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="
+      M240.8,409h-25.7
+      c-4.8,0-8.7-3.9-8.7-8.7V238.8
+      c0-4.8-3.9-8.7-8.7-8.7
+      h-39.8h-49.7
+      c-7.8,0-11.6-9.4-6.2-14.9
+      L259.9,57.3
+      c3.4-3.4,8.9-3.4,12.3,0
+      l157.9,157.9
+      c5.5,5.5,1.6,14.9-6.2,14.9
+      h-89.6
+      c-4.8,0-8.7,3.9-8.7,8.7
+      v197
+    "/>
+
+</svg>
