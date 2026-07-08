@@ -1,6 +1,6 @@
 @font-face {
   font-family: Intertight;
-  src: url('../fonts/InterTight-Light.ttf') format("truetype");
+  src: url('/fonts/InterTight-Light.ttf') format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: Intertight;
-  src: url('../fonts/InterTight-Regular.ttf') format("truetype");
+  src: url('/fonts/InterTight-Regular.ttf') format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: Intertight;
-  src: url('../fonts/InterTight-Medium.ttf') format("truetype");
+  src: url('/fonts/InterTight-Medium.ttf') format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: Intertight;
-  src: url('../fonts/InterTight-SemiBold.ttf') format("truetype");
+  src: url('/fonts/InterTight-SemiBold.ttf') format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: Intertight;
-  src: url('../fonts/InterTight-Bold.ttf') format("truetype");
+  src: url('/fonts/InterTight-Bold.ttf') format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -419,7 +419,7 @@ a {
 .cell {
   text-align: left;
   background-color: #26221d;
-  background-image: url('../images/yeedu-background-sphere.avif');
+  background-image: url('/images/yeedu-background-sphere.avif');
   background-position: 0%;
   background-size: cover;
   border: 1px #000;
@@ -1243,7 +1243,7 @@ a {
 
 .hero-without-image-3 {
   background-color: #0000;
-  background-image: url('../images/footer-bg.avif');
+  background-image: url('/images/footer-bg.avif');
   background-position: 50%;
   background-repeat: repeat-y;
   background-size: 960px;
@@ -1447,7 +1447,7 @@ a {
 
 .hero-subscribe-left {
   background-color: #26221d00;
-  background-image: url('../images/Quantum-Computing.avif');
+  background-image: url('/images/Quantum-Computing.avif');
   background-position: 100% 100%;
   background-size: auto;
   border: 1px solid #0000;
@@ -2776,7 +2776,7 @@ a {
 
 .hero-heading-left-2 {
   background-color: #26221d00;
-  background-image: url('../images/Quantum-Computing.avif');
+  background-image: url('/images/Quantum-Computing.avif');
   background-position: 100% 0;
   background-repeat: repeat;
   background-size: auto;
@@ -2811,7 +2811,7 @@ a {
 
 .hero-without-image-4 {
   background-color: #26221d00;
-  background-image: url('../images/Header-BG.avif');
+  background-image: url('/images/Header-BG.avif');
   background-position: 100% 0;
   background-size: auto;
   border: 0 #0000;
@@ -3595,7 +3595,7 @@ a {
 
 .hero-without-image-6 {
   background-color: #26221d;
-  background-image: url('../images/Gain-bg-33.avif');
+  background-image: url('/images/Gain-bg-33.avif');
   background-position: 0 0;
   background-size: auto;
   border: 1px solid #0000;
@@ -3895,7 +3895,7 @@ a {
 }
 
 .logos-quote-block-2 {
-  background-image: url('../images/Tower-bg.avif');
+  background-image: url('/images/Tower-bg.avif');
   background-position: 0%;
   background-size: cover;
   border: 0 #fff0;
@@ -4101,7 +4101,7 @@ a {
 }
 
 .section-6 {
-  background-image: url('../images/Wave-bg-transparent.avif');
+  background-image: url('/images/Wave-bg-transparent.avif');
   background-position: 0 0;
   background-size: auto;
 }
@@ -4129,7 +4129,7 @@ a {
 }
 
 .product-hero-section {
-  background-image: url('../images/Wave-bg-transparent.avif');
+  background-image: url('/images/Wave-bg-transparent.avif');
   background-position: 0 100%;
   background-size: auto;
 }
@@ -4344,7 +4344,7 @@ a {
 }
 
 .documents-section {
-  background-image: url('../images/Folder-banner.avif');
+  background-image: url('/images/Folder-banner.avif');
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: auto;
@@ -4497,7 +4497,7 @@ a {
   text-align: center;
   -webkit-text-fill-color: inherit;
   background-color: #6927da33;
-  background-image: url('../images/grain-bg.avif');
+  background-image: url('/images/grain-bg.avif');
   background-position: 0 0;
   background-repeat: repeat;
   background-size: contain;
@@ -4617,7 +4617,7 @@ a {
 
 .hero-without-image-7 {
   background-color: #0000;
-  background-image: url('../images/Header-BG.avif');
+  background-image: url('/images/Header-BG.avif');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4709,7 +4709,7 @@ a {
 
 .hero-heading-left-3 {
   background-color: #0000;
-  background-image: url('../images/Quantum-Computing.avif');
+  background-image: url('/images/Quantum-Computing.avif');
   background-position: 50%;
   background-size: auto;
   border: 1px solid #0000;
@@ -4852,7 +4852,7 @@ a {
 .section-11 {
   text-align: center;
   background-color: #f2600c;
-  background-image: url('../images/Grid-small-bg.avif');
+  background-image: url('/images/Grid-small-bg.avif');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5020,7 +5020,7 @@ a {
 
 .lp-3-column {
   background-color: #0000;
-  background-image: url('../images/Quantum-Computing.avif');
+  background-image: url('/images/Quantum-Computing.avif');
   background-position: 50%;
   background-size: auto;
   border: 1px solid #0000;
@@ -6059,7 +6059,7 @@ a {
 .team-circles {
   background-color: var(--yeedu-bg-black);
   text-align: left;
-  background-image: url('../images/yeedu-bg-Hex-lines-1.avif');
+  background-image: url('/images/yeedu-bg-Hex-lines-1.avif');
   background-position: 100%;
   border: 3px #000;
   border-radius: 0;
@@ -8377,7 +8377,7 @@ a {
 .section-18 {
   -webkit-text-fill-color: inherit;
   background-color: #0000;
-  background-image: url('../images/Artboard-2-1.avif');
+  background-image: url('/images/Artboard-2-1.avif');
   background-size: cover;
   background-attachment: scroll;
   background-clip: border-box;
@@ -9090,7 +9090,7 @@ a {
 }
 
 .rt-home-review-main-block {
-  background-image: url('../images/Map.webp');
+  background-image: url('/images/Map.webp');
   background-position: 50% 95%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -9916,7 +9916,7 @@ a {
 }
 
 .rt-testimonial-main-block-one {
-  background-image: url('../images/Testimonial.svg');
+  background-image: url('/images/Testimonial.svg');
   background-position: 4% 2%;
   background-repeat: no-repeat;
   background-size: 35px;
@@ -9971,7 +9971,7 @@ a {
 
 .rt-comment-text-block {
   background-color: #f5f5fb;
-  background-image: url('../images/quote-1-1_1quote (1) 1.png');
+  background-image: url('/images/quote-1-1_1quote (1) 1.png');
   background-position: 8% 23%;
   background-repeat: no-repeat;
   background-size: 57px;
@@ -9991,7 +9991,7 @@ a {
 }
 
 .rt-slider-image {
-  background-image: url('../images/Testimonial-Woman.webp');
+  background-image: url('/images/Testimonial-Woman.webp');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10005,11 +10005,11 @@ a {
 }
 
 .rt-slider-image.rt-slider-img-three {
-  background-image: url('../images/Testiminial-Two.webp');
+  background-image: url('/images/Testiminial-Two.webp');
 }
 
 .rt-slider-image.rt-slider-img-two {
-  background-image: url('../images/Testiminial-Three.webp');
+  background-image: url('/images/Testiminial-Three.webp');
 }
 
 .rt-name-text-block {
@@ -10232,7 +10232,7 @@ a {
 
 .rt-home-one-testimonial-details {
   color: var(--radiant-ui-components-library-marketplace--color--body-font-dark);
-  background-image: url('../images/Mask-group-19_1Mask group (19).avif');
+  background-image: url('/images/Mask-group-19_1Mask group (19).avif');
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: auto;
@@ -10268,7 +10268,7 @@ a {
 }
 
 .rt-home-one-testimonial {
-  background-image: url('../images/Testimonials_1Testimonials.avif');
+  background-image: url('/images/Testimonials_1Testimonials.avif');
   background-position: 50% 20%;
   background-repeat: no-repeat;
   background-size: 1037px;
@@ -10634,7 +10634,7 @@ a {
 }
 
 .yeedu-section {
-  background-image: url('../images/footer-bg.avif');
+  background-image: url('/images/footer-bg.avif');
   background-position: 50%;
   background-repeat: repeat-y;
   background-size: 960px;
@@ -10721,7 +10721,7 @@ a {
 }
 
 .section-20 {
-  background-image: url('../images/Quantum-Computing.avif');
+  background-image: url('/images/Quantum-Computing.avif');
   background-position: 50% 0;
   background-size: auto;
   font-family: Inter, sans-serif;
@@ -11947,7 +11947,7 @@ a {
 .spark-engine-card-1 {
   transform: scale3d(1none, 1none, 1none);
   transform-style: preserve-3d;
-  background-image: url('../images/Bill-shocks-drain-budgets.avif');
+  background-image: url('/images/Bill-shocks-drain-budgets.avif');
   background-size: cover;
   background-attachment: scroll;
   border: 1px solid #373832;
@@ -12002,7 +12002,7 @@ a {
 .spark-engine-card-2 {
   transform: scale3d(1none, 1none, 1none);
   transform-style: preserve-3d;
-  background-image: url('../images/Heavy-Developer-Overhead.avif');
+  background-image: url('/images/Heavy-Developer-Overhead.avif');
   background-position: 50%;
   background-size: cover;
   background-attachment: scroll;
@@ -12019,7 +12019,7 @@ a {
 .spark-engine-card-3 {
   transform: scale3d(1none, 1none, 1none);
   transform-style: preserve-3d;
-  background-image: url('../images/Locked-In-Data-Platforms.avif');
+  background-image: url('/images/Locked-In-Data-Platforms.avif');
   background-position: 50%;
   background-size: cover;
   background-attachment: scroll;
@@ -12217,7 +12217,7 @@ a {
 }
 
 .section-25 {
-  background-image: url('../images/footer-bg.avif');
+  background-image: url('/images/footer-bg.avif');
   background-position: 50% 35%;
   background-repeat: repeat-y;
   background-size: cover;
@@ -12338,7 +12338,7 @@ a {
 }
 
 .section-27 {
-  background-image: url('../images/Header-BG.avif');
+  background-image: url('/images/Header-BG.avif');
   background-position: 100% 0;
   background-size: auto;
   background-attachment: scroll;
@@ -13796,7 +13796,7 @@ a {
   width: 200px;
   height: 200px;
   color: var(--yeedu-orange);
-  background-image: url('../images/Group-1009002136.svg');
+  background-image: url('/images/Group-1009002136.svg');
   background-repeat: no-repeat;
   background-size: cover;
   flex-direction: column;
@@ -13809,7 +13809,7 @@ a {
 }
 
 .rt-number-img-bg-inner:hover {
-  background-image: url('../images/Group-1009002136-1.svg');
+  background-image: url('/images/Group-1009002136-1.svg');
   background-position: 0 0;
   background-size: cover;
 }
@@ -14390,7 +14390,7 @@ a {
 .yeedu-serects-management-1 {
   transform: scale3d(1none, 1none, 1none);
   transform-style: preserve-3d;
-  background-image: url('../images/Tenant-Secrets.avif');
+  background-image: url('/images/Tenant-Secrets.avif');
   background-size: cover;
   background-attachment: scroll;
   border: 1px solid #373832;
@@ -14406,7 +14406,7 @@ a {
 .yeedu-serects-management-2 {
   transform: scale3d(1none, 1none, 1none);
   transform-style: preserve-3d;
-  background-image: url('../images/Workspace-secrets.avif');
+  background-image: url('/images/Workspace-secrets.avif');
   background-size: cover;
   background-attachment: scroll;
   border: 1px solid #373832;
@@ -14422,7 +14422,7 @@ a {
 .yeedu-serects-management-3 {
   transform: scale3d(1none, 1none, 1none);
   transform-style: preserve-3d;
-  background-image: url('../images/User-Secrets.avif');
+  background-image: url('/images/User-Secrets.avif');
   background-position: 50%;
   background-size: cover;
   background-attachment: scroll;
@@ -14522,7 +14522,7 @@ a {
   border: 1px solid var(--card-border-yeedu);
   text-align: center;
   background-color: #0000;
-  background-image: url('../images/Chatgpt-bg.avif');
+  background-image: url('/images/Chatgpt-bg.avif');
   background-position: 50%;
   background-size: cover;
   border-radius: 20px;
@@ -14545,7 +14545,7 @@ a {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   border: 1px solid var(--card-border-yeedu);
-  background-image: url('../images/Claude-AssistantX-bg.avif');
+  background-image: url('/images/Claude-AssistantX-bg.avif');
   background-position: 50%;
   background-size: cover;
   border-radius: 20px;
@@ -14589,7 +14589,7 @@ a {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   border: 1px solid var(--card-border-yeedu);
-  background-image: url('../images/Chatgpt-AssistantX-bg.avif');
+  background-image: url('/images/Chatgpt-AssistantX-bg.avif');
   background-position: 50%;
   background-size: cover;
   border-radius: 20px;
@@ -15395,7 +15395,7 @@ a {
 }
 
 .rt-emoji-celebration {
-  background-image: url('../images/Emoji-Two.svg');
+  background-image: url('/images/Emoji-Two.svg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -15464,7 +15464,7 @@ a {
 }
 
 .rt-heading-three-celebration {
-  background-image: url('../images/Celebration-Things.svg');
+  background-image: url('/images/Celebration-Things.svg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: auto 32px;
@@ -15575,7 +15575,7 @@ a {
 }
 
 .rt-emoji-love-big {
-  background-image: url('../images/Emoji-Big-Love.svg');
+  background-image: url('/images/Emoji-Big-Love.svg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 40px 52px;
@@ -16171,7 +16171,7 @@ a {
   border: 1px solid var(--card-border-yeedu);
   text-align: center;
   background-color: #0000;
-  background-image: url('../images/Conversational-Error-Analysis.avif');
+  background-image: url('/images/Conversational-Error-Analysis.avif');
   background-position: 100% 0;
   background-repeat: repeat-x;
   background-size: cover;
@@ -16188,7 +16188,7 @@ a {
 .team-card-align-left-bg-1:hover {
   box-shadow: inset 0 2px 10px 0 var(--card-border-yeedu);
   background-color: #0000;
-  background-image: url('../images/Conversational-Error-Analysis.avif');
+  background-image: url('/images/Conversational-Error-Analysis.avif');
   background-position: 100% 0;
   background-size: contain;
   transform: translate(0, -5px);
@@ -16216,7 +16216,7 @@ a {
 }
 
 .team-card-align-left-bg-1-copy {
-  background-image: url('../images/Contextual-Recommendations.avif');
+  background-image: url('/images/Contextual-Recommendations.avif');
   background-position: 100% 0;
   background-size: cover;
 }
@@ -16227,7 +16227,7 @@ a {
   border: 1px solid var(--card-border-yeedu);
   text-align: center;
   background-color: #0000;
-  background-image: url('../images/Contextual-Recommendations.avif');
+  background-image: url('/images/Contextual-Recommendations.avif');
   background-position: 100% 0;
   background-repeat: repeat-x;
   background-size: cover;
@@ -16244,7 +16244,7 @@ a {
 .team-card-align-left-bg-2:hover {
   box-shadow: inset 0 2px 10px 0 var(--card-border-yeedu);
   background-color: #0000;
-  background-image: url('../images/Contextual-Recommendations.avif');
+  background-image: url('/images/Contextual-Recommendations.avif');
   background-position: 100% 0;
   background-size: contain;
   transform: translate(0, -5px);
@@ -16256,7 +16256,7 @@ a {
   border: 1px solid var(--card-border-yeedu);
   text-align: center;
   background-color: #0000;
-  background-image: url('../images/AI-Code-Assistance.avif');
+  background-image: url('/images/AI-Code-Assistance.avif');
   background-position: 100% 0;
   background-repeat: repeat-x;
   background-size: cover;
@@ -16273,7 +16273,7 @@ a {
 .team-card-align-left-bg-3:hover {
   box-shadow: inset 0 2px 10px 0 var(--card-border-yeedu);
   background-color: #0000;
-  background-image: url('../images/AI-Code-Assistance.avif');
+  background-image: url('/images/AI-Code-Assistance.avif');
   background-position: 100% 0;
   background-size: contain;
   transform: translate(0, -5px);
@@ -16285,7 +16285,7 @@ a {
   border: 1px solid var(--card-border-yeedu);
   text-align: center;
   background-color: #0000;
-  background-image: url('../images/Screen-Aware-Intelligence.avif');
+  background-image: url('/images/Screen-Aware-Intelligence.avif');
   background-position: 100% 0;
   background-repeat: repeat-x;
   background-size: cover;
@@ -16302,7 +16302,7 @@ a {
 .team-card-align-left-bg-4:hover {
   box-shadow: inset 0 2px 10px 0 var(--card-border-yeedu);
   background-color: #0000;
-  background-image: url('../images/Screen-Aware-Intelligence.avif');
+  background-image: url('/images/Screen-Aware-Intelligence.avif');
   background-position: 100% 0;
   background-size: contain;
   transform: translate(0, -5px);
@@ -17767,7 +17767,7 @@ a {
   }
 
   .yeedu-section {
-    background-image: url('../images/footer-bg.avif');
+    background-image: url('/images/footer-bg.avif');
     background-position: 50%;
     background-repeat: repeat-y;
     background-size: 960px;
@@ -18038,7 +18038,7 @@ a {
   }
 
   .yeedu-section {
-    background-image: url('../images/footer-bg.avif');
+    background-image: url('/images/footer-bg.avif');
     background-position: 50%;
     background-repeat: repeat-y;
   }
@@ -20578,7 +20578,7 @@ a {
   }
 
   .cell-38 {
-    background-image: url('../images/Chatgpt-bg.avif');
+    background-image: url('/images/Chatgpt-bg.avif');
     background-position: 0 100%;
   }
 
@@ -20587,7 +20587,7 @@ a {
   }
 
   .cell-38-1 {
-    background-image: url('../images/Chatgpt-bg.avif');
+    background-image: url('/images/Chatgpt-bg.avif');
     background-position: 0 100%;
   }
 
@@ -26175,35 +26175,35 @@ a {
 
 @font-face {
   font-family: 'Intertight';
-  src: url('../fonts/InterTight-Light.ttf') format('truetype');
+  src: url('/fonts/InterTight-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Intertight';
-  src: url('../fonts/InterTight-Regular.ttf') format('truetype');
+  src: url('/fonts/InterTight-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Intertight';
-  src: url('../fonts/InterTight-Medium.ttf') format('truetype');
+  src: url('/fonts/InterTight-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Intertight';
-  src: url('../fonts/InterTight-SemiBold.ttf') format('truetype');
+  src: url('/fonts/InterTight-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Intertight';
-  src: url('../fonts/InterTight-Bold.ttf') format('truetype');
+  src: url('/fonts/InterTight-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
