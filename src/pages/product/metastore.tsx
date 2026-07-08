@@ -33,7 +33,7 @@ export default function Metastore() {
           <p style={{ color: "#ccc", fontSize: "1.2rem", lineHeight: "1.6", marginBottom: "40px" }}>
             Connect Your Governance to Yeedu’s Spark Orchestration
           </p>
-          
+
           <div style={{ display: "flex", justifyContent: "center", gap: "30px", marginBottom: "40px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
               <img src="https://cdn.prod.website-files.com/67724ebcc1aad14c5b2a2be4/695b70fabf63ebabe5de6056_uc.avif" width="24" alt="Unity Catalog" />
@@ -48,7 +48,7 @@ export default function Metastore() {
               <span style={{ color: "#fff" }}>AWS Glue</span>
             </div>
           </div>
-          
+
           <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
             <a href="/pricing" style={{ padding: "14px 28px", backgroundColor: "#ff5b1a", borderRadius: "8px", color: "#fff", fontWeight: "bold", textDecoration: "none" }}>Book a Demo</a>
             <a href="/30-days-csc" style={{ padding: "14px 28px", backgroundColor: "#111217", border: "1px solid #333", borderRadius: "8px", color: "#fff", fontWeight: "bold", textDecoration: "none" }}>Try 30-Day Challenge</a>

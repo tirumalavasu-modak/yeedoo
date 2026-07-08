@@ -22,7 +22,7 @@ export default function Pricing() {
           <div className="hero-section-tag" style={{ display: "inline-block", backgroundColor: "#1c1d24", border: "1px solid #333", borderRadius: "20px", padding: "6px 16px", marginBottom: "30px" }}>
             <div className="text-block-21" style={{ color: "#ff5b1a", fontWeight: "bold", fontSize: "0.85rem", letterSpacing: "1px", textTransform: "uppercase" }}>Pricing</div>
           </div>
-          
+
           <div className="form-section-03" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "start" }}>
             <div className="content-wrap-left">
               <h1 className="pricing-heading" style={{ fontSize: "3rem", fontWeight: "bold", lineHeight: "1.2", marginBottom: "20px" }}>
@@ -31,7 +31,7 @@ export default function Pricing() {
               <p className="paragraph-32" style={{ color: "#ccc", fontSize: "1.1rem", lineHeight: "1.6", marginBottom: "40px" }}>
                 Yeedu’s tier-based pricing means you pay a fixed fee per usage tier—no shock bills, even during spikes. Contact us for a free quote.
               </p>
-              
+
               <div className="contact-method-wrap" style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
                 <a href="mailto:sales@yeedu.io" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", color: "#fff" }}>
                   <img src="https://cdn.prod.website-files.com/67724ebcc1aad14c5b2a2be4/694539af7185e597001bb348_94871972ed71b7f1f592d73086241e27_email-icon.webp" alt="Email" width="24" />
@@ -134,7 +134,7 @@ export default function Pricing() {
           <p className="section-header-desc" style={{ color: "#aaa", marginBottom: "40px" }}>
             The industry’s first predictable Spark pricing enabling <strong>unlimited usage</strong> without surprise bills.
           </p>
-          
+
           <div className="pricing-card-box" style={{ maxWidth: "500px", margin: "0 auto", backgroundColor: "#111217", border: "1px solid #ff5b1a", borderRadius: "20px", padding: "40px", textAlign: "left" }}>
             <h3 style={{ color: "#ff5b1a", fontWeight: "bold", fontSize: "1.8rem", margin: "0 0 10px 0" }}>Fixed Price Tiers</h3>
             <p style={{ color: "#ccc", fontSize: "0.95rem", lineHeight: "1.5", marginBottom: "30px" }}>

@@ -120,6 +120,9 @@ export default function Index() {
                 </div>
               </div>
             </div>
+            <div className="div-block-41">
+              <img src="/images/Scroll-Down-Arrow.gif" alt="Orange down arrows gif" width={100} height="auto" className="image-50" />
+            </div>
           </div>
         </div>
       </section>
@@ -138,6 +141,9 @@ export default function Index() {
             >
               <source src="https://s3.amazonaws.com/webflow-prod-assets/67724ebcc1aad14c5b2a2be4/698da6b1e97d7307c49b1431_Yeedu-Homepage%20Workspace.mp4" type="video/mp4" />
             </video>
+          </div>
+          <div className="div-block-41">
+            <img src="/images/Scroll-Down-Arrow.gif" alt="Orange down arrows gif" width={100} height="auto" className="image-50" />
           </div>
         </div>
       </section>
@@ -167,6 +173,9 @@ export default function Index() {
                 <div className="spark-engine-desc">Proprietary platforms enforce usage pricing and create painful, restrictive migrations.</div>
               </div>
             </div>
+          </div>
+          <div className="div-block-41">
+            <img src="/images/Scroll-Down-Arrow.gif" alt="Orange down arrows gif" width={100} height="auto" className="image-50" />
           </div>
         </div>
       </section>
@@ -253,11 +262,17 @@ export default function Index() {
               <div className="card-desc-orange">Fully supported</div>
             </div>
           </div>
+          <div className="div-block-41">
+            <img src="/images/Scroll-Down-Arrow.gif" alt="Orange down arrows gif" width={100} height="auto" className="image-50" />
+          </div>
         </div>
       </section>
 
       {/* Testimonials */}
       <section className="a-testimonial-section">
+        <div className="div-block-41">
+          <img src="/images/Scroll-Down-Arrow.gif" alt="Orange down arrows gif" width={100} height="auto" className="image-50" />
+        </div>
         <div className="container-2">
           <h2 className="section-header-h2">What Our Customers Are Saying</h2>
           <div className="testimonial-cards-grid" style={{ marginTop: "40px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px" }}>
